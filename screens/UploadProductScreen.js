@@ -148,7 +148,7 @@ if(userId == undefined || userId == null){
            resolve(firebaseStorage.ref(userId)
            .child("My products")
            .child(imagePath)
-           .putFile(pathValue));
+           .putFile(imagePath));
   
         }}
       );
