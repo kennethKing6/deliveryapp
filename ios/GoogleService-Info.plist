@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>257715845585-5srvsgqh31ccjnlot1d917hhir16mdc7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.257715845585-5srvsgqh31ccjnlot1d917hhir16mdc7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCyVmEGHCH064yiwU0-1Xc1ZiJrmCOyOYw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>257715845585</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Dispatch.com</string>
+	<key>PROJECT_ID</key>
+	<string>deliveryapp-bd7d8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>deliveryapp-bd7d8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:257715845585:ios:c3b1e94058c7103e9f48f0</string>
+	<key>DATABASE_URL</key>
+	<string>https://deliveryapp-bd7d8.firebaseio.com</string>
+</dict>
+</plist>
