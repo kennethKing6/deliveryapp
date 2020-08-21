@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     
     },
     signUp: {
-        fontFamily: "Black",
         color: "rgba(255,255,255,1)",
         fontSize: 22,
         alignSelf: "center",
