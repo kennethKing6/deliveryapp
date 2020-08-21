@@ -27,8 +27,6 @@ import io.invertase.firebase.storage.ReactNativeFirebaseStoragePackage;
 import com.mapbox.rctmgl.RCTMGLPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
-// react-native-fetch-blob
-import com.RNFetchBlob.RNFetchBlobPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-image-picker
@@ -96,7 +94,6 @@ public class PackageList {
       new ReactNativeFirebaseStoragePackage(),
       new RCTMGLPackage(),
       new RNCameraPackage(),
-      new RNFetchBlobPackage(),
       new RNGestureHandlerPackage(),
       new ImagePickerPackage(),
       new RNPermissionsPackage(),

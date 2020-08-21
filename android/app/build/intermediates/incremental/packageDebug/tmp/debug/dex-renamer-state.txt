@@ -1,4 +1,4 @@
-#Fri Aug 21 13:35:12 EAT 2020
+#Sat Aug 22 00:39:23 EAT 2020
 base.2=C\:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes2.dex
 base.1=C\:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
 base.0=C\:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
@@ -18,7 +18,6 @@ path.2=classes2.dex
 renamed.4=classes5.dex
 renamed.3=classes4.dex
 path.1=classes.dex
-renamed.18=classes19.dex
 renamed.2=classes3.dex
 path.0=classes.dex
 renamed.17=classes18.dex
@@ -28,8 +27,6 @@ renamed.0=classes.dex
 renamed.15=classes16.dex
 renamed.14=classes15.dex
 renamed.13=classes14.dex
-path.18=classes_15.dex
-base.18=C\:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_15.dex
 renamed.12=classes13.dex
 path.17=classes_9.dex
 base.17=C\:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_9.dex

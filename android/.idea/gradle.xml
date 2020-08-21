@@ -20,7 +20,6 @@
             <option value="$PROJECT_DIR$/../node_modules/@react-native-firebase/storage/android" />
             <option value="$PROJECT_DIR$/../node_modules/@react-native-mapbox-gl/maps/android/rctmgl" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-camera/android" />
-            <option value="$PROJECT_DIR$/../node_modules/react-native-fetch-blob/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-gesture-handler/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-image-picker/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-permissions/android" />

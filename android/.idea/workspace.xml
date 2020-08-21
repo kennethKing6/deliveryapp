@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4bfc4f0-d483-4e42-8dbe-95771645cc33" name="Default Changelist" comment="" />
+    <list default="true" id="c4bfc4f0-d483-4e42-8dbe-95771645cc33" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-1204007043/react-native-community_masked-view.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-1204007043/react-native-community_masked-view.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-1683852772/react-native-vector-icons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-1683852772/react-native-vector-icons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-261598756/react-native-fetch-blob.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-264947718/react-native-gesture-handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-264947718/react-native-gesture-handler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-418132798/react-native-firebase_analytics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-418132798/react-native-firebase_analytics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-503903813/react-native-screens.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-503903813/react-native-screens.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-560317981/react-native-safe-area-context.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-560317981/react-native-safe-area-context.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/-772475465/react-native-firebase_storage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/-772475465/react-native-firebase_storage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/1109369504/react-native-shared-element.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/1109369504/react-native-shared-element.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/139884791/react-native-mapbox-gl_maps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/139884791/react-native-mapbox-gl_maps.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/1608534655/react-native-firebase_database.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/1608534655/react-native-firebase_database.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/2086308780/react-native-firebase_auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/2086308780/react-native-firebase_auth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/211629873/react-native-camera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/211629873/react-native-camera.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/470243768/react-native-permissions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/470243768/react-native-permissions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/922678621/react-native-firebase_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/922678621/react-native-firebase_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/985847116/react-native-image-picker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/985847116/react-native-image-picker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="711KPKN0820949" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_29" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -24,6 +49,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1gOiLCsbsY0fX4XQMnkXTYgdkBB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
