@@ -109,18 +109,7 @@ if(userId == undefined || userId == null){
 
   }
 
-  async function checkPermission(){
-    const promise = null;
-    if(Platform.OS === 'ios'){
-      promise = check(PERMISSIONS.IOS.CAMERA);
-      
-    }else if(Platform.OS === "android"){
-      promise = check(PERMISSIONS.ANDROID.CAMERA);
-  
-    }
-
-    return promise;
-  }
+ 
 
   async function getCameraPermission(){
   
@@ -153,13 +142,12 @@ if(userId == undefined || userId == null){
           alert('An error occurred: ',   response.error);
           reject("Error occured with camera " + response.error);
         } else {
-          setImageURI({ uri: Platform.OS=== "android" ?response.path: response.uri});
   
-          var pathValue =  Platform.OS=== "android" ?response.path: response.uri;
+          var imagePath =  Platform.OS=== "android" ?response.path: response.uri;
             
            resolve(firebaseStorage.ref(userId)
            .child("My products")
-           .child(response.fileName)
+           .child(imagePath)
            .putFile(pathValue));
   
         }}
@@ -172,6 +160,7 @@ if(userId == undefined || userId == null){
   };
 
 
+  
 
   return (
     <View style={styles.container}>
