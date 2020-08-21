@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
         marginTop: 4
     },
     input: {
-        fontFamily: "Black",
         color: "#121212",
         width: 315,
         height: 30,

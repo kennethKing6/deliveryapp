@@ -316,7 +316,6 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   loremIpsum: {
-    fontFamily: "roboto-regular",
     color: "rgba(255,246,246,1)",
     height: 31,
     width: "70%",

@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     
     input: {
         flex:0.95,
-        fontFamily: "Regular",
         color: "#121212",
         fontSize: 20,
         

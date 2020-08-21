@@ -314,7 +314,6 @@ export const AppNavigator = () => {
                     tabBarIcon: ({ focused }) => (
                         <Text
                             style={{
-                                fontFamily: "apple-bold",
                                 fontSize: focused ? 20 : 15,
                                 color: focused ? "red" : "blue",
                             }}
