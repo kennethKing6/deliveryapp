@@ -142,12 +142,14 @@ if(userId == undefined || userId == null){
           alert('An error occurred: ',   response.error);
           reject("Error occured with camera " + response.error);
         } else {
-  
-          var imagePath =  Platform.OS=== "android" ?response.path: response.uri;
-            
+            const imageName = getImageName(response);
+            console.log(imageName)
+
+            var imagePath =  Platform.OS=== "android" ?response.path: response.uri;
+         
            resolve(firebaseStorage.ref(userId)
            .child("My products")
-           .child(imagePath)
+           .child(imageName)
            .putFile(imagePath));
   
         }}
@@ -160,7 +162,22 @@ if(userId == undefined || userId == null){
   };
 
 
-  
+  function getImageName(response){
+    var imageName = null;
+    if(Platform.OS === "android"){
+      imageName = response.fileName;
+
+
+    }else{
+      var tempPath = response.uri;
+      var image = tempPath.split("/");
+      imageName = image[image.length - 1];
+
+
+    }
+    console.log("the value " + imageName)
+    return imageName;
+  }
 
   return (
     <View style={styles.container}>
