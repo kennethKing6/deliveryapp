@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "257715845585",
+    "firebase_url": "https://deliveryapp-bd7d8.firebaseio.com",
+    "project_id": "deliveryapp-bd7d8",
+    "storage_bucket": "deliveryapp-bd7d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257715845585:android:01bf12b9e5ca08eb9f48f0",
+        "android_client_info": {
+          "package_name": "com.deliveryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257715845585-6lrtt48idc42j3fe0knq59ttjl5c7b50.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVObze8pBBjZEVdBDgHysPKcih0P9mmLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257715845585-6lrtt48idc42j3fe0knq59ttjl5c7b50.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257715845585-5srvsgqh31ccjnlot1d917hhir16mdc7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Dispatch.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

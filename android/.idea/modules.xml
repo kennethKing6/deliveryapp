@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="deliveryapp/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/deliveryapp.iml" filepath="$PROJECT_DIR$/.idea/modules/deliveryapp.iml" group="deliveryapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/211629873/react-native-camera.iml" filepath="$PROJECT_DIR$/.idea/modules/211629873/react-native-camera.iml" group="deliveryapp/react-native-camera" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1204007043/react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-1204007043/react-native-community_masked-view.iml" group="deliveryapp/react-native-community_masked-view" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-261598756/react-native-fetch-blob.iml" filepath="$PROJECT_DIR$/.idea/modules/-261598756/react-native-fetch-blob.iml" group="deliveryapp/react-native-fetch-blob" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-418132798/react-native-firebase_analytics.iml" filepath="$PROJECT_DIR$/.idea/modules/-418132798/react-native-firebase_analytics.iml" group="deliveryapp/react-native-firebase_analytics" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/922678621/react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/922678621/react-native-firebase_app.iml" group="deliveryapp/react-native-firebase_app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2086308780/react-native-firebase_auth.iml" filepath="$PROJECT_DIR$/.idea/modules/2086308780/react-native-firebase_auth.iml" group="deliveryapp/react-native-firebase_auth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1608534655/react-native-firebase_database.iml" filepath="$PROJECT_DIR$/.idea/modules/1608534655/react-native-firebase_database.iml" group="deliveryapp/react-native-firebase_database" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-772475465/react-native-firebase_storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-772475465/react-native-firebase_storage.iml" group="deliveryapp/react-native-firebase_storage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-264947718/react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-264947718/react-native-gesture-handler.iml" group="deliveryapp/react-native-gesture-handler" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/985847116/react-native-image-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/985847116/react-native-image-picker.iml" group="deliveryapp/react-native-image-picker" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/139884791/react-native-mapbox-gl_maps.iml" filepath="$PROJECT_DIR$/.idea/modules/139884791/react-native-mapbox-gl_maps.iml" group="deliveryapp/react-native-mapbox-gl_maps" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/470243768/react-native-permissions.iml" filepath="$PROJECT_DIR$/.idea/modules/470243768/react-native-permissions.iml" group="deliveryapp/react-native-permissions" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-560317981/react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-560317981/react-native-safe-area-context.iml" group="deliveryapp/react-native-safe-area-context" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-503903813/react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-503903813/react-native-screens.iml" group="deliveryapp/react-native-screens" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1109369504/react-native-shared-element.iml" filepath="$PROJECT_DIR$/.idea/modules/1109369504/react-native-shared-element.iml" group="deliveryapp/react-native-shared-element" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1683852772/react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-1683852772/react-native-vector-icons.iml" group="deliveryapp/react-native-vector-icons" />
+    </modules>
+  </component>
+</project>
