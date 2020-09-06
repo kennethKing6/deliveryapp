@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState,useEffect } from "react";
 import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image,ScrollView } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/Feather";
 import auth from '@react-native-firebase/auth';
@@ -10,56 +10,54 @@ import { WebView } from 'react-native-webview';
 
 
 
+
+
+
+
 const {width} = Dimensions.get("window");
 
 
 
- 
-
- function Profile(props) {
+const Product = ()=>{
     const [imageUrls,setImageUrls] = React.useState(new Array());
+    const [newData,setnewData] = React.useState(false);
+
+
+    const userId = firebase.auth().currentUser.uid;
+        var ref = firebase.database().ref("" + userId).child("Product Info/");        
+
+    
 
     React.useEffect(() => {
-        let isSubscribed = (imageUrls.length === 0);
+        let isSubscribed = (imageUrls.length === 0 && newData === false);
 
-        
+        if(isSubscribed){
+            getDatasnapshot();
+        }
 
         ShowImage().then( urls => {
-
-            if (isSubscribed ) {
+        
               setImageUrls(urls.reverse());
   
-            }
-          })
+            
+          }).catch((err)=>{
+            console.log(err)
+            throw err;
+        })
+            
           return () => isSubscribed = (imageUrls.length === 0)
         
-      }, []);
+      }, [newData]);
     
 
      function getDatasnapshot(){
-         const NO_DATA = 0;
-        const userId = firebase.auth().currentUser.uid;
-        var ref = firebase.database().ref("" + userId).child("Product Info/");        
-    
-            return new Promise((resolve,reject)=>{
-                ref.on("value",(dataSnapshot)=>{
-                    if(imageUrls.length > 0){
-                        ShowImage().then( urls => {
+        ref.on("value",(dataSnapshot)=>{
 
-                            if (isSubscribed ) {
-                              setImageUrls(urls.reverse());
-                  
-                            }
-                          })
-                    }
-                     if(dataSnapshot !== null)
-                        resolve(dataSnapshot);
-                     else
-                        reject(NO_DATA)
-                });
-            })
-        
-     
+            if(dataSnapshot !== null)
+                setnewData(dataSnapshot)                         
+            else
+               setnewData(false)  
+       });
        
     }
 
@@ -87,11 +85,35 @@ function getDownloadUrls(datasaphot){
        
    });
 }
-async function ShowImage(){
-    const datasaphot = await getDatasnapshot();
-    const urls = await getDownloadUrls(datasaphot);
+async function ShowImage(){    
+    const urls = await getDownloadUrls(newData);
     return urls;
 }
+        return (<View style = {styles.Listed}>
+        {imageUrls.map((url,index)=>{
+        return(
+        
+        <View key={index} style={[{width:(width/3)},{height:(width/3)}]} 
+        >
+        <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
+        source={{uri:url}}
+        onError={(err)=>{
+        
+
+        }}
+
+        scrollEnabled={false}
+        />
+        </View>
+
+        )
+        }
+        )}
+        </View>)
+} 
+
+ function Profile(props) {
+
 
 // ShowImage().then(()=>{}).catch((err)=>{
 // throw err;
@@ -178,27 +200,7 @@ async function ShowImage(){
                     
 
                            <ScrollView >    
-                              <View style = {styles.Listed}>
-                              {imageUrls.map((url,index)=>{
-                            return(
-                                
-                                <View key={index} style={[{width:(width/3)},{height:(width/3)}]} 
-                                >
-                            <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
-                            source={{uri:url}}
-                            onError={(err)=>{
-                               
-
-                            }}
-                            
-                            scrollEnabled={false}
-                            />
-                            </View>
-
-                            )
-                            }
-                            )}
-                              </View>
+                             <Product/>
                         </ScrollView>
 
                                
@@ -208,7 +210,6 @@ async function ShowImage(){
 
 
                     
-
 
 
                     </View>
