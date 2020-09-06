@@ -133,7 +133,7 @@ if(userId == undefined || userId == null){
   
       ImagePicker.showImagePicker({
         noData: true,
-        quality:0.5,
+        quality:0.3,
       }, response => {
         
         if (response.didCancel) {

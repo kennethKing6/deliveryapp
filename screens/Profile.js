@@ -18,7 +18,7 @@ const {width} = Dimensions.get("window");
 
 
 
-const Product = ()=>{
+const Product = (props)=>{
     const [imageUrls,setImageUrls] = React.useState(new Array());
     const [newData,setnewData] = React.useState(false);
 
@@ -89,27 +89,45 @@ async function ShowImage(){
     const urls = await getDownloadUrls(newData);
     return urls;
 }
-        return (<View style = {styles.Listed}>
-        {imageUrls.map((url,index)=>{
-        return(
-        
-        <View key={index} style={[{width:(width/3)},{height:(width/3)}]} 
-        >
-        <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
-        source={{uri:url}}
-        onError={(err)=>{
-        
+   
 
-        }}
+function layoutIdentifier(){
 
-        scrollEnabled={false}
-        />
-        </View>
+    if(imageUrls.length === 0){
+        return (<View style={{flex:props.flex,justifyContent: 'center',  alignItems: 'center'}}>
+                <Text style={{fontSize:20,color:"#f03434", fontWeight: 'bold',}}>Hurry up! Upload your products to sell</Text>
 
-        )
-        }
-        )}
         </View>)
+     }else{
+        return(
+            <ScrollView style={{flex:5}}>    
+
+                <View style = {styles.Listed}>
+                    {imageUrls.map((url,index)=>{
+                        return(
+            
+                            <View key={index} style={[{width:(width/3)},{height:(width/3)}]}>
+                                    <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
+                                    source={{uri:url}}
+                                    onError={(err)=>{
+                                        //Error loading the image
+                                    console.log(err)
+                                    }}/>
+                            </View>
+                    )})}
+                </View>
+            </ScrollView>
+        )
+     }
+}
+
+
+        return (
+            
+                    layoutIdentifier()
+                    
+        )
+    
 } 
 
  function Profile(props) {
@@ -161,7 +179,7 @@ async function ShowImage(){
          </SafeAreaView>
 
             
-                        <View style={styles.rect}>
+        <View style={[styles.rect]}>
                                     <View style={styles.profile}>
 
                                         
@@ -199,9 +217,8 @@ async function ShowImage(){
                                 </View>
                     
 
-                           <ScrollView >    
-                             <Product/>
-                        </ScrollView>
+            <Product flex={0}/>
+        
 
                                
                                 
@@ -219,7 +236,8 @@ async function ShowImage(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "white"
+        backgroundColor: "white",
+        flexDirection:"column"
     },
    
     TopNav: {
