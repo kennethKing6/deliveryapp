@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
-import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image } from "react-native";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
-import { ScrollView } from "react-native-gesture-handler";
+import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image,ScrollView } from "react-native";
+import MaterialCommunityIconsIcon from "react-native-vector-icons/Feather";
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
 import analytics from '@react-native-firebase/analytics';
@@ -19,38 +18,45 @@ const {width} = Dimensions.get("window");
 
  function Profile(props) {
     const [imageUrls,setImageUrls] = React.useState(new Array());
+
     React.useEffect(() => {
-        let isSubscribed = (imageUrls.length === 0)
+        let isSubscribed = (imageUrls.length === 0);
+
+        
+
         ShowImage().then( urls => {
 
-          if (isSubscribed ) {
-            setImageUrls(urls.reverse());
-
-          }
-        })
-        return () => isSubscribed = (imageUrls.length === 0)
-      }, []);
-    async function ShowImage(){
-        const datasaphot = await getDatasnapshot();
-        const urls = await getDownloadUrls(datasaphot);
-        return urls;
-    }
-     function getDatasnapshot(){
-        const userId = firebase.auth().currentUser.uid;
-        var ref = firebase.database().ref("" + userId).child("Product Info/");
-        var urls = new Array();
-        var num = 1;
+            if (isSubscribed ) {
+              setImageUrls(urls.reverse());
+  
+            }
+          })
+          return () => isSubscribed = (imageUrls.length === 0)
         
+      }, []);
+    
+
+     function getDatasnapshot(){
+         const NO_DATA = 0;
+        const userId = firebase.auth().currentUser.uid;
+        var ref = firebase.database().ref("" + userId).child("Product Info/");        
     
             return new Promise((resolve,reject)=>{
-                ref.once("value",()=>{}).then((data)=>{
-    
-                    resolve(data);
-                }).catch((err)=>{
-                    console.log(err)
-                    reject(err)
-                    throw err;
-                })
+                ref.on("value",(dataSnapshot)=>{
+                    if(imageUrls.length > 0){
+                        ShowImage().then( urls => {
+
+                            if (isSubscribed ) {
+                              setImageUrls(urls.reverse());
+                  
+                            }
+                          })
+                    }
+                     if(dataSnapshot !== null)
+                        resolve(dataSnapshot);
+                     else
+                        reject(NO_DATA)
+                });
             })
         
      
@@ -60,8 +66,6 @@ const {width} = Dimensions.get("window");
 function getDownloadUrls(datasaphot){
     var urls = new Array();
     var num = 1;
-
-
    return new Promise((resolve,reject)=>{
     datasaphot.forEach(product => {
         firebase.storage().ref(product.val().fullPath).getDownloadURL().then((url)=>{
@@ -83,12 +87,16 @@ function getDownloadUrls(datasaphot){
        
    });
 }
+async function ShowImage(){
+    const datasaphot = await getDatasnapshot();
+    const urls = await getDownloadUrls(datasaphot);
+    return urls;
+}
 
-ShowImage().then(()=>{}).catch((err)=>{
-throw err;
-})
+// ShowImage().then(()=>{}).catch((err)=>{
+// throw err;
+// })
 
-console.log("\n\nWe are starting again")
     return (
         
 
@@ -168,29 +176,30 @@ console.log("\n\nWe are starting again")
                                     </View>
                                 </View>
                     
-                                <View style = {styles.Listed}>
+
+                           <ScrollView >    
+                              <View style = {styles.Listed}>
+                              {imageUrls.map((url,index)=>{
+                            return(
+                                
+                                <View key={index} style={[{width:(width/3)},{height:(width/3)}]} 
+                                >
+                            <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
+                            source={{uri:url}}
+                            onError={(err)=>{
                                
-                                {imageUrls.map((url,index)=>{
-                                    console.log(url);
-  return(
-      
-    <View key={index} style={[{width:(width/3)},{height:(width/3)}]}>
-  <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
-  source={{uri:url}}
-  onError={(err)=>{
-    console.log("\n\n");
-     console.log("\n\n");
 
-  }}
-  
-  scrollEnabled={false}
-  />
-  </View>
+                            }}
+                            
+                            scrollEnabled={false}
+                            />
+                            </View>
 
-  )
-}
-)}
-                                </View>
+                            )
+                            }
+                            )}
+                              </View>
+                        </ScrollView>
 
                                
                                 
