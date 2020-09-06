@@ -26,6 +26,8 @@ target 'deliveryapp' do
   pod 'Permission-StoreKit', :path => "#{permissions_path}/StoreKit.podspec"
 
   use_react_native!(:path => config["reactNativePath"])
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   target 'deliveryappTests' do
     inherit! :complete
     # Pods for testing

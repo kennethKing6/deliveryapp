@@ -165,5 +165,6 @@
     <orderEntry type="module" module-name="react-native-screens" />
     <orderEntry type="module" module-name="react-native-shared-element" />
     <orderEntry type="module" module-name="react-native-vector-icons" />
+    <orderEntry type="module" module-name="react-native-webview" />
   </component>
 </module>

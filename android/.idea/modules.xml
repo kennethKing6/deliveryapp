@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-503903813/react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-503903813/react-native-screens.iml" group="deliveryapp/react-native-screens" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1109369504/react-native-shared-element.iml" filepath="$PROJECT_DIR$/.idea/modules/1109369504/react-native-shared-element.iml" group="deliveryapp/react-native-shared-element" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1683852772/react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-1683852772/react-native-vector-icons.iml" group="deliveryapp/react-native-vector-icons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1244961235/react-native-webview.iml" filepath="$PROJECT_DIR$/.idea/modules/-1244961235/react-native-webview.iml" group="deliveryapp/react-native-webview" />
     </modules>
   </component>
 </project>

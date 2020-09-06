@@ -47,7 +47,7 @@ function UploadProductScreen(props) {
 
   const [imageURI, setImageURI] = useState(null);
 
-//If it is null the user is not signed in. What do we do?
+//Get user Id
 const userId = firebase.auth().currentUser.uid;
 
 if(userId == undefined || userId == null){
@@ -132,7 +132,8 @@ if(userId == undefined || userId == null){
     const result = new Promise((resolve,reject)=>{
   
       ImagePicker.showImagePicker({
-        noData: true
+        noData: true,
+        quality:0.5,
       }, response => {
         
         if (response.didCancel) {

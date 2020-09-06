@@ -24,6 +24,7 @@ MERGED from [:react-native-safe-area-context] C:\Users\kenzo 3.0\Documents\React
 MERGED from [:react-native-screens] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-shared-element] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-shared-element\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\11614b2684fb4d78f88e143023bdb642\jetified-react-native-0.63.2\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6c482c77967dafe9a67eb2c2bac77e24\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\875d74e1b7c2a5e628332c6e662eaddc\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -267,6 +268,8 @@ MERGED from C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\delive
 MERGED from C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\android\app\src\main\AndroidManifest.xml:29:5-50:19
 MERGED from [:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\11614b2684fb4d78f88e143023bdb642\jetified-react-native-0.63.2\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\11614b2684fb4d78f88e143023bdb642\jetified-react-native-0.63.2\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0513ce940e40512928699ffa586bbe30\soloader-0.8.2\AndroidManifest.xml:11:5-20
@@ -430,6 +433,8 @@ MERGED from [:react-native-shared-element] C:\Users\kenzo 3.0\Documents\React Na
 MERGED from [:react-native-shared-element] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-shared-element\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\11614b2684fb4d78f88e143023bdb642\jetified-react-native-0.63.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.2] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\11614b2684fb4d78f88e143023bdb642\jetified-react-native-0.63.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6c482c77967dafe9a67eb2c2bac77e24\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
@@ -722,6 +727,16 @@ ADDED from [:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Nativ
 		ADDED from [:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
 	android:name
 		ADDED from [:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
 uses-feature#0x00020000
 ADDED from [com.mapbox.mapboxsdk:mapbox-android-sdk:9.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\692e24b99f4f1c1a7204f930501499cb\jetified-mapbox-android-sdk-9.1.0\AndroidManifest.xml:9:5-11:35
 	android:glEsVersion

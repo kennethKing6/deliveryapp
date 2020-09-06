@@ -1,10 +1,97 @@
-import React, { Component } from "react";
-import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView } from "react-native";
+import React, { Component, useState } from "react";
+import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import { ScrollView } from "react-native-gesture-handler";
+import auth from '@react-native-firebase/auth';
+import firebase from "@react-native-firebase/app";
+import analytics from '@react-native-firebase/analytics';
+import storage from '@react-native-firebase/storage';
+import { WebView } from 'react-native-webview';
 
-function Profile(props) {
+
+
+
+const {width} = Dimensions.get("window");
+
+
+
+ 
+
+ function Profile(props) {
+    const [imageUrls,setImageUrls] = React.useState(new Array());
+    React.useEffect(() => {
+        let isSubscribed = (imageUrls.length === 0)
+        ShowImage().then( urls => {
+
+          if (isSubscribed ) {
+            setImageUrls(urls.reverse());
+
+          }
+        })
+        return () => isSubscribed = (imageUrls.length === 0)
+      }, []);
+    async function ShowImage(){
+        const datasaphot = await getDatasnapshot();
+        const urls = await getDownloadUrls(datasaphot);
+        return urls;
+    }
+     function getDatasnapshot(){
+        const userId = firebase.auth().currentUser.uid;
+        var ref = firebase.database().ref("" + userId).child("Product Info/");
+        var urls = new Array();
+        var num = 1;
+        
+    
+            return new Promise((resolve,reject)=>{
+                ref.once("value",()=>{}).then((data)=>{
+    
+                    resolve(data);
+                }).catch((err)=>{
+                    console.log(err)
+                    reject(err)
+                    throw err;
+                })
+            })
+        
+     
+       
+    }
+
+function getDownloadUrls(datasaphot){
+    var urls = new Array();
+    var num = 1;
+
+
+   return new Promise((resolve,reject)=>{
+    datasaphot.forEach(product => {
+        firebase.storage().ref(product.val().fullPath).getDownloadURL().then((url)=>{
+           urls.push(url);
+        }).catch((err)=>{
+            console.log(err)
+            reject(err)
+            throw err;
+        }).finally(()=>{
+            if(datasaphot.numChildren() === num){
+               resolve(urls);
+            }else{
+                ++num;
+            }
+
+        })
+   })
+        
+       
+   });
+}
+
+ShowImage().then(()=>{}).catch((err)=>{
+throw err;
+})
+
+console.log("\n\nWe are starting again")
     return (
+        
+
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />
                 
@@ -82,9 +169,33 @@ function Profile(props) {
                                 </View>
                     
                                 <View style = {styles.Listed}>
-                                <Text style = {styles.Listing} >You haven't listed anything for sale yet. Please add listing to get started</Text>
+                               
+                                {imageUrls.map((url,index)=>{
+                                    console.log(url);
+  return(
+      
+    <View key={index} style={[{width:(width/3)},{height:(width/3)}]}>
+  <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
+  source={{uri:url}}
+  onError={(err)=>{
+    console.log("\n\n");
+     console.log("\n\n");
 
+  }}
+  
+  scrollEnabled={false}
+  />
+  </View>
+
+  )
+}
+)}
                                 </View>
+
+                               
+                                
+
+                               
 
 
                     
@@ -203,13 +314,16 @@ const styles = StyleSheet.create({
     
     Listed: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection:'row',
+        flexWrap:"wrap",
+        width:"100%",
     },
     Listing: {
-        textAlign: 'center',
-        fontSize: 20,
-        width: '80%',
+        
+        width: '100%',
+        height:"100%",
+        flexDirection:'row',
+        flexWrap:"wrap"
     }
    
     

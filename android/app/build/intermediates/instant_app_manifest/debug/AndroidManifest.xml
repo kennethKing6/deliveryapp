@@ -83,6 +83,15 @@
                 android:resource="@xml/provider_paths" />
         </provider>
         <provider
+            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+            android:authorities="com.deliveryapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+        <provider
             android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
             android:authorities="com.deliveryapp.mapboxtelemetryinitprovider"
             android:exported="false"
