@@ -116,7 +116,7 @@ function layoutIdentifier(){
                                         }}>
                                             <View style = {{margin: 5,flex:1,justifyContent:"flex-end"}}>
 
-                                                <Text style = {{color: 'black', fontWeight: "bold",padding:2,alignSelf:'flex-start',backgroundColor: 'white',borderRadius: 3,overflow: 'hidden'}}>$50</Text>
+                                                <Text style = {{color: 'black', fontWeight: "bold",padding:2,alignSelf:'flex-start',backgroundColor: 'white',borderRadius: 3,overflow: 'hidden'}}>$500</Text>
                                             </View>
 
                                             
