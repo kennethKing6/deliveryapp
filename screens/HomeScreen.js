@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import SearchBar from "../components/SearchBar";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture-handler";
 
 
 function HomeScreen (props) {
@@ -125,7 +125,7 @@ function HomeScreen (props) {
                                 <Text style = {{fontSize: 30, fontWeight: 'bold', color: '#f03434'}}>Listings Nearby</Text>
                             </View> 
 
-                            <TouchableWithoutFeedback
+                            <TouchableOpacity
                             onPress={() => props.navigation.navigate('AddListing',{product:'images'})}
                             >
                                 
@@ -145,7 +145,7 @@ function HomeScreen (props) {
 
                                         
                                     </View>
-                            </TouchableWithoutFeedback>
+                            </TouchableOpacity>
 
                             
                                 
