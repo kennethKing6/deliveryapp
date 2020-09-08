@@ -1,12 +1,11 @@
 import React, { Component, useState,useEffect } from "react";
 import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image,ScrollView } from "react-native";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/Feather";
+import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
 import analytics from '@react-native-firebase/analytics';
 import storage from '@react-native-firebase/storage';
 import { WebView } from 'react-native-webview';
-
 
 
 
@@ -100,23 +99,32 @@ function layoutIdentifier(){
         </View>)
      }else{
         return(
-            <ScrollView style={{flex:5}}>    
+              
 
                 <View style = {styles.Listed}>
                     {imageUrls.map((url,index)=>{
                         return(
-            
-                            <View key={index} style={[{width:(width/3)},{height:(width/3)}]}>
-                                    <Image style={{flex:1,width:undefined,height:undefined,resizeMode:"cover"}} 
-                                    source={{uri:url}}
-                                    onError={(err)=>{
-                                        //Error loading the image
-                                    console.log(err)
-                                    }}/>
-                            </View>
+                            
+                                <View key={index} style={[{width:(width/3)},{height:(width/3)},{padding:0.5}]}>
+                                
+                                        
+                                        <ImageBackground style={{flex:1,width:undefined,height:undefined,resizeMode:"cover",borderRadius:3,flex:1,overflow:'hidden'}} 
+                                        source={{uri:url}}
+                                        onError={(err)=>{
+                                            //Error loading the image
+                                        console.log(err)
+                                        }}>
+                                            <View style = {{margin: 5,flex:1,justifyContent:"flex-end"}}>
+
+                                                <Text style = {{color: 'black', fontWeight: "bold",padding:2,alignSelf:'flex-start',backgroundColor: 'white',borderRadius: 3,overflow: 'hidden'}}>$50</Text>
+                                            </View>
+
+                                            
+                                        </ImageBackground>
+                                </View>
+
                     )})}
                 </View>
-            </ScrollView>
         )
      }
 }
@@ -178,7 +186,9 @@ function layoutIdentifier(){
 
          </SafeAreaView>
 
-            
+          <ScrollView style = {{flex:2}}>
+
+        
         <View style={[styles.rect]}>
                                     <View style={styles.profile}>
 
@@ -217,7 +227,11 @@ function layoutIdentifier(){
                                 </View>
                     
 
+            <View style = {{marginTop:30, width: '100%',alignSelf: 'center'}}>
+
             <Product flex={0}/>
+            </View>
+          </ScrollView>  
         
 
                                
@@ -237,18 +251,18 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "white",
-        flexDirection:"column"
     },
    
     TopNav: {
-        backgroundColor: 'white',
+        backgroundColor: 'transparent',
         width: '95%',
         height: 'auto',
         flexDirection: 'row',
         paddingTop:10,
         paddingBottom: 10,
         alignSelf: "center",
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        overflow: "visible"
     },
     icon1: {
         color: "#f03434",
@@ -257,6 +271,7 @@ const styles = StyleSheet.create({
     },
     
     rect: {
+        marginTop:10,
         height: 'auto',
         width: '95%',
         alignSelf: "center",
