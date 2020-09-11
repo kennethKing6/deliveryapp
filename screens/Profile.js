@@ -6,6 +6,7 @@ import firebase from "@react-native-firebase/app";
 import analytics from '@react-native-firebase/analytics';
 import storage from '@react-native-firebase/storage';
 import { WebView } from 'react-native-webview';
+import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -20,16 +21,18 @@ const {width} = Dimensions.get("window");
 const Product = (props)=>{
     const [imageUrls,setImageUrls] = React.useState(new Array());
     const [newData,setnewData] = React.useState(false);
+    const [orientation,setOrientation] = React.useState(false);
 
 
     const userId = firebase.auth().currentUser.uid;
         var ref = firebase.database().ref("" + userId).child("Product Info/");        
 
-    
+     
 
     React.useEffect(() => {
         let isSubscribed = (imageUrls.length === 0 && newData === false);
 
+       
         if(isSubscribed){
             getDatasnapshot();
         }
@@ -37,6 +40,8 @@ const Product = (props)=>{
         ShowImage().then( urls => {
         
               setImageUrls(urls.reverse());
+            //   if(orientation == true)
+            //      setOrientation(false);
   
             
           }).catch((err)=>{
@@ -57,6 +62,15 @@ const Product = (props)=>{
             else
                setnewData(false)  
        });
+
+       // Event Listener for orientation changes
+    //  Dimensions.addEventListener('change', () => {
+    //     setTimeout(()=>setOrientation(true),5000)
+    //     ;
+    //    });
+        
+        
+    
        
     }
 
