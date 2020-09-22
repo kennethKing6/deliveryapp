@@ -159,6 +159,9 @@ function Register(props) {
                                         
                                     />
 
+                                <Text style = {{alignSelf:'center', color:'grey',fontSize:13,fontWeight:'400' ,width:'80%',textAlign:'center'}}>
+                                By tapping 'Sign Up'and using the Dispatch app, you're agreeing with our <Text style = {{color:"rgba(240,52,52,1)"}}>terms of service</Text> and <Text style = {{color:"rgba(240,52,52,1)"}}>privacy policy.</Text></Text>
+
                                 </View>
 
 

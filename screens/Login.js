@@ -4,7 +4,7 @@ import LoginButtons from "../components/LoginButtons";
 import CustomTextInput from '../components/CustomTextInput';
 import firebase from "@react-native-firebase/app";
 import auth from '@react-native-firebase/auth';
-
+import Modal from 'react-native-modal';
 
 
 function Login(props) {
@@ -12,7 +12,7 @@ function Login(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-
+    
     return (
 
         <View style={styles.container}>
@@ -22,6 +22,7 @@ function Login(props) {
 
             <View style={styles.pageView}>
 
+            
 
                 <View style={styles.header}>
 
@@ -59,7 +60,7 @@ function Login(props) {
                                 firebase.auth()
                                 .signInWithEmailAndPassword (email, password)
                                 .then(() => {
-                                    props.navigation.navigate('signedIn')
+                                    props.navigation.navigate('SelectCategories')
                                 
                                 })
                                 .catch(error => {

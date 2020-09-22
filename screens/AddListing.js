@@ -4,13 +4,15 @@ import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommun
 import Feather from "react-native-vector-icons/Feather";
 import MapboxGL from "@react-native-mapbox-gl/maps";
 
+import {SharedElement} from 'react-navigation-shared-element';
+
 MapboxGL.setAccessToken(
   'pk.eyJ1Ijoic2hhaGJla21pcnUiLCJhIjoiY2tjNnNyNGw0MDNndDMwbWZ3eGNwaHFqbCJ9.bJ2sqsCvcrOUmr_YeWFtJg',
 );
 
-function AddListing(props) {
+export default function AddListing({props, route, navigation: { goBack } }) {
 
-    
+    const { item } = route.params;
 
     return (
         <View style={styles.container}>
@@ -22,30 +24,47 @@ function AddListing(props) {
 
 
                     <ScrollView>
-                            <View style = {styles.AddPhotos}>
+                            <View style = {[styles.AddPhotos]}>
                             
+                            <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]}>
+                            <View style = {[StyleSheet.absoluteFillObject, {borderRadius:0}]}>
 
                                     <Image 
                                     resizeMode = "cover"
-                                    source = {require('../assets/images/car2.jpg')}
+                                    source = {item.src}
                                     style = {styles.inner}
 
                                     />
+                            </View>
+                                </SharedElement>
                                 
+                            
+                            <TouchableOpacity style={{ margin:10,marginTop:20,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white'}} onPress = {()=> goBack()}>
+                                
+                                <Feather style={{color: "black",fontSize:30}} name = 'x'/>
 
+                            </TouchableOpacity>
+                            
                             </View>
 
                             <View style = {{width:'90%',alignSelf:'center'}}>
                                 
                                 <View style = {{flex:1,flexDirection:'row',marginBottom:10}}>
+                                
                                     <View style = {{width:50,height:50,borderRadius:30,backgroundColor:'lightgrey',overflow:'hidden'}}>
+                                    
+                                    
+
                                     <ImageBackground
                                         resizeMode = "cover"
                                         source = {require('../assets/images/face1.jpg')}
                                         style = {styles.inner}
 
                                         />
+                                    
+
                                     </View>
+                                    
                                     <View style={{alignSelf:'center',marginLeft:5}}>
                                         <Text style = {{fontSize:18,fontWeight:'500'}}>shahbeklukas</Text>
                                         
@@ -56,9 +75,14 @@ function AddListing(props) {
                                     </View>
                                     
                                 </View>
+                                {/* <SharedElement id= {`item.${item.key}.title`}> */}
+                                <Text style = {styles.TextOverlay}>{item.name}</Text>
+                                {/* </SharedElement> */}
 
                             <View style={{marginBottom:10}}>
-                                <Text style = {{fontSize:30,fontWeight:'900'}}>BMW M3</Text>
+                                                           
+                                
+
                                 <Text style = {{fontSize:25, fontWeight:'600',color:'#2ecc71'}}>CA$12,500</Text>
                                
                                 <View style={{flexDirection:'row',flex:1,alignContent:'center'}}>
@@ -100,9 +124,8 @@ function AddListing(props) {
                                     zoomLevel={12}
                                     centerCoordinate={[-120.32,50.67]}
                                     />
-                                    <MapboxGL.PointAnnotation coordinate={[-120.32,50.67]}>
+                                    <MapboxGL.PointAnnotation coordinate={[-120.32,50.67]}/>
                                     
-                                    </MapboxGL.PointAnnotation>
                                 </MapboxGL.MapView>
                                 </View>
 
@@ -199,16 +222,17 @@ const styles = StyleSheet.create({
         backgroundColor: "white"
     },
 
-   
+    TextOverlay: {
+        fontSize: 40,
+        fontWeight: 'bold',
+        color: 'black',
+    },
     
     AddPhotos: {
         height: 300,
         width: '100%',
         marginBottom: 10,
-        backgroundColor: 'grey',
-        alignItems: "center",
-        justifyContent: "center",
-        alignSelf: 'center'
+        
     },
 
     
@@ -228,4 +252,16 @@ const styles = StyleSheet.create({
 
 });
 
-export default AddListing;
+AddListing.sharedElements = (route, otherRoute, showing) => {
+    const { item } = route.params;
+    return [
+        {
+            id: `item.${item.key}.photo`
+        },
+        {
+            id: `item.${item.key}.title`
+        },
+    
+    ];
+  };
+

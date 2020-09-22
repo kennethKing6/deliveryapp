@@ -168,7 +168,7 @@ function layoutIdentifier(){
                 <View style={{ justifyContent: 'center', marginTop: 5 }}>
 
                         <Text style={{
-                            color: "#f03434", fontSize:18 }}>urbanoutfitters</Text>
+                            color: "black", fontSize:18 }}>urbanwear</Text>
 
                 </View>
 
@@ -202,11 +202,11 @@ function layoutIdentifier(){
                                             ></ImageBackground>
                                         </View>
                                         <View style={styles.group}>
-                                            <Text style={styles.shahbekMiru}>Urban Outfitters</Text>
+                                            <Text style={styles.shahbekMiru}>Urban Wear <MaterialCommunityIconsIcon name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
                                             <Text style={styles.kamloopsCanada}>Kamloops, Canada</Text>
                                         </View>
                                         <View style={styles.group2}>
-                                            <Text style={styles.kamloopsCanada}>Urban Outfitters is the leading online destination for men's contemporary fashion and streetwear. Shop at our store and also enjoy the best in daily editorial content. </Text>
+                                            <Text style={styles.kamloopsCanada}>Urban Wear is the leading online destination for men's contemporary fashion and streetwear. Shop at our store and also enjoy the best in daily editorial content. </Text>
                                         </View>
                                         
                                         <View style={styles.banner}>
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
         overflow: "visible"
     },
     icon1: {
-        color: "#f03434",
+        color: "#2ecc71",
         fontSize: 30,
         
     },
@@ -326,10 +326,12 @@ const styles = StyleSheet.create({
     },
     shahbekMiru: {
         color: "black",
+        fontWeight:'600',
         fontSize: 20
     },
     kamloopsCanada: {
         color: "black",
+        fontWeight:'400'
     },
     banner: {
         marginTop: 20,
@@ -348,11 +350,13 @@ const styles = StyleSheet.create({
     },
     loremIpsum: {
         color: "black",
+        fontWeight:'500',
         fontSize: 25
     },
     rating: {
-        color: "#f03434",
-        fontSize: 15
+        color: "#2ecc71",
+        fontSize: 15,
+        fontWeight:'900'
     },
     
     Listed: {

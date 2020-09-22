@@ -23,6 +23,12 @@ import AccountSettings from "./AccountSettings";
 import PersonalInformation from './PersonalInformation';
 import AddListing from './AddListing';
 import UploadProductScreen from './UploadProductScreen';
+import SelectCategories from './SelectCategories';
+import Introduction from './Introduction';
+import PaymentCard from './PaymentCard';
+
+
+
 
 
 import SignIn from "./Login";
@@ -33,12 +39,17 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+import {enableScreens} from 'react-native-screens';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
+import {NavigationContainer} from '@react-navigation/native';
 
+enableScreens();
 
-const Stack = createStackNavigator ();
+const Stack = createSharedElementStackNavigator ();
 
 export const SignedOut = () => {
     return(
+        
         <Stack.Navigator
         initialRouteName = "Welcome"
         >
@@ -168,7 +179,7 @@ const defaultStackNavigationOptions = {
     headerBackTitle: '',
 };
 
-const HomeScreenStackNavigator = createStackNavigator();
+const HomeScreenStackNavigator = createSharedElementStackNavigator();
 
 const HomeScreenNavigator = () => {
     return (
@@ -186,7 +197,7 @@ const HomeScreenNavigator = () => {
     );
 };
 
-const MapScreenStackNavigator = createStackNavigator();
+const MapScreenStackNavigator = createSharedElementStackNavigator();
 
 const MapScreenNavigator = () => {
     return (
@@ -203,7 +214,7 @@ const MapScreenNavigator = () => {
     );
 };
 
-const UploadScreenStackNavigator = createStackNavigator();
+const UploadScreenStackNavigator = createSharedElementStackNavigator();
 
 const UploadScreenNavigator = () => {
     
@@ -228,7 +239,7 @@ const UploadScreenNavigator = () => {
 
 
 
-const ProfileScreenStackNavigator = createStackNavigator();
+const ProfileScreenStackNavigator = createSharedElementStackNavigator();
 
 const ProfileScreenNavigator = () => {
     return (
@@ -247,7 +258,7 @@ const ProfileScreenNavigator = () => {
 };
 
 
-const ListItemsScreenStackNavigator = createStackNavigator();
+const ListItemsScreenStackNavigator = createSharedElementStackNavigator();
 
 const ListItemsScreenNavigator = () => {
     return (
@@ -370,11 +381,12 @@ export const AppNavigator = () => {
     );
 };
 
-const Switch = createStackNavigator();
+const Switch = createSharedElementStackNavigator();
 
 export const MainNavigator = () => {
     return(
 
+        
         <Switch.Navigator>
 
             <Switch.Screen 
@@ -382,7 +394,21 @@ export const MainNavigator = () => {
             component = {SignedOut}
             options = {{headerShown:false}}
             />
-            
+            <Switch.Screen
+                name="SelectCategories"
+                component={SelectCategories}
+                options={{ headerShown: false }}
+            />
+            <Switch.Screen
+                name="Introduction"
+                component={Introduction}
+                options={{ headerShown: false }}
+            />
+            <Switch.Screen
+                name="PaymentCard"
+                component={PaymentCard}
+                options={{ headerShown: false }}
+            />
             <Switch.Screen 
             name = "signedIn" 
             component = {AppNavigator}
@@ -413,8 +439,10 @@ export const MainNavigator = () => {
                 component={UploadProductScreen}
                 options={{ headerShown: false }}
             />
-        </Switch.Navigator>
+            
 
+        </Switch.Navigator>
+        
     )
 
 }
