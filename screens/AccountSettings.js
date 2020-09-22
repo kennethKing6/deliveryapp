@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity, SafeAreaView, ScrollView } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import Feather from "react-native-vector-icons/Feather";
+import Ion from "react-native-vector-icons/Ionicons";
+
+
 import LoginButtons from "../components/LoginButtons";
 
 function AccountSettings(props) {
@@ -16,10 +20,10 @@ function AccountSettings(props) {
                     <TouchableOpacity style={{ justifyContent: "center"}}
                         onPress={() => props.navigation.navigate('ProfileScreen')}>
 
-                        <MaterialCommunityIconsIcon
+                        <Feather
                             name="arrow-left"
                             style={styles.icon1}
-                        ></MaterialCommunityIconsIcon>
+                        />
 
                     </TouchableOpacity>
 
@@ -48,56 +52,147 @@ function AccountSettings(props) {
             <ScrollView>
 
 
-                <Text style={styles.heyShahbek}>Hey Shahbek!</Text>
+                <Text style={styles.heyShahbek}>Urban wear</Text>
                 
                 <View style={styles.settingsOptions}>
-                    <Text style={styles.accSett}>Account Settings</Text>
+                    
                     
                     <View style={styles.settingOpts}>
                         <TouchableOpacity 
-                        style={styles.personal}
+                        style = {styles.settings}
                         onPress={() => props.navigation.navigate('PersonalInformation')}
                         >
-                            <Text style={styles.personalInformation}>Personal information</Text>
-                            <MaterialCommunityIconsIcon
-                                name="account-outline"
+                        <View style = {styles.personal}>
+                            <Feather
+                                name="mail"
                                 style={styles.icon1}
-                            ></MaterialCommunityIconsIcon>
+                            />
+                            <Text style={styles.personalInformation}>Account</Text>
+
+                        </View>
+                        <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.personal}>
-                            <Text style={styles.personalInformation}>Profile settings</Text>
-                            <MaterialCommunityIconsIcon
-                                name="store"
+
+                        <TouchableOpacity style={styles.settings}>
+                            <View style = {styles.personal}>
+                            
+                                <Feather
+                                    name="save"
+                                    style={styles.icon1}
+                                />
+                                <Text style={styles.personalInformation}>Saved </Text>
+
+                            </View>
+                            <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity 
+                        onPress={() => props.navigation.navigate('PaymentCard')}
+                        style={styles.settings}>
+                        <View style = {styles.personal}>
+                            <Ion
+                                name="card-outline"
                                 style={styles.icon1}
-                            ></MaterialCommunityIconsIcon>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.personal}>
+                            />
                             <Text style={styles.personalInformation}>Payments</Text>
-                            <MaterialCommunityIconsIcon
-                                name="cash-usd"
-                                style={styles.icon1}
-                            ></MaterialCommunityIconsIcon>
+                            
+                        </View>
+                        <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+
                         </TouchableOpacity>
+
                         <TouchableOpacity 
-                        style={styles.personal}
-                        onPress={() => props.navigation.navigate('AddListing')}
+                        style={styles.settings}
                         >
-                            <Text style={styles.personalInformation}>Add new listings</Text>
-                            <MaterialCommunityIconsIcon
-                                name="cash-usd"
+                        <View style = {styles.personal}>
+
+                            <Feather
+                                name="settings"
                                 style={styles.icon1}
-                            ></MaterialCommunityIconsIcon>
+                            />
+                            <Text style={styles.personalInformation}>Settings</Text>
+
+                        </View>
+                        <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
                         </TouchableOpacity>
+
                         <TouchableOpacity 
-                        style={styles.personal}
+                        style={styles.settings}
                         onPress={() => props.navigation.navigate('UploadProductScreen')}
                         >
-                            <Text style={styles.personalInformation}>Add products</Text>
-                            <MaterialCommunityIconsIcon
-                                name="cash-usd"
+                         <View style = {styles.personal}>
+                            <Feather
+                                name="plus-circle"
                                 style={styles.icon1}
-                            ></MaterialCommunityIconsIcon>
+                            />
+                            <Text style={styles.personalInformation}>Add </Text>
+                            </View>
+                        
+                            <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+                        
                         </TouchableOpacity>
+                        
+                        <View style = {{borderColor:'lightgrey',width:'100%',height:1,borderWidth:0.5,borderRadius:2,marginBottom:10}}/>
+
+                        <TouchableOpacity style={styles.settings}>
+                            <View style = {styles.personal}>
+                            
+                                <Ion
+                                    name="mail-unread-outline"
+                                    style={styles.icon1}
+                                />
+                                <Text style={styles.personalInformation}>Help and support </Text>
+
+                            </View>
+                            <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.settings}>
+                        <View style = {styles.personal}>
+                            <Feather
+                                name="users"
+                                style={styles.icon1}
+                            />
+                            <Text style={styles.personalInformation}>FAQ</Text>
+                            
+                        </View>
+                        <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+
+                        </TouchableOpacity>
+
+                        <TouchableOpacity 
+                        style={styles.settings}
+                        >
+                        <View style = {styles.personal}>
+
+                            <Feather
+                                name="info"
+                                style={styles.icon1}
+                            />
+                            <Text style={styles.personalInformation}>About</Text>
+
+                        </View>
+                        <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+                        </TouchableOpacity>
+
+                        <View style = {{borderColor:'lightgrey',width:'100%',height:1,borderWidth:0.5,borderRadius:2,marginBottom:10}}/>
+
+                        <TouchableOpacity 
+                        style={styles.settings}
+                        >
+                        <View style = {styles.personal}>
+
+                            <Feather
+                                name="thumbs-up"
+                                style={styles.icon1}
+                            />
+                            <Text style={styles.personalInformation}>Rate us</Text>
+
+                        </View>
+                        <Feather name = 'chevron-right' style = {[styles.icon1,{color:'grey'}]} />
+                        </TouchableOpacity>
+
                     </View>
                 </View>
                 
@@ -135,8 +230,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     icon1: {
-        color: "#f03434",
-        fontSize: 30,
+        color: "#2ecc71",
+        fontSize: 25,
 
     },
 
@@ -145,6 +240,7 @@ const styles = StyleSheet.create({
         width: '90%',
         alignSelf: "center",
         fontSize: 30,
+        fontWeight:'900',
         marginTop: 15,
     },
     settingsOptions: {
@@ -152,8 +248,15 @@ const styles = StyleSheet.create({
         height: "auto",
         alignItems: 'center',
         justifyContent: "space-between",
-        marginTop: 24,
+        marginTop: 10,
         marginBottom: 25
+    },
+    settings: {
+        flexDirection:'row', 
+        justifyContent:'space-between', 
+        alignItems:'center',
+        marginBottom:10
+
     },
     accSett: {
         width: '90%',
@@ -171,13 +274,14 @@ const styles = StyleSheet.create({
     
         height: 35,
         flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center"
+        justifyContent: 'flex-start',
+        alignItems: "center",
     },
     personalInformation: {
         
         color: "#121212",
-        fontSize: 19
+        fontSize: 17,
+        marginLeft:10
     },
    
 

@@ -8,17 +8,20 @@ import {
     FlatList,
     SafeAreaView,
     Image,
+    Animated,
     ImageBackground
 
 } from "react-native";
 import SearchBar from "../components/SearchBar";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture-handler";
+import Profiles from './images';
+import {SharedElement} from 'react-navigation-shared-element';
 
 
-function HomeScreen (props) {
+export default function HomeScreen (props, {navigation}) {
 
- 
+    const scrollX = React.useRef(new Animated.Value(0)).current;
 
     return (
         
@@ -117,42 +120,105 @@ function HomeScreen (props) {
                                 </ScrollView>
                             </View>
                         </View>
+
                         
                         
+
                         <View style={styles.content}>
+
+                        
                             
-                            <View style = {{width: '90%', marginTop: 10, height : 'auto', alignSelf: 'center'}}>
-                                <Text style = {{fontSize: 30, fontWeight: 'bold', color: '#f03434'}}>Listings Nearby</Text>
+                            <View style = {{width: '95%', marginTop: 10, height : 'auto', alignSelf: 'center'}}>
+                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>Popular items</Text>
                             </View> 
 
-                            <TouchableOpacity
-                            onPress={() => props.navigation.navigate('AddListing',{product:'images'})}
-                            >
-                                
-                                    <View style={styles.listing}>
+                            
 
-                                    <ImageBackground
-                                        source={require("../assets/images/car2.jpg")}
-                                        resizeMode="cover"
-                                        style={styles.listingImage1}
+                                    <View>
+
+                                        <Animated.FlatList
+                                        onScroll = {Animated.event(
+                                            [{nativeEvent: {contentOffset: {x: scrollX}}}],
+                                            { useNativeDriver: true}
+                                        )}
+                                        showsHorizontalScrollIndicator={false}
+                                        snapToInterval = {220}
+                                        decelerationRate = {'fast'}
+                                        data={Profiles}
+                                        horizontal = {true}
+                                        keyExtractor={(item, index) => item.id}
+                                        renderItem={({item, index}) => {
+                                            
+                                            const inputRange = [(index - 1) * 220, index * 220, (index+1)*220];
+                                            const translateX = scrollX.interpolate({
+                                                inputRange,
+                                                outputRange: [50, 0 ,-50],
+                                            });
+                                            const scale = scrollX.interpolate({
+                                                inputRange,
+                                                outputRange: [1,1.1,1],
+                                            });
+                                            return(
+                                            
+                                            <TouchableWithoutFeedback style = {[{
+                                                width:200,
+                                                height:200,
+                                                margin:10}]} onPress={()=>{
+                                                props.navigation.push('AddListing',{item})
+                                            }}>
+                                                
+                                                <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]}>
+
+                                                    <View style = {[StyleSheet.absoluteFillObject, 
+                                                    {overflow: 'hidden', 
+                                                    borderRadius:20}]}>
+
+                                                        <Animated.Image
+                                                        useNativeDriver = {true}
+                                                        style = {[StyleSheet.absoluteFillObject,
+                                                        {
+                                                            resizeMode: 'cover',
+                                                            borderRadius:20,
+                                                            width:'100%',
+                                                            height:'100%',
+                                                            transform:[{scale}],
+                                                        }
+                                                        ]}
+                                                        source={item.src} />
+                                                        
+                                                    </View>
+                                                </SharedElement>
+
+                                                
+
+                                                <View style = {styles.bLMTEXT}>
+                                                
+                                                {/* <SharedElement id= {`item.${item.key}.title`}> */}
+
+                                                <Animated.Text 
+                                                style = {[styles.TextOverlay2,
+                                                 {transform: [{translateX}]}
+                                                ]}>
+                                                {item.name}</Animated.Text>
+                                                {/* </SharedElement> */}
+                                                </View>
+                                            </TouchableWithoutFeedback>
+                                            
+                                            );
+                                        }}
                                         
-                                    >
+                                        />
 
-                                    <View style = {styles.bLMTEXT}>
-                                        <Text style = {styles.TextOverlay}>BMW M3</Text>
                                     </View>
-                                    </ImageBackground>
-
-                                        
-                                    </View>
-                            </TouchableOpacity>
-
+                           
                             
                                 
-                            
+                                    <View style = {{width: '95%', marginTop: 10, height : 'auto', alignSelf: 'center'}}>
+                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>For You</Text>
+                            </View> 
+
 
                                 <View style={styles.listing}>
-
                                     <ImageBackground
                                         source={require("../assets/images/volkswagen.jpg")}
                                         resizeMode="cover"
@@ -525,7 +591,7 @@ const styles = StyleSheet.create({
     },
    
     listing: {
-        width: "90%",
+        width: "95%",
         height: 298,
         marginTop: 10,
         marginBottom: 10,
@@ -552,10 +618,14 @@ const styles = StyleSheet.create({
     
    
     TextOverlay: {
-        fontSize: 40,
+        fontSize: 30,
         fontWeight: 'bold',
         color: 'white',
-        margin: 10,
+    },
+    TextOverlay2: {
+        fontSize: 25,
+        fontWeight: '600',
+        color: 'white',
     },
 
     blackCardListing: {
@@ -606,5 +676,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default HomeScreen;
 
