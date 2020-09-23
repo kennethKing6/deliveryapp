@@ -1,12 +1,11 @@
 import React, { Component, useState,useEffect } from "react";
 import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image,ScrollView } from "react-native";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIconsIcon from "react-native-vector-icons/Feather";
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
 import analytics from '@react-native-firebase/analytics';
 import storage from '@react-native-firebase/storage';
 import { WebView } from 'react-native-webview';
-import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -25,7 +24,7 @@ const Product = (props)=>{
 
 
     const userId = firebase.auth().currentUser.uid;
-        var ref = firebase.database().ref("" + userId).child("Product Info/");        
+        var ref = firebase.database().ref("users/" + userId).child("products");        
 
      
 
@@ -56,9 +55,9 @@ const Product = (props)=>{
 
      function getDatasnapshot(){
         ref.on("value",(dataSnapshot)=>{
-
-            if(dataSnapshot !== null)
-                setnewData(dataSnapshot)                         
+            if(dataSnapshot !== null){
+                setnewData(dataSnapshot);
+            }                         
             else
                setnewData(false)  
        });
@@ -75,11 +74,14 @@ const Product = (props)=>{
     }
 
 function getDownloadUrls(datasaphot){
+    console.log(datasaphot)
+
+
     var urls = new Array();
     var num = 1;
    return new Promise((resolve,reject)=>{
     datasaphot.forEach(product => {
-        firebase.storage().ref(product.val().fullPath).getDownloadURL().then((url)=>{
+        firebase.storage().ref(product.val().productFileMetadata.fullPath).getDownloadURL().then((url)=>{
            urls.push(url);
         }).catch((err)=>{
             console.log(err)

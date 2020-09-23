@@ -1,4 +1,4 @@
-import {IN_STOCK} from './Constants/ProductConstant';
+import productState from './Constants/ProductStateConstant';
 import firebase from "@react-native-firebase/app";
 
 
@@ -6,21 +6,28 @@ import firebase from "@react-native-firebase/app";
 export class Product{
 
     
-
-    
-
     constructor(userId){
 
-        var key = firebase.database().ref("users/" + userId + "/products").push().key;
-        this.userOwnerRef = userId;
-        this.productKeyRef = key;
-        this.ref =  "users/" + this.userOwnerRef + "/products/" + key;
-
-        //Initialize Tags
-        this.tags = {};
+       
+      this.userId = userId;
+       
     }
 
-    
+    async initProductRef(){
+      this.key = await firebase.database().ref("users/" + this.userId + "/products").push().key;
+      this.userOwnerRef = this.userId;
+
+      this.productKeyRef = this.key;
+
+
+      this.ref =  "users/" + this.userOwnerRef + "/products/" + this.key;
+
+
+
+      //Initialize Tags
+      this.tags = {};
+      return;
+    }
     deleteProduct(){
         firebase.database().ref(this.ref).remove();
     }
@@ -73,13 +80,7 @@ export class Product{
 
     //Initialize product object
     
-  initProductReference(){
-    firebase.database().ref(this.ref + "/productReference").set({
-        userID: this.userOwnerRef,
-        productKey: this.productKeyRef,
-        productPathRef: this.ref
-      });
-  }
+ 
 
     /**
      * This method is used to initialize the product properties and
@@ -91,17 +92,17 @@ export class Product{
      * @param {*} productLocation 
      * @param {*} productPrice 
      */
-    initProductProperties(productCategory,productName,productDescription,productLocation,productPrice){
+   async initProductProperties(productCategory,productName,productDescription,productLocation,productPrice){
 
-        firebase.database().ref(this.ref + "/properties").set({
+        await firebase.database().ref(this.ref + "/properties").set({
             productCategory: productCategory,
             productName: productName,
             productDescription : productDescription,
             productLocation: productLocation,
             productPrice: productPrice,
-            productState : IN_STOCK
+            productState : productState.IN_STOCK
 
-          });
+          }).then(()=>{}).catch(()=>{console.log("failed to set product properties")})
           
           this.initProductSearchQueries({
             user: this.userOwnerRef,
@@ -112,16 +113,17 @@ export class Product{
             productDescription : productDescription,
             productLocation: productLocation,
             productPrice: productPrice,
-            productState : IN_STOCK
+            productState : productState.IN_STOCK
 
-          })
+          }).then(()=>{}).catch(()=>{console.log("failed to init product querries")})
          this.properties ={
             productCategory: productCategory,
             productName: productName,
             productDescription : productDescription,
             productLocation: productLocation,
             productPrice: productPrice,
-            productState : IN_STOCK
+            productState : productState.IN_STOCK
+
 
           };
           this.searchQueries = {
@@ -133,15 +135,15 @@ export class Product{
             productDescription : productDescription,
             productLocation: productLocation,
             productPrice: productPrice,
-            productState : IN_STOCK
+            productState : productState.IN_STOCK
 
           }
     }
 
    
 
-    initProductRatings(){
-        firebase.database().ref(this.ref + "/rating").set({
+    async initProductRatings(){
+       await firebase.database().ref(this.ref + "/rating").set({
             negativeProductRating: 0,
             positiveProductRating: 0,
             totalProductRating : 0
@@ -154,10 +156,20 @@ export class Product{
           };
     }
 
-    initProductSearchQueries(querries){
-        var key = firebase.database().ref("all_products").push().set(querries).key;
-        firebase.database().ref(this.ref + "/productReference").set({productQueryRef: "all_products/" + key});
+    async initProductSearchQueries(querries){
+        var reference = firebase.database().ref("all_products").push();
+        var key =  reference.key;
+        await reference.set(querries);
+        await firebase.database().ref(this.ref + "/productReference").set({
+          // If users/ada/rank has never been set, currentRank will be `null`.
+         
+          productQueryRef:"all_products/" + key,
+          userID: this.userOwnerRef,
+          productKey: this.key,
+          productPathRef: this.ref
+        });
         this.productQueryRef =  "all_products/" + key;
+        this.productTags = "tags"
           
     }
     addProductTag(productTag){
@@ -166,21 +178,20 @@ export class Product{
             this.tags[productTag] = productTag;
         }
     }
-    uploadProductQueryTag(){
+    async uploadProductQueryTag(){
       
-        if(Object.keys(this.tags).length !== 0 && this.productQueryRef !== undefined){
-            firebase.database().ref(this.ref + "/tags").set(this.tags);
-            firebase.database().ref( this.productQueryRef).set(this.tags);
+            await firebase.database().ref(this.ref + "/tags").set(this.tags);
+            await firebase.database().ref( this.productTags).set(this.tags);
 
-        }
-
+        
+      
     }
 
    
 
     //Set product properties
-    setProductProperties(productObject){
-        firebase.database().ref(this.ref + "/properties").set(productObject);
+    async setProductProperties(productObject){
+        await firebase.database().ref(this.ref + "/properties").set(productObject);
     }
 
     
@@ -193,5 +204,21 @@ export class Product{
 
     getProductTags(){
         return this.tags;
+    }
+    setProductKey(key){
+      this.productKeyRef = key;
+    }
+
+    uploadProductFileMeta(metadata){
+      return new Promise((resolve,reject)=>{
+
+      if (metadata != null){
+            var path = this.ref + "/productFileMetadata";
+            resolve(firebase.database().ref(path).set(metadata))
+        }else{
+            reject("failed to load product metadata")
+        }
+    })
+
     }
 }
