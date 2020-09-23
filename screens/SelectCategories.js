@@ -17,6 +17,9 @@ import {
 import Profiles from './images';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Root, Popup } from 'popup-ui';
+import {Account} from './model/Account';
+import firebase from "@react-native-firebase/app";
+
 
 const {width} = Dimensions.get("window");
 
@@ -35,20 +38,21 @@ const formatData = (Profiles,numOfColumns) => {
   return Profiles;
 }
 
+var userSelectedCategories =[];
 
 
 
-export default class App extends Component {
+export default class SelectCategories extends Component {
   
   constructor(props) {
 		super(props);
 		this.state = {
-			indexChecked: '0'
+      indexChecked: '0',
+      
 		};
 	}
 
   render() { 
-    
     return (
       <View style={styles.page}>
                       <StatusBar animated barStyle="dark-content" />
@@ -75,7 +79,11 @@ export default class App extends Component {
                           renderItem={({item}) => (
                             
                             <TouchableOpacity 
-                            onPress={() => this.setState({ indexChecked: item.key })}
+                            onPress={() => {
+                              this.setState({ indexChecked: item.key});
+                              userSelectedCategories.push({categroyName:item.name,categoryNum:item.category});
+                              console.log(userSelectedCategories)
+                              }}
                             style = {{marginBottom:8.5}}>
 
                                 <ImageBackground
@@ -93,7 +101,15 @@ export default class App extends Component {
                       
 
                       <TouchableOpacity 
-                      onPress={() => this.props.navigation.navigate('Introduction')}
+                      onPress={() => {
+                        var account = new Account(firebase.auth().currentUser.uid);
+                        account.updateDbUserCategory(userSelectedCategories).then(()=>{
+                          this.props.navigation.navigate('Introduction')
+
+                        }).catch(()=>{
+                          alert("Select at least 3 categories")
+                        })
+                        }}
                       style = {{width:'100%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center'}}>
                         <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
                       </TouchableOpacity>

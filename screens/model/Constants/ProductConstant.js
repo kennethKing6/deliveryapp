@@ -1,16 +1,23 @@
 
-// Product is in stock, out of stock, a deal
-export const OUT_STOCK = 0;
-export const IN_STOCK = 5;
-export const DEALS = 10;
 
 
 //Product Category are categorized by numbers
-export const FURNITURE = 30;
-export const CLOTHING = 31;
-export const VEHICLES = 32;
-export const VEHICLE_TOOLS = 32;
-export const SHIRTS = 33;
-export const SHOES=  34;
-export const BAGS = 35;
-export const HOME = 36;
+
+const categories = {
+    "BARBER" : 100,
+    "CLOTHING" :110,
+    "CARS":120,
+    "COMPUTER":130,
+    "FOOD" : 150,
+    "SHOES":  160,
+    "GAMING" : 170,
+    "MODEL" : 180,
+    "PHOTOGRAPHY":190,
+    "PLANTS" : 200,
+    "JEWELLERY" : 210,
+    "TOYS" : 220
+};
+
+
+
+export default categories;

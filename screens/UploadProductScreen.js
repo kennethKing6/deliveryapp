@@ -6,8 +6,9 @@ import storage from '@react-native-firebase/storage';
 import ImagePicker from 'react-native-image-picker';
 import analytics from '@react-native-firebase/analytics';
 import database from '@react-native-firebase/database';
-
+import {Product } from './model/Product'
 import {request,check, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import Category from './model/Constants/ProductConstant'
 
 
 
@@ -92,20 +93,24 @@ if(userId == undefined || userId == null){
   function uploadFileMetadata(metadata){
    
     
+      var product = new Product(userId);
+      product.initProductRef().then(()=>{
+      return product.uploadProductFileMeta(metadata);
+      }).then(()=>{
+        return product.initProductProperties(Category.CARS,"BMW 123","This product is fresh from the store",{long:12.3,lat:-1.7839},10)
+      }).then(()=>{
+        return product.initProductRatings();
+      }).then(()=>{
+        product.addProductTag("machine");
+        product.addProductTag("fast");
+        product.addProductTag("tesla");
 
-      var ref = firebase.database().ref("" + userId).child("Product Info/").push(metadata);
+        return product.uploadProductQueryTag()
+      }).catch(()=>{
+        alert("Failed to upload file metadata");
+      })
+     
       
-      ref.set(metadata).then(()=>{
-        console.log("succeeded")
-        }).catch((err)=>{
-          console.log(err)
-          throw err;
-        })
-
-    
-   
-    
-   
 
   }
 
