@@ -47,7 +47,7 @@ export default class Introduction extends Component {
 
                     <Image
                         style = {{width:width/6,height:width/6}}
-                        source = {require('../assets/images/twitch.png')}
+                        source = {require('../assets/images/DispatchLogo.png')}
                     />
 
                     </View>

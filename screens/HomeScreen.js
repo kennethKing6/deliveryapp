@@ -34,8 +34,16 @@ export default function HomeScreen (props, {navigation}) {
                     
         <SafeAreaView>
                     <ScrollView>
+                    <View style = {{alignSelf:'center', justifyContent:'center'}}>
 
+                    <Image
+                        style = {{width:30,height:30,marginTop:5}}
+                        source = {require('../assets/images/DispatchLogo.png')}
+                    />
+
+                    </View>
                         <View style={styles.header}>
+                        
                             <View style={styles.marketplace}>
                                 
                                     <Text style={styles.marketplace1}>Explore</Text>
@@ -327,7 +335,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: "#121212",
         fontSize: 50,
-        marginTop: 60,
+        marginTop: 30,
         marginLeft: 7,
         marginBottom: 7,
     },
