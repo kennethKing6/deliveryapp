@@ -1,6 +1,6 @@
 import React, { Component, useState,useEffect } from "react";
 import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,SafeAreaView,Dimensions,Image,ScrollView } from "react-native";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/Feather";
+import Feather from "react-native-vector-icons/Feather";
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
 import analytics from '@react-native-firebase/analytics';
@@ -174,10 +174,10 @@ function layoutIdentifier(){
 
                 <View style={{ justifyContent: "center", opacity: 0 }}>
 
-                    <MaterialCommunityIconsIcon
+                    <Feather
                         name="arrow-left"
                         style={styles.icon1}
-                    ></MaterialCommunityIconsIcon>
+                    />
 
                 </View>
 
@@ -191,10 +191,10 @@ function layoutIdentifier(){
                 <TouchableOpacity style={{ justifyContent: "center" }}  
                         onPress={ () => props.navigation.navigate('AccountSettings')}>
 
-                    <MaterialCommunityIconsIcon
-                        name="dots-vertical"
+                    <Feather
+                        name="settings"
                         style={styles.icon1}
-                    ></MaterialCommunityIconsIcon>
+                    />
 
                 </TouchableOpacity>
 
@@ -218,7 +218,7 @@ function layoutIdentifier(){
                                             ></ImageBackground>
                                         </View>
                                         <View style={styles.group}>
-                                            <Text style={styles.shahbekMiru}>Urban Wear <MaterialCommunityIconsIcon name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
+                                            <Text style={styles.shahbekMiru}>Urban Wear <Feather name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
                                             <Text style={styles.kamloopsCanada}>Kamloops, Canada</Text>
                                         </View>
                                         <View style={styles.group2}>
