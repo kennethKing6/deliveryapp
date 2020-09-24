@@ -14,6 +14,7 @@ import {
     Image
 } from 'react-native';
 
+import Feather from 'react-native-vector-icons/Feather';
 import Profiles from './images';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Root, Popup } from 'popup-ui';
@@ -40,7 +41,40 @@ const formatData = (Profiles,numOfColumns) => {
 
 var userSelectedCategories =[];
 
+const handleUserSelection = (selectedValue) => {
 
+  if (selectedValue.selected === false){
+    selectedValue.selected =true;
+    userSelectedCategories.push({categoryName:selectedValue.name,categoryNum:selectedValue.category});
+  }
+  else {
+    selectedValue.selected = false;
+    handleRemoveItem(selectedValue);
+
+  }
+
+}
+
+const handleTickSelection = (item) => {
+
+  if (item === true){
+    return 100
+  }
+  else {
+    return 0
+  }
+}
+
+const handleRemoveItem = (item) =>{
+
+  for ( var i = userSelectedCategories.length-1; i >= 0; --i){
+    if (userSelectedCategories[i].categoryName == item.name){
+      userSelectedCategories.splice(i,1);
+    }
+  }
+  
+
+}
 
 export default class SelectCategories extends Component {
   
@@ -80,8 +114,9 @@ export default class SelectCategories extends Component {
                             
                             <TouchableOpacity 
                             onPress={() => {
+                              handleUserSelection(item);
+                              console.log(item.selected)
                               this.setState({ indexChecked: item.key});
-                              userSelectedCategories.push({categroyName:item.name,categoryNum:item.category});
                               console.log(userSelectedCategories)
                               }}
                             style = {{marginBottom:8.5}}>
@@ -89,8 +124,24 @@ export default class SelectCategories extends Component {
                                 <ImageBackground
                                 style = {styles.card}
                                 source={item.src} >
-                                <View style = {{margin: 5,flex:1,justifyContent:"flex-end"}}>
-                                <Text style = {styles.cardText}>{item.name}</Text>
+                                <View style = {{margin: 5,flex:1,justifyContent:'space-between'}}>
+
+                                
+                                  <Feather name ='check-circle' 
+                                  style = {{
+                                    fontSize:20,
+                                    backgroundColor:'white',
+                                    borderRadius:11,
+                                    overflow:'hidden',
+                                    margin:2,
+                                    padding:2,
+                                    color:'#53d769',
+                                    alignSelf:'flex-end',
+                                    opacity:handleTickSelection(item.selected)
+                                    }}/>
+
+                                
+                                <Text style = {[styles.cardText]}>{item.name}</Text>
                                 </View>
                                 </ImageBackground>
 
