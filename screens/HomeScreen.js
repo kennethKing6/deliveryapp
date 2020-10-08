@@ -33,7 +33,8 @@ export default function HomeScreen (props, {navigation}) {
                 
                     
         <SafeAreaView>
-                    <ScrollView>
+                    <ScrollView
+                    showsVerticalScrollIndicator={false}>
                     <View style = {{alignSelf:'center', justifyContent:'center'}}>
 
                     <Image
@@ -56,6 +57,7 @@ export default function HomeScreen (props, {navigation}) {
 
                             <View style={styles.categories}>
                                 <ScrollView
+                                    showsHorizontalScrollIndicator = {false}
                                     horizontal={true}
                                     contentContainerStyle={styles.categories_contentContainerStyle}
                                 >

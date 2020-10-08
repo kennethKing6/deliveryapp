@@ -15,9 +15,12 @@ import {
   StatusBar,
   ActivityIndicator,
   TouchableOpacity,
-  ImageBackground
+  ImageBackground,
+  Image,
+  Animated
 } from 'react-native';
 
+import Feather from 'react-native-vector-icons/Feather';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MapboxGL, { Camera } from '@react-native-mapbox-gl/maps';
 import {lineString as makeLineString} from '@turf/helpers';
@@ -31,6 +34,7 @@ import MapMatching from '@mapbox/mapbox-sdk/services/map-matching';
 const accessToken = 'pk.eyJ1Ijoic2hhaGJla21pcnUiLCJhIjoiY2tjNnNyNGw0MDNndDMwbWZ3eGNwaHFqbCJ9.bJ2sqsCvcrOUmr_YeWFtJg';
 const directionsClient = MapboxDirectionsFactory({accessToken});
 
+const Pulse = require('react-native-pulse').default;
 
 
 Icon.loadFont();
@@ -83,7 +87,6 @@ export default class AppClass extends Component {
 
 
   
-
 
   
 
@@ -148,11 +151,56 @@ export default class AppClass extends Component {
       <MapboxGL.PointAnnotation
         id="destination"
         title="destination location"
-        coordinate={DestinationLocation}>
+        
+        coordinate={DestinationLocation}
+        >
         <ImageBackground
                 source={require("../assets/images/3dcar.png")}                                            
                 style={styles.MapMarker}
             />
+            <MapboxGL.Callout>
+            
+              <View 
+              style = {{
+                width:150,
+                height:150,
+                backgroundColor:'#212121',
+                borderRadius:20,
+                bottom:10,
+                shadowColor: "black",
+                shadowOffset: {
+                    width: 0,
+                    height: 0
+                },
+                elevation: 30,
+                shadowOpacity: 0.5,
+                shadowRadius: 10,
+                borderWidth:0.25,borderColor:'#121212'
+                }}>
+
+                <View style = {{flex:1,justifyContent:'space-between',margin:15}}>
+
+                    <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                      <Image style = {{width:50,height:50,borderRadius:50,borderColor:'white',borderWidth:1}} source = {require('../assets/images/face1.jpg')}/>
+                      <Text style = {{fontSize:25,fontWeight:'900',color:'grey'}}>2.6 mi</Text>
+                    </View>
+
+                    <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                    <Text style = {{fontSize:15,fontWeight:'500',color:'#2ecc71'}}>Delivering</Text>
+                    <Feather style = {{fontSize:20,color:'white',backgroundColor:'dodgerblue',borderRadius:10,overflow:'hidden'}} name = 'activity'/>
+                    </View>
+
+                    <View>
+                    <Text style = {{fontSize:20,fontWeight:'900',color:'white'}}>V2A4F5</Text>
+                    <Text style = {{fontSize:20,fontWeight:'300',color:'white'}}>VW GOLF</Text>
+                    </View>
+                </View>
+
+              </View>
+
+
+            
+            </MapboxGL.Callout>
       </MapboxGL.PointAnnotation>
     ) : null;
   };
@@ -162,11 +210,24 @@ export default class AppClass extends Component {
       <MapboxGL.PointAnnotation
         id="start"
         title="start location"
+        
         coordinate={StartLocation}>
-        <View style={styles.circle}>
-          <View style={styles.innerCircle}>
-            <View style={styles.dotCircle} />
-          </View>
+        <View>
+        
+          <Animated.View 
+          style={styles.circle}>
+          <Pulse 
+          color='#2ecc70' 
+         
+          numPulses={2} 
+          diameter={50} 
+          speed={30} 
+          duration={2000} />
+
+            <View style={styles.innerCircle}>
+              <View style={styles.dotCircle} />
+            </View>
+          </Animated.View>
         </View>
       </MapboxGL.PointAnnotation>
       
@@ -190,6 +251,7 @@ export default class AppClass extends Component {
           {!this.state.started ? 'Start' : 'Stop'}
         </Text>
       </TouchableOpacity>
+      
     );
   };
 
@@ -203,6 +265,8 @@ export default class AppClass extends Component {
         )}
         <StatusBar barStyle="light-content" />
           <View style={styles.flex}>
+
+          
             <MapboxGL.MapView
                         styleURL = "mapbox://styles/shahbekmiru/ckdgwp2sj0myi1io4mt2ga8qo"
               logoEnabled={false}
@@ -224,12 +288,18 @@ export default class AppClass extends Component {
                 }}
                 ref={camera => (_camera = camera)}
               />
+
               {/* <MapboxGL.UserLocation
                 visible={true}
                 onUpdate={newUserLocation =>
                   this.onUserLocationUpdate(newUserLocation)
                 }
               /> */}
+              <SafeAreaView>
+
+              
+              </SafeAreaView>
+              
               {this.renderRoute()}
               {this.renderDestinationPoint()}
               {this.renderStart()}
@@ -277,40 +347,62 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   circle: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#2ecc71',
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+    borderWidth:1,
+    borderColor:"#23cc70",
+    backgroundColor: '#23cc7040',
     justifyContent: 'center',
     alignItems: 'center',
   },
   innerCircle: {
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    backgroundColor: 'white',
+    width: 25,
+    height: 25,
+    borderRadius: 20,
+    borderWidth:3,
+    borderColor:'#ffffff',
+    shadowColor: "black",
+        shadowOffset: {
+            width: 1,
+            height: 1
+        },
+        shadowOpacity: 1,
+        shadowRadius: 6,
+    backgroundColor: '#23cc70',
     justifyContent: 'center',
     alignItems: 'center',
   },
   dotCircle: {
-    width: 10,
-    height: 10,
+    width: 8,
+    height: 8,
     borderRadius: 5,
-    backgroundColor: '#2ecc71',
+    shadowColor: "black",
+        shadowOffset: {
+            width: 0,
+            height: 3
+        },
+        shadowOpacity: 1,
+        shadowRadius: 3,
+    
+    backgroundColor: '#ffffff',
   },
   MapMarker:{
     height : 40,
     width: 80
 
   },
+ 
+
 });
 
 const layerStyles = {
   route: {
     lineColor: '#2ecc71',
-    
-    lineCap: MapboxGL.LineJoin.Round,
-    lineWidth: 5,
+    lineJoin: MapboxGL.LineJoin.Round,
+    lineCap: MapboxGL.LineCap.Round,
+    lineDasharray: [0.5,2],
+    lineWidth: 4,
     lineOpacity: 1,
   },
 };

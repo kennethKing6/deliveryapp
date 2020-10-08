@@ -109,8 +109,8 @@ async function ShowImage(){
 function layoutIdentifier(){
 
     if(imageUrls.length === 0){
-        return (<View style={{flex:props.flex,justifyContent: 'center',  alignItems: 'center'}}>
-                <Text style={{fontSize:20,color:"#f03434", fontWeight: 'bold',}}>Hurry up! Upload your products to sell</Text>
+        return (<View style={{flex:props.flex,justifyContent: 'center',alignSelf:'center', width:'80%',alignItems:'center' }}>
+                <Text style={{fontSize:20,color:'grey', fontWeight: '500',textAlign:'center'}}>You have no products to sell yet, please list an item 😁</Text>
 
         </View>)
      }else{
@@ -212,7 +212,7 @@ function layoutIdentifier(){
 
                                         <View style={styles.rect2}>
                                             <ImageBackground
-                                                source={require("../assets/images/logo.png")}
+                                                source={require("../assets/images/vintage.jpg")}
                                                 resizeMode="cover"
                                                 style={styles.listingImage1}
                                             ></ImageBackground>

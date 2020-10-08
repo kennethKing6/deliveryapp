@@ -23,7 +23,10 @@ export default function AddListing({props, route, navigation: { goBack } }) {
             
 
 
+                            
                     <ScrollView>
+                    
+
                             <View style = {[styles.AddPhotos]}>
                             
                             <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]}>
@@ -37,14 +40,14 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                                     />
                             </View>
                                 </SharedElement>
-                                
-                            
-                            <TouchableOpacity style={{ margin:10,marginTop:20,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white'}} onPress = {()=> goBack()}>
+                             
+                                <TouchableOpacity 
+                            style={{ margin:10,marginTop:20,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white'}} 
+                            onPress = {()=> goBack()}>
                                 
                                 <Feather style={{color: "black",fontSize:30}} name = 'x'/>
 
-                            </TouchableOpacity>
-                            
+                        </TouchableOpacity>
                             </View>
 
                             <View style = {{width:'90%',alignSelf:'center'}}>
@@ -204,6 +207,7 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                         </View>
 
                         </View>
+                        
                         
                         
 

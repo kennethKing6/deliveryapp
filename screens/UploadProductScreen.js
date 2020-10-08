@@ -13,7 +13,6 @@ import Category from './model/Constants/ProductConstant'
 
 
 
-
  
  // Your web app's Firebase configuration
  var firebaseConfig = {

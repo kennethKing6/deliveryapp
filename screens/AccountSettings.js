@@ -1,17 +1,19 @@
-import React, { Component } from "react";
-import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity, SafeAreaView, ScrollView } from "react-native";
+import React, { Component, useState } from "react";
+import { StyleSheet, View, StatusBar, Text, ImageBackground,Image, TouchableOpacity, SafeAreaView,TouchableHighlight,Modal, ScrollView } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import Feather from "react-native-vector-icons/Feather";
 import Ion from "react-native-vector-icons/Ionicons";
+import { BlurView, VibrancyView } from "@react-native-community/blur";
 
 
 import LoginButtons from "../components/LoginButtons";
 
 function AccountSettings(props) {
+    const [modalVisible, setModalVisible] = useState(false);
     return (
         <View style={styles.container}>
+            
             <StatusBar barStyle="dark-content" />
-
 
             <SafeAreaView >
 
@@ -48,7 +50,6 @@ function AccountSettings(props) {
 
             </SafeAreaView>
             
-
             <ScrollView>
 
 
@@ -180,6 +181,10 @@ function AccountSettings(props) {
 
                         <TouchableOpacity 
                         style={styles.settings}
+                        title="OPEN BOTTOM SHEET" 
+                        onPress={() => {
+                        setModalVisible(true);
+                        }}
                         >
                         <View style = {styles.personal}>
 
@@ -205,6 +210,77 @@ function AccountSettings(props) {
                     text='Sign Out'
 
                 />
+                    
+
+           
+                    
+                    
+                    <View style={styles.centeredView}>
+                        <Modal
+                            backdropOpacity={0.1}
+                            animationType= "fade"
+                            transparent={true}
+                            visible={modalVisible}
+                            onRequestClose={() => {
+                            Alert.alert("Modal has been closed.");
+                            }}
+                        >
+                            
+                            <BlurView
+                            style={styles.absolute}
+                            blurType="dark"
+                            blurAmount={10}
+                            reducedTransparencyFallbackColor="white"
+                            />
+
+                            <View style={styles.centeredView2}>
+                            
+                            
+                            <View style={styles.modalView}>
+                            
+
+                                    <View style = {{width:'100%'}}>
+
+                                        <TouchableHighlight
+                                            style={{ ...styles.openButton, backgroundColor: "#00000033" }}
+                                            onPress={() => {
+                                                setModalVisible(!modalVisible);
+                                            }}
+                                        >
+                                            
+                                            <Feather name = 'x' style={styles.textStyle}></Feather>
+                                        </TouchableHighlight>
+                                    </View>
+
+                                    <Image 
+                                    resizeMode= 'cover'
+                                    style = {{width:'50%',height:'50%'}}
+                                    source = {require('../assets/images/earth.gif')}/>
+                                    
+                                    <Text style={styles.modalText}>How did we do?</Text>
+                                    
+                                    <View style={{width:'100%',flexDirection:'row',justifyContent:'space-evenly'}}>
+                                        <View style={{backgroundColor:'#2ecc71',borderRadius:30,justifyContent:'center'}}>
+                                            <Feather name = 'thumbs-up' style = {{fontSize:40,padding:10,color:'white'}}/>
+                                        </View>
+                                        <View style={{backgroundColor:'#e74c3c',borderRadius:30,justifyContent:'center'}}>
+                                            <Feather name = 'thumbs-down' style = {{fontSize:40,padding:10,color:'white'}}/>
+                                        </View>                                   
+
+                                    </View>
+                                
+                                </View>
+                                        
+                            </View>
+                            
+                        </Modal>
+
+                        </View>
+                        
+
+                        
+                        
+                       
             </ScrollView>
 
 
@@ -283,6 +359,61 @@ const styles = StyleSheet.create({
         fontSize: 17,
         marginLeft:10
     },
+
+    centeredView: {
+        flex:1,
+        // backgroundColor: '#00000099',
+              
+        
+      },
+      centeredView2: {
+        flex:1,
+        
+        // backgroundColor: '#00000099',
+        justifyContent: "center",
+        alignItems: "center",        
+        
+      },
+      
+      
+      modalView: {
+        width:'80%',
+        height:'60%',
+        padding:20,
+        justifyContent:'space-between',
+        backgroundColor: "#f5f7f8",
+        borderRadius: 20,
+        alignItems: "center",
+        shadowColor: "black",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.5,
+        shadowRadius: 10,
+        elevation: 5
+      },
+      openButton: {
+        width:30,
+        borderRadius: 30,
+        elevation: 2
+      },
+      textStyle: {
+        color: "white",
+        fontSize:30,
+        fontWeight: "bold",
+        textAlign: "center"
+      },
+      modalText: {
+        fontSize:30,
+        fontWeight:'600',
+        textAlign: "center"
+      },
+      absolute: {
+        position:'absolute',
+        width: '100%',
+        height:'100%',
+      }
    
 
 });
