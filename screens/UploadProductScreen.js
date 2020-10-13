@@ -46,6 +46,17 @@ firebase.analytics();
 function UploadProductScreen(props) {
 
   const [imageURI, setImageURI] = useState(null);
+  const [productCategory,setProductCategory] = useState(0);
+  const [productName,setProductName] = useState("");
+  const [productCategoryDescr,setProductCategoryDescr] = useState("");
+  const [productCategoryLocation,setProductCategoryLocation] = useState([]);
+  const [productPrice,setProductPrice] = useState(0);
+
+
+
+  
+
+
 
 //Get user Id
 const userId = firebase.auth().currentUser.uid;
@@ -137,14 +148,12 @@ if(userId == undefined || userId == null){
   
       ImagePicker.showImagePicker({
         noData: true,
-        quality:0.3,
+        quality:0.1,
       }, response => {
         
         if (response.didCancel) {
-          alert('Post canceled');
           reject("User Cancelled");
         } else if (response.error) {
-          alert('An error occurred: ',   response.error);
           reject("Error occured with camera " + response.error);
         } else {
             const imageName = getImageName(response);
@@ -251,42 +260,44 @@ if(userId == undefined || userId == null){
       <MaterialIconButton
          onPress={() =>{
 
-          getCameraPermission().then((result) => {
-      switch (result) {
-        case RESULTS.UNAVAILABLE:
-          console.log(
-            'This feature is not available (on this device / in this context)',
-          );
-          break;
-        case RESULTS.DENIED:
-          console.log(
-            'The permission has not been requested / is denied but requestable',
-          );
-          break;
-        case RESULTS.GRANTED:
-          console.log('The permission is granted');
-          uploadFile().then((uploadTask)=>{
-            uploadFileMetadata(uploadTask.metadata);
+          props.navigation.navigate("ProductDetails");
+
+    //       getCameraPermission().then((result) => {
+    //   switch (result) {
+    //     case RESULTS.UNAVAILABLE:
+    //       console.log(
+    //         'This feature is not available (on this device / in this context)',
+    //       );
+    //       break;
+    //     case RESULTS.DENIED:
+    //       console.log(
+    //         'The permission has not been requested / is denied but requestable',
+    //       );
+    //       break;
+    //     case RESULTS.GRANTED:
+    //       console.log('The permission is granted');
+    //       uploadFile().then((uploadTask)=>{
+    //         uploadFileMetadata(uploadTask.metadata);
           
             
-                  alert("Success");
-              }).catch((err)=>{
-                  alert(err)
-                  console.log("we are here\n");
-                  console.log(err)
-                  throw err;
+    //               alert("Success");
+    //           }).catch((err)=>{
+    //               alert(err)
+    //               console.log("we are here\n");
+    //               console.log(err)
+    //               throw err;
                   
-                });
-          break;
-        case RESULTS.BLOCKED:
-          console.log('The permission is denied and not requestable anymore');
-          break;
-      }
-    })
-    .catch((err) => {
-      console.log("The camera permission: " + err);
-     throw err;
-    })
+    //             });
+    //       break;
+    //     case RESULTS.BLOCKED:
+    //       console.log('The permission is denied and not requestable anymore');
+    //       break;
+    //   }
+    // })
+    // .catch((err) => {
+    //   console.log("The camera permission: " + err);
+    //  throw err;
+    // })
 
         
                
