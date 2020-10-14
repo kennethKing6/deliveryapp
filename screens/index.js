@@ -26,7 +26,6 @@ import UploadProductScreen from './UploadProductScreen';
 import SelectCategories from './SelectCategories';
 import Introduction from './Introduction';
 import PaymentCard from './PaymentCard';
-import ProductDetails from '../screens/ProductDetails';
 
 
 
@@ -303,7 +302,7 @@ const ListItemsScreenNavigator = () => {
 
             />
 
-
+            
         </ListItemsScreenStackNavigator.Navigator>
     );
 };
@@ -440,12 +439,8 @@ export const MainNavigator = () => {
                 component={UploadProductScreen}
                 options={{ headerShown: false }}
             />
-             <Switch.Screen
-                name="ProductDetails"
-                component={ProductDetails}
-                options={{ headerShown: false }}
-            />
-                
+            
+
         </Switch.Navigator>
         
     )

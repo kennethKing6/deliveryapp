@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet,Image,Platform,NetInfo } from 'react-native';
-import MaterialIconButton from "../components/MaterialIconButton";
+import MaterialIconButton from "../../components/MaterialIconButton";
 import firebase from "@react-native-firebase/app";
 import storage from '@react-native-firebase/storage';
 import ImagePicker from 'react-native-image-picker';
 import analytics from '@react-native-firebase/analytics';
 import database from '@react-native-firebase/database';
-import {Product } from './model/Product'
+import {Product } from '../model/Product'
 import {request,check, PERMISSIONS, RESULTS} from 'react-native-permissions';
-import Category from './model/Constants/ProductConstant'
+import CategoryConstants from '../model/Constants/ProductConstant';
+
 
 
 
@@ -46,6 +47,17 @@ firebase.analytics();
 function UploadProductScreen(props) {
 
   const [imageURI, setImageURI] = useState(null);
+  const [productCategory,setProductCategory] = useState(0);
+  const [productName,setProductName] = useState("");
+  const [productCategoryDescr,setProductCategoryDescr] = useState("");
+  const [productCategoryLocation,setProductCategoryLocation] = useState([]);
+  const [productPrice,setProductPrice] = useState(0);
+
+
+
+  
+
+
 
 //Get user Id
 const userId = firebase.auth().currentUser.uid;
@@ -96,7 +108,7 @@ if(userId == undefined || userId == null){
       product.initProductRef().then(()=>{
       return product.uploadProductFileMeta(metadata);
       }).then(()=>{
-        return product.initProductProperties(Category.CARS,"BMW 123","This product is fresh from the store",{long:12.3,lat:-1.7839},10)
+        return product.initProductProperties(CategoryConstants.CARS,"BMW 123","This product is fresh from the store",{long:12.3,lat:-1.7839},10)
       }).then(()=>{
         return product.initProductRatings();
       }).then(()=>{
@@ -137,14 +149,12 @@ if(userId == undefined || userId == null){
   
       ImagePicker.showImagePicker({
         noData: true,
-        quality:0.3,
+        quality:0.1,
       }, response => {
         
         if (response.didCancel) {
-          alert('Post canceled');
           reject("User Cancelled");
         } else if (response.error) {
-          alert('An error occurred: ',   response.error);
           reject("Error occured with camera " + response.error);
         } else {
             const imageName = getImageName(response);
@@ -190,12 +200,12 @@ if(userId == undefined || userId == null){
 
         <View style={styles.imageRow}>
           <Image
-            source={require("../assets/images/makeup.jpg")}
+            source={require("../../assets/images/makeup.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
           <Image
-            source={require("../assets/images/phone.jpg")}
+            source={require("../../assets/images/phone.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
@@ -205,12 +215,12 @@ if(userId == undefined || userId == null){
 
         <View style={styles.imageRow}>
           <Image
-            source={require("../assets/images/shoes.jpg")}
+            source={require("../../assets/images/shoes.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
           <Image
-            source={require("../assets/images/t-shirt.jpg")}
+            source={require("../../assets/images/t-shirt.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
@@ -219,12 +229,12 @@ if(userId == undefined || userId == null){
 
         <View style={styles.imageRow}>
           <Image
-            source={require("../assets/images/t-shirt.jpg")}
+            source={require("../../assets/images/t-shirt.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
           <Image
-            source={require("../assets/images/t-shirt.jpg")}
+            source={require("../../assets/images/t-shirt.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
@@ -251,42 +261,44 @@ if(userId == undefined || userId == null){
       <MaterialIconButton
          onPress={() =>{
 
-          getCameraPermission().then((result) => {
-      switch (result) {
-        case RESULTS.UNAVAILABLE:
-          console.log(
-            'This feature is not available (on this device / in this context)',
-          );
-          break;
-        case RESULTS.DENIED:
-          console.log(
-            'The permission has not been requested / is denied but requestable',
-          );
-          break;
-        case RESULTS.GRANTED:
-          console.log('The permission is granted');
-          uploadFile().then((uploadTask)=>{
-            uploadFileMetadata(uploadTask.metadata);
+          props.navigation.navigate("ProductDetails");
+
+    //       getCameraPermission().then((result) => {
+    //   switch (result) {
+    //     case RESULTS.UNAVAILABLE:
+    //       console.log(
+    //         'This feature is not available (on this device / in this context)',
+    //       );
+    //       break;
+    //     case RESULTS.DENIED:
+    //       console.log(
+    //         'The permission has not been requested / is denied but requestable',
+    //       );
+    //       break;
+    //     case RESULTS.GRANTED:
+    //       console.log('The permission is granted');
+    //       uploadFile().then((uploadTask)=>{
+    //         uploadFileMetadata(uploadTask.metadata);
           
             
-                  alert("Success");
-              }).catch((err)=>{
-                  alert(err)
-                  console.log("we are here\n");
-                  console.log(err)
-                  throw err;
+    //               alert("Success");
+    //           }).catch((err)=>{
+    //               alert(err)
+    //               console.log("we are here\n");
+    //               console.log(err)
+    //               throw err;
                   
-                });
-          break;
-        case RESULTS.BLOCKED:
-          console.log('The permission is denied and not requestable anymore');
-          break;
-      }
-    })
-    .catch((err) => {
-      console.log("The camera permission: " + err);
-     throw err;
-    })
+    //             });
+    //       break;
+    //     case RESULTS.BLOCKED:
+    //       console.log('The permission is denied and not requestable anymore');
+    //       break;
+    //   }
+    // })
+    // .catch((err) => {
+    //   console.log("The camera permission: " + err);
+    //  throw err;
+    // })
 
         
                

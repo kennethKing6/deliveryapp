@@ -268,7 +268,7 @@ export default class AppClass extends Component {
 
           
             <MapboxGL.MapView
-                        styleURL = "mapbox://styles/shahbekmiru/ckg363tz81g3z19qlp9lwsh3y"
+                        styleURL = "mapbox://styles/shahbekmiru/ckdgwp2sj0myi1io4mt2ga8qo"
               logoEnabled={false}
               compassEnabled={false}
               zoomEnabled={true}
