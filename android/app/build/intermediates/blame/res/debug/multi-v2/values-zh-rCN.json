@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\87edc080d9a79bb26bba07c68d7fdd9e\\jetified-play-services-basement-17.0.0\\res\\values-zh-rCN\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "157",
-                        "endOffsets": "408"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3682",
-                        "endColumns": "157",
-                        "endOffsets": "3835"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\9a4658afade2e57b9a640b6674c28496\\core-1.1.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2",
@@ -52,6 +35,23 @@
                         "startOffsets": "6195",
                         "endColumns": "100",
                         "endOffsets": "6291"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\5f888ee65180fddfd9563ef727a24d50\\jetified-mapbox-android-sdk-9.1.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,136,236,305,373,442,517,604,709,790,883,968,1082,1142",
+                        "endColumns": "80,99,68,67,68,74,86,104,80,92,84,113,59,64",
+                        "endOffsets": "131,231,300,368,437,512,599,704,785,878,963,1077,1137,1202"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,54,55,56,57,58,59,60",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4965,5046,5146,5215,5283,5352,5427,5514,5619,5700,5793,5878,5992,6052",
+                        "endColumns": "80,99,68,67,68,74,86,104,80,92,84,113,59,64",
+                        "endOffsets": "5041,5141,5210,5278,5347,5422,5509,5614,5695,5788,5873,5987,6047,6112"
                     }
                 },
                 {
@@ -72,20 +72,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\692e24b99f4f1c1a7204f930501499cb\\jetified-mapbox-android-sdk-9.1.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\eaaf0538ce1031be9345425e196c7c7d\\jetified-play-services-basement-17.0.0\\res\\values-zh-rCN\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,136,236,305,373,442,517,604,709,790,883,968,1082,1142",
-                        "endColumns": "80,99,68,67,68,74,86,104,80,92,84,113,59,64",
-                        "endOffsets": "131,231,300,368,437,512,599,704,785,878,963,1077,1137,1202"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "157",
+                        "endOffsets": "408"
                     },
                     "to": {
-                        "startLines": "47,48,49,50,51,52,53,54,55,56,57,58,59,60",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4965,5046,5146,5215,5283,5352,5427,5514,5619,5700,5793,5878,5992,6052",
-                        "endColumns": "80,99,68,67,68,74,86,104,80,92,84,113,59,64",
-                        "endOffsets": "5041,5141,5210,5278,5347,5422,5509,5614,5695,5788,5873,5987,6047,6112"
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3682",
+                        "endColumns": "157",
+                        "endOffsets": "3835"
                     }
                 }
             ]
