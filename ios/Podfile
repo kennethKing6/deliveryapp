@@ -1,9 +1,11 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 
 platform :ios, '10.0'
 
 target 'deliveryapp' do
+  use_unimodules!
   config = use_native_modules!
 
   permissions_path = '../node_modules/react-native-permissions/ios'
@@ -29,6 +31,8 @@ target 'deliveryapp' do
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
 
   target 'deliveryappTests' do
     inherit! :complete

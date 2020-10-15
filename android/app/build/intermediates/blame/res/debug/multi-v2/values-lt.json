@@ -4,23 +4,6 @@
             "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lt\\values-lt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\692e24b99f4f1c1a7204f930501499cb\\jetified-mapbox-android-sdk-9.1.0\\res\\values-lt\\values-lt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,236,310,394,466,569,647,779,914,1099,1225",
-                        "endColumns": "180,73,83,71,102,77,131,134,184,125,132",
-                        "endOffsets": "231,305,389,461,564,642,774,909,1094,1220,1353"
-                    },
-                    "to": {
-                        "startLines": "47,48,49,50,51,52,53,54,55,56,57",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5629,5810,5884,5968,6040,6143,6221,6353,6488,6673,6799",
-                        "endColumns": "180,73,83,71,102,77,131,134,184,125,132",
-                        "endOffsets": "5805,5879,5963,6035,6138,6216,6348,6483,6668,6794,6927"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\d2974ac36bf11b6e048576ef94732df8\\appcompat-1.1.0\\res\\values-lt\\values-lt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
@@ -38,6 +21,40 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\eaaf0538ce1031be9345425e196c7c7d\\jetified-play-services-basement-17.0.0\\res\\values-lt\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "217",
+                        "endOffsets": "464"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4038",
+                        "endColumns": "217",
+                        "endOffsets": "4251"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\5f888ee65180fddfd9563ef727a24d50\\jetified-mapbox-android-sdk-9.1.0\\res\\values-lt\\values-lt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,236,310,394,466,569,647,779,914,1099,1225",
+                        "endColumns": "180,73,83,71,102,77,131,134,184,125,132",
+                        "endOffsets": "231,305,389,461,564,642,774,909,1094,1220,1353"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,54,55,56,57",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5629,5810,5884,5968,6040,6143,6221,6353,6488,6673,6799",
+                        "endColumns": "180,73,83,71,102,77,131,134,184,125,132",
+                        "endOffsets": "5805,5879,5963,6035,6138,6216,6348,6483,6668,6794,6927"
+                    }
+                },
+                {
                     "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\9a4658afade2e57b9a640b6674c28496\\core-1.1.0\\res\\values-lt\\values-lt.xml",
                     "from": {
                         "startLines": "2",
@@ -52,23 +69,6 @@
                         "startOffsets": "7015",
                         "endColumns": "100",
                         "endOffsets": "7111"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\87edc080d9a79bb26bba07c68d7fdd9e\\jetified-play-services-basement-17.0.0\\res\\values-lt\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "217",
-                        "endOffsets": "464"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4038",
-                        "endColumns": "217",
-                        "endOffsets": "4251"
                     }
                 },
                 {

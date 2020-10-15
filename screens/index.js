@@ -22,7 +22,8 @@ import ProfileScreen from "./Profile";
 import AccountSettings from "./AccountSettings";
 import PersonalInformation from './PersonalInformation';
 import AddListing from './AddListing';
-import UploadProductScreen from './UploadProductScreen';
+import UploadProductScreen from './UploadProductScreens/UploadProductScreen';
+import ProductDetails from './UploadProductScreens/ProductDetails';
 import SelectCategories from './SelectCategories';
 import Introduction from './Introduction';
 import PaymentCard from './PaymentCard';
@@ -439,8 +440,14 @@ export const MainNavigator = () => {
                 component={UploadProductScreen}
                 options={{ headerShown: false }}
             />
+            <Switch.Screen
+                name="ProductDetails"
+                component={ProductDetails}
+                options={{ headerShown: false }}
+            />
             
 
+            
         </Switch.Navigator>
         
     )

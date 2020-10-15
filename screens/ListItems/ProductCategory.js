@@ -15,7 +15,7 @@ import SearchBar from "../../components/SearchBar";
 import Feather from "react-native-vector-icons/Feather";
 import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture-handler";
 import { Button } from "native-base";
-import DropDownPicker from 'react-native-dropdown-picker';
+// import DropDownPicker from 'react-native-dropdown-picker';
 import { Platform } from 'react-native';
 
 function HomeScreen1 (props) {

@@ -4,20 +4,20 @@
             "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\692e24b99f4f1c1a7204f930501499cb\\jetified-mapbox-android-sdk-9.1.0\\res\\values-uk\\values-uk.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\eaaf0538ce1031be9345425e196c7c7d\\jetified-play-services-basement-17.0.0\\res\\values-uk\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,189,358,436,520,595,693,780,910,1022,1201,1328,1473",
-                        "endColumns": "133,168,77,83,74,97,86,129,111,178,126,144,76",
-                        "endOffsets": "184,353,431,515,590,688,775,905,1017,1196,1323,1468,1545"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
                     },
                     "to": {
-                        "startLines": "47,48,49,50,51,52,53,54,55,56,57,58,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5544,5678,5847,5925,6009,6084,6182,6269,6399,6511,6690,6817,6962",
-                        "endColumns": "133,168,77,83,74,97,86,129,111,178,126,144,76",
-                        "endOffsets": "5673,5842,5920,6004,6079,6177,6264,6394,6506,6685,6812,6957,7034"
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3998",
+                        "endColumns": "204",
+                        "endOffsets": "4198"
                     }
                 },
                 {
@@ -55,6 +55,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\5f888ee65180fddfd9563ef727a24d50\\jetified-mapbox-android-sdk-9.1.0\\res\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,189,358,436,520,595,693,780,910,1022,1201,1328,1473",
+                        "endColumns": "133,168,77,83,74,97,86,129,111,178,126,144,76",
+                        "endOffsets": "184,353,431,515,590,688,775,905,1017,1196,1323,1468,1545"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,54,55,56,57,58,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5544,5678,5847,5925,6009,6084,6182,6269,6399,6511,6690,6817,6962",
+                        "endColumns": "133,168,77,83,74,97,86,129,111,178,126,144,76",
+                        "endOffsets": "5673,5842,5920,6004,6079,6177,6264,6394,6506,6685,6812,6957,7034"
+                    }
+                },
+                {
                     "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\9a4658afade2e57b9a640b6674c28496\\core-1.1.0\\res\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2",
@@ -69,23 +86,6 @@
                         "startOffsets": "7120",
                         "endColumns": "100",
                         "endOffsets": "7216"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\87edc080d9a79bb26bba07c68d7fdd9e\\jetified-play-services-basement-17.0.0\\res\\values-uk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3998",
-                        "endColumns": "204",
-                        "endOffsets": "4198"
                     }
                 }
             ]
