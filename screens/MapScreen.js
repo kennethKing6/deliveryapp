@@ -42,7 +42,7 @@ MapboxGL.setAccessToken(accessToken);
 
 // Coordinates
 const UserLocation = [-120.340300, 50.655503]; // [longitude, latitude]
-const DestinationLocation = [-120.340836,50.676109]; // [longitude, latitude]
+const DestinationLocation = [-120.3490,50.7575]; // [longitude, latitude]
 const StartLocation = UserLocation;
 const CenterCoordinate = UserLocation;
 
@@ -268,7 +268,7 @@ export default class AppClass extends Component {
 
           
             <MapboxGL.MapView
-                        styleURL = "mapbox://styles/shahbekmiru/ckdgwp2sj0myi1io4mt2ga8qo"
+                        styleURL = "mapbox://styles/shahbekmiru/ckg363tz81g3z19qlp9lwsh3y"
               logoEnabled={false}
               compassEnabled={false}
               zoomEnabled={true}

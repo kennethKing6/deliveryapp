@@ -120,7 +120,7 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                                 scrollEnabled={false}
                                 zoomEnabled={false}
                                 borderRadius={20}
-                                styleURL = "mapbox://styles/shahbekmiru/ckdgwp2sj0myi1io4mt2ga8qo"
+                                styleURL = "mapbox://styles/shahbekmiru/ckg0gaos50rpi19mxjyt6v1h1"
 
                                 >
                                     <MapboxGL.Camera
