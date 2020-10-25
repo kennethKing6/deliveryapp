@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet,Image,Platform,NetInfo } from 'react-native';
+import { Text, View, StyleSheet,Image,Platform,NetInfo, ImageBackground } from 'react-native';
 import MaterialIconButton from "../../components/MaterialIconButton";
 import firebase from "@react-native-firebase/app";
 import storage from '@react-native-firebase/storage';
@@ -196,61 +196,32 @@ if(userId == undefined || userId == null){
 
   return (
     <View style={styles.container}>
-      <View style={styles.group}>
-
-        <View style={styles.imageRow}>
-          <Image
-            source={require("../../assets/images/makeup.jpg")}
-            resizeMode="cover"
-            style={styles.image}
-          ></Image>
-          <Image
-            source={require("../../assets/images/phone.jpg")}
-            resizeMode="cover"
-            style={styles.image}
-          ></Image>
-        </View>
-
-      
-
-        <View style={styles.imageRow}>
-          <Image
-            source={require("../../assets/images/shoes.jpg")}
-            resizeMode="cover"
-            style={styles.image}
-          ></Image>
-          <Image
-            source={require("../../assets/images/t-shirt.jpg")}
-            resizeMode="cover"
-            style={styles.image}
-          ></Image>
-        </View>
-        
-
-        <View style={styles.imageRow}>
-          <Image
-            source={require("../../assets/images/t-shirt.jpg")}
-            resizeMode="cover"
-            style={styles.image}
-          ></Image>
-          <Image
-            source={require("../../assets/images/t-shirt.jpg")}
-            resizeMode="cover"
-            style={styles.image}
-          ></Image>
-        </View>
 
         
+          <ImageBackground
+            source={require("../../assets/images/burger.jpg")}
+            resizeMode="cover"
+            style={styles.image}
+          >
+          
 
-      
-        
-
-        <View style={styles.rect}>
             <Text style={styles.loremIpsum}>Create your own store</Text>
-         </View>
+
+      </ImageBackground>
+
+       
+        
 
         
-      </View>
+
+        
+
+      
+        
+         
+
+        
+      
       
       
       
@@ -315,29 +286,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  group: {
-    paddingTop:"7%",
-    height:"100%"
-  
-  },
+
   imageRow: {
     flex:1,
-    flexDirection: "row",
   },
-  rect: {
-    position:"absolute",
-    top:"50%",
-    width: "80%",
-    height: 90,
-    backgroundColor: "rgba(33,33,33,1)",
-    alignSelf: "center"
-  },
+  
   loremIpsum: {
-    color: "rgba(255,246,246,1)",
-    height: 31,
-    width: "70%",
-    fontSize: 22,
-    alignSelf:"center",
+    color: 'white',
+    width:'90%',
+    alignSelf:'center',
+    fontSize: 60,
+    fontWeight:'900',
     marginTop:"9%"
     
   },
@@ -349,8 +308,8 @@ const styles = StyleSheet.create({
    alignSelf:"center"
   },
   image:{
-    width:"50%",
-    height:"150%"
+    width:"100%",
+    height:"100%"
   }
 });
 
