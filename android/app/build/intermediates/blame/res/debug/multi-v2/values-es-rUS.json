@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
+            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\d2974ac36bf11b6e048576ef94732df8\\appcompat-1.1.0\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\c8f4c24d17327ad6c5aca9ed6cde941e\\appcompat-1.1.0\\res\\values-es-rUS\\values-es-rUS.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\eaaf0538ce1031be9345425e196c7c7d\\jetified-play-services-basement-17.0.0\\res\\values-es-rUS\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "204",
-                        "endOffsets": "455"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4014",
-                        "endColumns": "204",
-                        "endOffsets": "4214"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\c4fb6b3249f446fdb0995f0c1cd7339f\\play-services-base-17.1.0\\res\\values-es-rUS\\values.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\e45c3bcec9556f6c305c7348090de509\\jetified-play-services-base-17.1.0\\res\\values-es-rUS\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\9a4658afade2e57b9a640b6674c28496\\core-1.1.0\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\0f512e181ca87b528277c07a0d4a1870\\core-1.1.0\\res\\values-es-rUS\\values-es-rUS.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -69,6 +52,23 @@
                         "startOffsets": "5721",
                         "endColumns": "100",
                         "endOffsets": "5817"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\18d7fa3102df174b1d86e2b4bf7f382c\\jetified-play-services-basement-17.0.0\\res\\values-es-rUS\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "204",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4014",
+                        "endColumns": "204",
+                        "endOffsets": "4214"
                     }
                 }
             ]

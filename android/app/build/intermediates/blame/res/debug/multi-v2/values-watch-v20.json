@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\d2974ac36bf11b6e048576ef94732df8\\appcompat-1.1.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\c8f4c24d17327ad6c5aca9ed6cde941e\\appcompat-1.1.0\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

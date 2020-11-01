@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he\\values-he.xml",
+            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he\\values-he.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\5f888ee65180fddfd9563ef727a24d50\\jetified-mapbox-android-sdk-9.1.0\\res\\values-he\\values-he.xml",
+                    "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\1fe0718a4a9d82fc422634a98e14585b\\jetified-mapbox-android-sdk-9.1.0\\res\\values-he\\values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",

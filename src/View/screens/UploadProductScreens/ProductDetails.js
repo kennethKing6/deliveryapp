@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { StyleSheet, Dimensions, Image, Platform,TouchableOpacity,View,Text,TextInput } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import DropDown from 'react-native-dropdown-picker';
-import Category from '../images';
+import Category from '../../../Model/Constants/images';
 // import AwesomeButton from "react-native-really-awesome-button";
 import styles from './styles';
 import GetLocation from 'react-native-get-location';

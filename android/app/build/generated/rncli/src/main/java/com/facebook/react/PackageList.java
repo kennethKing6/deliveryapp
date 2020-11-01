@@ -47,8 +47,6 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import com.ijzerenhein.sharedelement.RNSharedElementPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
-// react-native-webview
-import com.reactnativecommunity.webview.RNCWebViewPackage;
 // rn-fetch-blob
 import com.RNFetchBlob.RNFetchBlobPackage;
 
@@ -114,7 +112,6 @@ public class PackageList {
       new RNScreensPackage(),
       new RNSharedElementPackage(),
       new VectorIconsPackage(),
-      new RNCWebViewPackage(),
       new RNFetchBlobPackage()
     ));
   }

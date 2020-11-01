@@ -19,12 +19,12 @@
     <remote-repository>
       <option name="id" value="maven2" />
       <option name="name" value="maven2" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/jsc-android/dist/" />
+      <option name="url" value="file:/$USER_HOME$/kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/jsc-android/dist/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven" />
       <option name="name" value="maven" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native/android/" />
+      <option name="url" value="file:/$USER_HOME$/kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native/android/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="BintrayJCenter" />
@@ -34,7 +34,7 @@
     <remote-repository>
       <option name="id" value="MavenLocal" />
       <option name="name" value="MavenLocal" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../kenzo%203.0/.m2/repository" />
+      <option name="url" value="file:/$USER_HOME$/kenzo%203.0/.m2/repository" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="Google" />
@@ -54,7 +54,7 @@
     <remote-repository>
       <option name="id" value="maven4" />
       <option name="name" value="maven4" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native-screens/node_modules/react-native/android" />
+      <option name="url" value="file:/$USER_HOME$/kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native-screens/node_modules/react-native/android" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="MavenRepo" />
@@ -64,12 +64,42 @@
     <remote-repository>
       <option name="id" value="maven5" />
       <option name="name" value="maven5" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native-image-picker/node_modules/jsc-android/dist" />
+      <option name="url" value="file:/$USER_HOME$/kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native-image-picker/node_modules/jsc-android/dist" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven4" />
       <option name="name" value="maven4" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native-image-picker/node_modules/react-native/android" />
+      <option name="url" value="file:/$USER_HOME$/kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryapp/node_modules/react-native-image-picker/node_modules/react-native/android" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryExpo/deliveryapp/node_modules/react-native/android/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryExpo/deliveryapp/node_modules/jsc-android/dist/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="MavenLocal" />
+      <option name="name" value="MavenLocal" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../../kenzo%203.0/.m2/repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven4" />
+      <option name="name" value="maven4" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryExpo/deliveryapp/node_modules/react-native-screens/node_modules/react-native/android" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven4" />
+      <option name="name" value="maven4" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryExpo/deliveryapp/node_modules/react-native-image-picker/node_modules/react-native/android" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../../../../../../../kenzo%203.0/Documents/React%20Native%20apps/working/Folder/deliveryExpo/deliveryapp/node_modules/react-native-image-picker/node_modules/jsc-android/dist" />
     </remote-repository>
   </component>
 </project>
