@@ -216,7 +216,7 @@
     <orderEntry type="module" module-name="react-native-safe-area-context" />
     <orderEntry type="module" module-name="react-native-screens" />
     <orderEntry type="module" module-name="react-native-shared-element" />
+    <orderEntry type="module" module-name="react-native-svg" />
     <orderEntry type="module" module-name="react-native-vector-icons" />
-    <orderEntry type="module" module-name="android-rn-fetch-blob" />
   </component>
 </module>

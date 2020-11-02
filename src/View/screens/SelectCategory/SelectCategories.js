@@ -15,10 +15,10 @@ import {
 } from 'react-native';
 
 import Feather from 'react-native-vector-icons/Feather';
-import Profiles from '../images';
+import Profiles from '../../../Model/Constants/CategoriesAppData';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Root, Popup } from 'popup-ui';
-import {Account} from '../model/Account';
+import {Account} from '../../../Model/Account';
 import firebase from "@react-native-firebase/app";
 
 

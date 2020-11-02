@@ -256,7 +256,7 @@ function AccountSettings(props) {
                                     <Image 
                                     resizeMode= 'cover'
                                     style = {{width:'50%',height:'50%'}}
-                                    source = {require('../assets/images/earth.gif')}/>
+                                    source = {require('../../../assets/images/earth.gif')}/>
                                     
                                     <Text style={styles.modalText}>How did we do?</Text>
                                     

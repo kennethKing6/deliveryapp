@@ -155,7 +155,7 @@ export default class AppClass extends Component {
         coordinate={DestinationLocation}
         >
         <ImageBackground
-                source={require("../assets/images/3dcar.png")}                                            
+                source={require("../../../assets/images/3dcar.png")}                                            
                 style={styles.MapMarker}
             />
             <MapboxGL.Callout>
@@ -181,7 +181,7 @@ export default class AppClass extends Component {
                 <View style = {{flex:1,justifyContent:'space-between',margin:15}}>
 
                     <View style = {{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
-                      <Image style = {{width:50,height:50,borderRadius:50,borderColor:'white',borderWidth:1}} source = {require('../assets/images/face1.jpg')}/>
+                      <Image style = {{width:50,height:50,borderRadius:50,borderColor:'white',borderWidth:1}} source = {require('../../../assets/images/face1.jpg')}/>
                       <Text style = {{fontSize:25,fontWeight:'900',color:'grey'}}>2.6 mi</Text>
                     </View>
 

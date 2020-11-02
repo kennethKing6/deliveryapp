@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@eva-design/eva": "^2.0.0",
     "@mapbox/mapbox-sdk": "^0.11.0",
     "@react-native-community/blur": "^3.6.0",
     "@react-native-community/cli": "^4.10.1",
@@ -24,6 +25,8 @@
     "@react-navigation/core": "^5.12.3",
     "@react-navigation/native": "^5.0.9",
     "@react-navigation/stack": "^5.9.0",
+    "@ui-kitten/components": "^5.0.0",
+    "@ui-kitten/eva-icons": "^5.0.0",
     "expo": "~38.0.9",
     "expo-linear-gradient": "^8.3.1",
     "expo-splash-screen": "^0.5.0",
@@ -48,6 +51,7 @@
     "react-native-eject": "^0.1.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-get-location": "^1.4.3",
+    "react-native-gifted-chat": "^0.16.3",
     "react-native-image-picker": "^2.3.3",
     "react-native-keyboard-aware-scroll-view": "^0.9.3",
     "react-native-keyboard-aware-scrollview": "^2.1.0",
@@ -61,14 +65,14 @@
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.9.0",
     "react-native-shared-element": "^0.7.0",
+    "react-native-svg": "^12.1.0",
     "react-native-touchable-scale": "^2.1.1",
     "react-native-unimodules": "^0.10.1",
     "react-native-vector-icons": "^7.0.0",
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.3.9",
     "react-navigation-shared-element": "^5.0.0-alpha1",
-    "react-navigation-stack": "^2.8.2",
-    "rn-fetch-blob": "^0.12.0"
+    "react-navigation-stack": "^2.8.2"
   },
   "devDependencies": {
     "@babel/core": "7.11.4",

@@ -2,8 +2,7 @@ import React,{useState} from 'react';
 import { StyleSheet, Dimensions, Image, Platform,TouchableOpacity,View,Text,TextInput } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import DropDown from 'react-native-dropdown-picker';
-import Category from '../../../Model/Constants/images';
-// import AwesomeButton from "react-native-really-awesome-button";
+import CategoriesAppData from '../../../Model/Constants/CategoriesAppData';
 import styles from './styles';
 import GetLocation from 'react-native-get-location';
 import firebase from "@react-native-firebase/app";
@@ -13,8 +12,7 @@ import analytics from '@react-native-firebase/analytics';
 import database from '@react-native-firebase/database';
 import {Product } from '../../../Model/Product'
 import {request,check, PERMISSIONS, RESULTS} from 'react-native-permissions';
-import RNFetchBlob from 'rn-fetch-blob';
-
+import { IndexPath, Layout, Select, SelectItem,Input,Button  } from '@ui-kitten/components';
 
 
 // Your web app's Firebase configuration
@@ -39,28 +37,30 @@ firebase.analytics();
 const { width, height } = Dimensions.get('screen');
 // const thumbMeasure = (width - 48 - 32) / 3;
 
-var photoImageRef = null;
 
 //Get the categories user can select
-var categories=[];
-Category.forEach(element => {
-  categories.push({label: element.name, value: element.name,selected: false},);
-});
 
 
-function  ProductDetails(){
-
-  //Component References
+function  ProductDetails(props){
 
   //product values
   const[productProps,setProductProps] = useState({});
   const[imagePickerResponse,setImagePickerResponse] = useState(null);
-  const[imageBase64,setImageBase64] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(new IndexPath(0));
+  const [selectedCategory,setSelectedCategory] = useState(CategoriesAppData[selectedIndex.row].name)
+  const [items,setItems] = useState([]);
 
 
+  //Ui Kitten eleme
+  const useInputState = (initialValue = '') => {
+    const [value, setValue] = React.useState(initialValue);
+    return { value, onChangeText: setValue };
+  };
   
-
+  const multilineInputState = useInputState();
   
+  
+ 
 
   //Image Picker response
 
@@ -81,11 +81,9 @@ if(userId == undefined || userId == null){
     }).then(()=>{
       //Find the selected product code
 
-      var CategoryObject = Category.find(element=>{
-        element.name === productProps.category;
-      })
+     
       console.log(productProps)
-      return product.initProductProperties(CategoryObject.category,productProps.productName,productProps.productDesc,productProps.productLocation,productProps.productPrice)
+      return product.initProductProperties(productProps.productCategory,productProps.productName,productProps.productDesc,productProps.productLocation,productProps.productPrice)
     }).then(()=>{
       return product.initProductRatings();
     }).then(()=>{
@@ -182,7 +180,7 @@ function getImageName(response){
       return  <Image style={screenStyle.image}  source={{uri:`data:image/gif;base64,${imagePickerResponse.data}`}} resizeMode='contain' />;
 
     }else{
-      return  (<Image style={screenStyle.image}  source={require("../../assets/images/cards/card1.jpg")} resizeMode='contain'/>);
+      return  (<Image style={screenStyle.image}  source={require("../../../assets/images/cards/card1.jpg")} resizeMode='contain'/>);
 
     }
   }
@@ -220,69 +218,64 @@ function getImageName(response){
         >
           <GetUploadImagePath imagePath={imagePickerResponse}/>
         </TouchableOpacity>
+
         <View style={screenStyle.productContent}>
            
-                <TouchableOpacity style={{heigt:null}}>
-                <DropDown  containerStyle={{height:50,margin:10,zIndex:0,marginBottom:40}} items={categories} onChangeItem={(value,idx)=>{setSelectedCategory(value)}} placeholder="Please select a product category"/>
-                </TouchableOpacity>
+          <Layout style={{minHeight: 128}} level='1'>
+              <Select
+                selectedIndex={selectedIndex}
+                value={()=>{return(<Text>{CategoriesAppData[selectedIndex.row].name}</Text>)}}
+                onSelect={index =>{
+                  productProps['productCategory'] = CategoriesAppData[index].category;
+                  setSelectedIndex(index);
+                }}>
+                
+                {
+                    CategoriesAppData.map((obj,index)=>{
+                      items.push(obj.name);
 
-                <TextInput
-                    multiline={false}
-                    onChangeText={(text) => {productProps['productName']  = text}}
-                    value={productProps.productName}
-                    placeholder="enter product name"
-                    
-                    />
+                        return(
+                            <SelectItem title={obj.name} key={index}/>
+                        )
+                    })
+                  
+                } 
+              </Select>
+          </Layout>
+            <Input
+                 placeholder='Enter product name'
+                  value={productProps.productName}
+                  onChangeText={nextValue => productProps['productName'] = nextValue}
+              />
 
-                <TextInput
-                    multiline={true}
-                    numberOfLines={4}
-                    onChangeText={(text) =>{productProps['productDesc']  = text}}
-                    value={productProps.productDesc}
-                    placeholder="enter product description"
+              <Input
+                  multiline={true}
+                  textStyle={{ minHeight: 64 }}
+                  placeholder='Enter Product Description'
+                  // {...multilineInputState}
+                  value={productProps.productDesc}
+                  onChangeText={nextValue => productProps['productDesc'] = nextValue}
+              />
 
-                    />
+                <Input
+                  placeholder='Enter product price'
+                  value={productProps.productPrice}
+                  onChangeText={nextValue => productProps['productPrice'] = nextValue}
+                />
 
-
-              <TouchableOpacity style={styles.itemContainer}>
-                <View style={styles.mainContainer}>
-                  <View style={styles.rowContainer}>
-                    {/* <Image style={styles.itemIcon} source={{ uri: item.icon }} /> */}
-                    <View style={styles.itemTxtContainer}>
-                      <Text style={styles.itemTitle}>Price (£</Text>
-                      <TextInput
-                          multiline={false}
-                          onChangeText={(text) =>{
-                            try{
-                              const price = parseInt(text);
-                              productProps['productPrice']  = price;
-
-                            }catch(e){
-                              alert("Enter a number price");
-                            }
-                          }}
-                          value={productProps.productPrice}
-                          placeholder="$0.00"
-
-                          />
-                    </View>
-                  </View>
-                  <Image style={styles.rightArrow} source={require('../../assets/icons/rightArrow.png')} />
-                </View>
-              </TouchableOpacity>
+             
 
               
         </View>
-        <TouchableOpacity>
-        <Text style={screenStyle.uploadButton}
-        onPress={()=>{
-               
+        <Button style={screenStyle.uploadButton}
+        status='danger'
+        onPress={()=>{     
           if(imagePickerResponse !== null){
             uploadFile(imagePickerResponse).then((uploadTask)=>{
             uploadFileMetadata(uploadTask.metadata);
           
             
-                  alert("Success");
+                  props.navigation.navigate("ProfileScreen")
               }).catch((err)=>{
                   alert(err)
                   console.log("we are here\n");
@@ -294,8 +287,7 @@ function getImageName(response){
             alert("Please select a product to upload")
           }
         }}
-        >Upload</Text>
-        </TouchableOpacity>
+        >UPLOAD</Button>
       </View>
   );
 }
@@ -303,17 +295,19 @@ function getImageName(response){
 
 const screenStyle = StyleSheet.create({
     container:{
-      flex:1
+      flex:1,
+      margin:2,
     },
     imageContainer:{
       flex:2,
-      width:width,
+      width:"100%",
       backgroundColor:"#CC8714",
+      padding:10
      
     },
     image:{
       flex:6,
-      width:width,
+      width:undefined,
       flexDirection:"row",
       padding:0,
       margin:0
@@ -324,7 +318,10 @@ const screenStyle = StyleSheet.create({
     uploadButton:{
       backgroundColor:"#F8002E",
       color:"#FAFAFA",
-      alignSelf:"center"
+      alignSelf:"center",
+      marginBottom:25,
+      width:160,
+      height:60
     }
   });
   

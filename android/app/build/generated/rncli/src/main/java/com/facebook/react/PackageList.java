@@ -45,10 +45,10 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-shared-element
 import com.ijzerenhein.sharedelement.RNSharedElementPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
-// rn-fetch-blob
-import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -111,8 +111,8 @@ public class PackageList {
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new RNSharedElementPackage(),
-      new VectorIconsPackage(),
-      new RNFetchBlobPackage()
+      new SvgPackage(),
+      new VectorIconsPackage()
     ));
   }
 }

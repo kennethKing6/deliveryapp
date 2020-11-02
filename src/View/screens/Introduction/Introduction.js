@@ -47,7 +47,7 @@ export default class Introduction extends Component {
 
                     <Image
                         style = {{width:width/6,height:width/6}}
-                        source = {require('../assets/images/DispatchLogo.png')}
+                        source = {require('../../../assets/images/DispatchLogo.png')}
                     />
 
                     </View>
@@ -69,7 +69,7 @@ export default class Introduction extends Component {
                                 <View style = {{alignSelf:'center',backgroundColor:'#fde3a7',borderRadius:30,overflow:'hidden',marginTop:20,marginBottom:20}}>
                                     <Image
                                         style = {{width:width*0.6,height:width*0.6,top:'25%'}}
-                                        source = {require('../assets/images/hand.png')}
+                                        source = {require('../../../assets/images/hand.png')}
                                     />
                                 </View>
 
@@ -85,7 +85,7 @@ export default class Introduction extends Component {
                                 <View style = {{alignSelf:'center',backgroundColor:'#c5eff7',borderRadius:30,overflow:'hidden',marginTop:20,marginBottom:20}}>
                                     <Image
                                         style = {{width:width*0.6,height:width*0.6,top:'10%'}}
-                                        source = {require('../assets/images/hand2.png')}
+                                        source = {require('../../../assets/images/hand2.png')}
                                     />
                                 </View>
 
@@ -102,7 +102,7 @@ export default class Introduction extends Component {
                                 <View style = {{alignSelf:'center',backgroundColor:'#d5b8ff',borderRadius:30,overflow:'hidden',marginTop:20,marginBottom:20}}>
                                     <Image
                                         style = {{width:width*0.6,height:width*0.6,top:'25%'}}
-                                        source = {require('../assets/images/hand3.png')}
+                                        source = {require('../../../assets/images/hand3.png')}
                                     />
                                 </View>
 

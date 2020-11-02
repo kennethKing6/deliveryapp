@@ -199,7 +199,7 @@ if(userId == undefined || userId == null){
 
         
           <ImageBackground
-            source={require("../../assets/images/burger.jpg")}
+            source={require("../../../assets/images/burger.jpg")}
             resizeMode="cover"
             style={styles.image}
           >

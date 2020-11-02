@@ -7,9 +7,9 @@ import Feather from 'react-native-vector-icons/Feather';
 
 
 //SCREENS
-import HomeScreen from "./HomeScreen";
+import HomeScreen from "../screens/Home/HomeScreen";
 
-import MapScreen from "./MapScreen";
+import MapScreen from "../screens/Map/MapScreen";
 import UploadScreen from "../screens/ListItems/ListItem";
 import ProductTitleScreen from '../screens/ListItems/ProductTitle';
 import ProductDescriptionScreen from '../screens/ListItems/ProductDescription';
@@ -17,23 +17,24 @@ import ProductPriceScreen from '../screens/ListItems/ProductPrice';
 import ProductCategoryScreen from '../screens/ListItems/ProductCategory';
 import ProductImageScreen from '../screens/ListItems/ProductImage';
 import FinishListingScreen from '../screens/ListItems/FinishListing';
-import WelcomeScreen from "./WelcomeScreen";
-import ProfileScreen from "./Profile";
-import AccountSettings from "./AccountSettings";
-import PersonalInformation from './PersonalInformation';
-import AddListing from './AddListing';
+import WelcomeScreen from "../screens/WelcomeScreen/WelcomeScreen";
+import ProfileScreen from "../screens/Profile/Profile";
+import AccountSettings from "../screens/AccountSettings/AccountSettings";
+import PersonalInformation from '../screens/PersonalInformation/PersonalInformation';
+import AddListing from '../screens/AddListing/AddListing';
 import UploadProductScreen from '../screens/UploadProductScreens/UploadProductScreen';
 import ProductDetails from '../screens/UploadProductScreens/ProductDetails';
-import SelectCategories from './SelectCategories';
-import Introduction from './Introduction';
-import PaymentCard from './PaymentCard';
+import SelectCategories from '../screens/SelectCategory/SelectCategories';
+import Introduction from '../screens/Introduction/Introduction';
+import PaymentCard from '../screens/Payment/PaymentCard';
+import ChatScreen from '../screens/Message/ChatScreen';
 
 
 
 
 
-import SignIn from "./Login";
-import SignUp from "./Register";
+import SignIn from "../screens/Login/Login";
+import SignUp from "../screens/Register/Register";
 //END OF SCREENS
 
 import {createStackNavigator} from '@react-navigation/stack';
@@ -445,8 +446,13 @@ export const MainNavigator = () => {
                 component={ProductDetails}
                 options={{ headerShown: false }}
             />
+             <Switch.Screen
+                name="ChatScreen"
+                component={ChatScreen}
+                options={{ headerShown: false }}
+            />
             
-
+            
             
         </Switch.Navigator>
         

@@ -60,7 +60,7 @@ export default function AddListing({props, route, navigation: { goBack } }) {
 
                                     <ImageBackground
                                         resizeMode = "cover"
-                                        source = {require('../assets/images/face1.jpg')}
+                                        source = {require('../../../assets/images/face1.jpg')}
                                         style = {styles.inner}
 
                                         />

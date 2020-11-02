@@ -190,12 +190,12 @@ if(userId == undefined || userId == null){
 
         <View style={styles.imageRow}>
           <Image
-            source={require("../assets/images/makeup.jpg")}
+            source={require("../../../assets/images/makeup.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
           <Image
-            source={require("../assets/images/phone.jpg")}
+            source={require("../../../assets/images/phone.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
@@ -205,12 +205,12 @@ if(userId == undefined || userId == null){
 
         <View style={styles.imageRow}>
           <Image
-            source={require("../assets/images/shoes.jpg")}
+            source={require("../../../assets/images/shoes.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
           <Image
-            source={require("../assets/images/t-shirt.jpg")}
+            source={require("../../../assets/images/t-shirt.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
@@ -219,12 +219,12 @@ if(userId == undefined || userId == null){
 
         <View style={styles.imageRow}>
           <Image
-            source={require("../assets/images/t-shirt.jpg")}
+            source={require("../../../assets/images/t-shirt.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>
           <Image
-            source={require("../assets/images/t-shirt.jpg")}
+            source={require("../../../assets/images/t-shirt.jpg")}
             resizeMode="cover"
             style={styles.image}
           ></Image>

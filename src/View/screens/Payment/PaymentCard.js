@@ -84,7 +84,7 @@ function AccountSettings(props) {
                                 <ImageBackground
                                     resizeMode = {'cover'}
                                     style = {{width:'100%',height:'100%',borderRadius:20,overflow:'hidden'}}
-                                    source = {require('../assets/images/cards/card2.jpg')}
+                                    source = {require('../../../assets/images/cards/card2.jpg')}
                                 >
                                 <View style = {{margin:20, flex:1, justifyContent:'space-between'}}>
                                     
@@ -127,7 +127,7 @@ function AccountSettings(props) {
                                 <ImageBackground
                                     resizeMode = {'cover'}
                                     style = {{width:'100%',height:'100%',borderRadius:20,overflow:'hidden'}}
-                                    source = {require('../assets/images/cards/card3.jpg')}
+                                    source = {require('../../../assets/images/cards/card3.jpg')}
                                 >
                                 <View style = {{margin:20, flex:1, justifyContent:'space-between'}}>
                                     

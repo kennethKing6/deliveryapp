@@ -207,7 +207,7 @@ function layoutIdentifier(){
 
                                         <View style={styles.rect2}>
                                             <ImageBackground
-                                                source={require("../assets/images/vintage.jpg")}
+                                                source={require("../../../assets/images/vintage.jpg")}
                                                 resizeMode="cover"
                                                 style={styles.listingImage1}
                                             ></ImageBackground>

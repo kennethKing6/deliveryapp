@@ -15,12 +15,12 @@ import {
 import SearchBar from "../../components/SearchBar";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture-handler";
-import Profiles from '../images';
+import Profiles from '../../../Model/Constants/CategoriesAppData';
 import {SharedElement} from 'react-navigation-shared-element';
 import {styles} from './styles';
 
 
-export default function HomeScreen (props, {navigation}) {
+export default function HomeScreen (props) {
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
@@ -40,7 +40,7 @@ export default function HomeScreen (props, {navigation}) {
 
                     <Image
                         style = {{width:30,height:30,marginTop:5}}
-                        source = {require('../assets/images/DispatchLogo.png')}
+                        source = {require('../../../assets/images/DispatchLogo.png')}
                     />
 
                     </View>
@@ -228,10 +228,10 @@ export default function HomeScreen (props, {navigation}) {
                                 <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>For You</Text>
                             </View> 
 
-
-                                <View style={styles.listing}>
+                                <TouchableOpacity onPress={()=>props.navigation.navigate("ChatScreen")}>
+                                <View style={styles.listing} >
                                     <ImageBackground
-                                        source={require("../assets/images/volkswagen.jpg")}
+                                        source={require("../../../assets/images/volkswagen.jpg")}
                                         resizeMode="cover"
                                         style={styles.listingImage1}
                                         
@@ -243,11 +243,12 @@ export default function HomeScreen (props, {navigation}) {
                                     </ImageBackground>
                                     
                                 </View>
+                                </TouchableOpacity>
 
                                 <View style={styles.listing}>
 
                                     <ImageBackground
-                                        source={require("../assets/images/macbook.jpg")}
+                                        source={require("../../../assets/images/macbook.jpg")}
                                         resizeMode="cover"
                                         style={styles.listingImage1}
                                     >
@@ -261,7 +262,7 @@ export default function HomeScreen (props, {navigation}) {
                                 <View style={styles.listing}>
 
                                     <ImageBackground
-                                        source={require("../assets/images/keyboard.jpg")}
+                                        source={require("../../../assets/images/keyboard.jpg")}
                                         resizeMode="cover"
                                         style={styles.listingImage1}
                                     >
