@@ -13,9 +13,9 @@ const {width} = Dimensions.get("window");
 
 
 const Product = (props)=>{
-    const [imageUrls,setImageUrls] = React.useState(new Array());
-    const [newData,setnewData] = React.useState(false);
-    const [orientation,setOrientation] = React.useState(false);
+    const [imageUrls,setImageUrls] = useState(new Array());
+    const [newData,setnewData] = useState(false);
+    const [orientation,setOrientation] = useState(false);
 
 
     const userId = firebase.auth().currentUser.uid;
@@ -23,7 +23,7 @@ const Product = (props)=>{
 
      
 
-    React.useEffect(() => {
+    useEffect(() => {
         let isSubscribed = (imageUrls.length === 0 && newData === false);
 
        
@@ -52,26 +52,16 @@ const Product = (props)=>{
         ref.on("value",(dataSnapshot)=>{
             if(dataSnapshot !== null){
                 setnewData(dataSnapshot);
+                console.log(dataSnapshot);
             }                         
             else
                setnewData(false)  
-       });
-
-       // Event Listener for orientation changes
-    //  Dimensions.addEventListener('change', () => {
-    //     setTimeout(()=>setOrientation(true),5000)
-    //     ;
-    //    });
-        
-        
+       });  
     
        
     }
 
 function getDownloadUrls(datasaphot){
-    console.log(datasaphot)
-
-
     var urls = new Array();
     var num = 1;
    return new Promise((resolve,reject)=>{
