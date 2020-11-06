@@ -173,7 +173,8 @@ function layoutIdentifier(){
         }catch(err){
             return 0;
         }
-        return data; 
+       
+        return data ? data: 0; 
     }
 // ShowImage().then(()=>{}).catch((err)=>{
 // throw err;

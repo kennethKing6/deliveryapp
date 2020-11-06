@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,useState,useEffect } from "react";
 import { 
     StyleSheet, 
     View, 
@@ -7,11 +7,74 @@ import {
     TouchableOpacity, 
     SafeAreaView, 
     ScrollView,
+    TextInput 
  } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import CustomTextInput from "../../components/CustomTextInput";
+import firebase from "@react-native-firebase/app";
+import database from '@react-native-firebase/database';
 
 function AccountSettings(props) {
+    const [profilePicture,setProfilePic] = useState(null);
+    const [username,setUsername] = useState(null);
+    const [address,setUserAddress] = useState(null);
+    const [userBio,setUserBio] = useState(null);
+    const [userProperties,setUserProperties] = useState(null);
+
+
+    const userId = firebase.auth().currentUser.uid;
+    const ref = firebase.database().ref("users/" + userId);
+    const userPropertiesRef = ref.child("user_properties");
+
+     //user data constants
+     const PROFILEP_PICTURE = 0;
+     const USERNAME = 1;
+     const ADDRESS = 2;
+     const USERBIO = 3;
+     const RATING = 4;
+     const REVIEWS = 5;
+     const SOLD = 6;
+
+     function getUserData(requestedUserData){
+        var data = null;
+        try{
+            switch(requestedUserData){
+                case PROFILEP_PICTURE:
+                   
+                    profilePicture === null? data = userProperties.profilePicture : data = profilePicture;
+                    break;
+                case USERNAME:
+                    username === null?data = userProperties.username : data = username;
+                    break;
+                case ADDRESS:
+                    address === null? data = userProperties.address : data = address;
+                    break;
+                case USERBIO:
+                    userBio === null? data  =userProperties.userBio:data = userBio; 
+                     break;
+            }
+        }catch(err){
+            return null; 
+        }
+        return data;
+    }
+
+
+    useEffect(() => {
+        const unsubscribe = props.navigation.addListener('focus', () => {
+            userPropertiesRef.once("value",(datasnapshot)=>{
+                    setUserProperties(datasnapshot.val());
+            })
+          
+
+           
+        });
+    
+        return unsubscribe;
+      }, [props.navigation]);
+
+   
+
     return (
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />
@@ -39,13 +102,34 @@ function AccountSettings(props) {
 
                     </View>
 
-                    <View style={{ justifyContent: "center" }}>
+                    <TouchableOpacity style={{ justifyContent: "center" }} 
+                    onPress={()=>{
+                        var firebaseUsernameValue = "";
+                        try{firebaseUsernameValue = userProperties.username}catch(err){}
+
+                        var firebaseBioValue = "";
+                        try{firebaseBioValue = userProperties.userBio}catch(err){}
+
+                        var firebaseAddressValue = "";
+                        try{firebaseAddressValue = userProperties.address}catch(err){}
+                       
+                       
+                       userPropertiesRef.update({
+                        username:username === null ? firebaseUsernameValue:username,
+                        userBio:userBio === null ?firebaseBioValue:userBio,
+                        address:address === null ? firebaseAddressValue:address
+                       }).then(()=>{
+                            props.navigation.navigate("ProfileScreen");
+                        }).catch()
+                        
+
+                    }}>
 
                         <Text style={{
                             color: "#f03434", fontSize: 18
                         }}>save</Text>
 
-                    </View>
+                    </TouchableOpacity>
 
                 </View>
 
@@ -61,10 +145,12 @@ function AccountSettings(props) {
 
                         <View style={styles.personal}>
 
-                            <Text style = {styles.Text}>First Name</Text>
-                            <CustomTextInput 
+                            <Text style = {styles.Text}>Business Name</Text>
+                            <TextInput  
                             style={styles.personalInformation}
-                            placeholder = "First Name"
+                            placeholder = "Business Name"
+                            onChangeText={(username)=>setUsername(username)}
+                            value={getUserData(USERNAME)}
                             
                             />
 
@@ -72,50 +158,28 @@ function AccountSettings(props) {
 
                     <View style={styles.personal}>
 
-                        <Text style={styles.Text}>Last Name</Text>
-                        <CustomTextInput
-                            placeholder="Last Name"
-
-                        />
+                        <Text style={styles.Text}>Describe your Business</Text>
+                        <TextInput  
+                            style={styles.personalInformation}
+                            placeholder = "Business Description"
+                            onChangeText={(bio)=>setUserBio(bio)}
+                            multiline
+                            value={getUserData(USERBIO)}
+                            />
 
                     </View>
 
                     <View style={styles.personal}>
 
-                        <Text style={styles.Text}>Email</Text>
-                        <CustomTextInput
-                            placeholder="Email"
-
-                        />
-
+                        <Text style={styles.Text}>Address</Text>
+                        <TextInput  
+                            style={styles.personalInformation}
+                            placeholder = "ADDRESS"
+                            onChangeText={(address)=>setUserAddress(address)}
+                            value={getUserData(ADDRESS)}
+                            />
                     </View>
-                    <View style={styles.personal}>
-
-                        <Text style={styles.Text}>Phone number</Text>
-                        <CustomTextInput
-                            placeholder="Phone number"
-
-                        />
-
-                    </View>
-                     <View style={styles.personal}>
-
-                        <Text style={styles.Text}>Phone number</Text>
-                        <CustomTextInput
-                            placeholder="Phone number"
-
-                        />
-
-                    </View>
-                    <View style={styles.personal}>
-
-                        <Text style={styles.Text}>Phone number</Text>
-                        <CustomTextInput
-                            placeholder="Phone number"
-
-                        />
-
-                    </View>
+                   
 
                 </View>
 
@@ -123,7 +187,7 @@ function AccountSettings(props) {
             </ScrollView>
 
 
-
+           
         </View>
     );
 }
@@ -187,7 +251,11 @@ const styles = StyleSheet.create({
         fontSize: 22
     },
     
-
+    personalInformation:{
+        width:"80%",
+        borderColor:'red',
+        borderWidth:1
+    }
 
 });
 
