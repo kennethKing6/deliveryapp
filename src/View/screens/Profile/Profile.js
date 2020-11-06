@@ -17,28 +17,28 @@ const {width} = Dimensions.get("window");
 
 const Product = (props)=>{
     const [productList,setProductList] = useState([]);
+
   
     const userId = firebase.auth().currentUser.uid;
-    const ref = firebase.database().ref("users/" + userId).child("products");  
+    const ref = firebase.database().ref("users/" + userId);
     
-    var listener = null;
+    const productRef = ref.child("products");
+    
+    
     useEffect(() => {
         const unsubscribe = props.navigation.addListener('focus', () => {
-           listener =  ref.on("value",(snapshot)=>{
-                getProducts(snapshot)
+          
+            productRef.once("value",(snapshot)=>{
+                    getProducts(snapshot)
             })
+
+           
         });
     
         return unsubscribe;
       }, [props.navigation]);
 
-      useEffect(() => {
-        const unsubscribe = props.navigation.addListener('blur', () => {
-            ref.off("value",listener);
-        });
-    
-        return unsubscribe;
-      }, [props.navigation]);
+     
 
  function getProducts(datasnapshot){
     var products = [];
@@ -103,8 +103,78 @@ function layoutIdentifier(){
 } 
 
  function Profile(props) {
+    const [userProperties,setUserProperties] = useState(null);
+
+    const userId = firebase.auth().currentUser.uid;
+    const ref = firebase.database().ref("users/" + userId);
+    const userPropertiesRef = ref.child("user_properties");
+
+    //user data constants
+    const PROFILEP_PICTURE = 0;
+    const USERNAME = 1;
+    const ADDRESS = 2;
+    const USERBIO = 3;
+    const RATING = 4;
+    const REVIEWS = 5;
+    const SOLD = 6;
+
+    useEffect(() => {
+        const unsubscribe = props.navigation.addListener('focus', () => {
+            userPropertiesRef.once("value",(datasnapshot)=>{
+                    setUserProperties(datasnapshot.val());
+            })
+          
+
+           
+        });
+    
+        return unsubscribe;
+      }, [props.navigation]);
 
 
+    function getUserData(requestedUserData){
+        var data = null;
+        try{
+            switch(requestedUserData){
+                case PROFILEP_PICTURE:
+                    data = userProperties.profilePicture;
+                    break;
+                case USERNAME:
+                    data = userProperties.username;
+                    break;
+                case ADDRESS:
+                    data = userProperties.address;
+                    break;
+                case USERBIO:
+                    data = userProperties.userBio;
+                        break;
+            }
+        }catch(err){
+            return ""; 
+        }
+        return data;
+    }
+
+
+    function getUserStats(requestedStats){
+        var data;
+        try{
+            switch(requestedStats){
+                case RATING:
+                        data = userProperties.rating;
+                            break;
+                    case REVIEWS:
+                        data = userProperties.reviews;
+                            break;
+                    case SOLD:
+                        data = userProperties.sold;
+                            break;
+            }
+        }catch(err){
+            return 0;
+        }
+        return data; 
+    }
 // ShowImage().then(()=>{}).catch((err)=>{
 // throw err;
 // })
@@ -132,7 +202,7 @@ function layoutIdentifier(){
                 <View style={{ justifyContent: 'center', marginTop: 5 }}>
 
                         <Text style={{
-                            color: "black", fontSize:18 }}>urbanwear</Text>
+                            color: "black", fontSize:18 }}>{getUserData(USERNAME)}</Text>
 
                 </View>
 
@@ -166,24 +236,24 @@ function layoutIdentifier(){
                                             ></ImageBackground>
                                         </View>
                                         <View style={styles.group}>
-                                            <Text style={styles.shahbekMiru}>Urban Wear <Feather name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
-                                            <Text style={styles.kamloopsCanada}>Kamloops, Canada</Text>
+                                            <Text style={styles.shahbekMiru}>{getUserData(USERNAME)}<Feather name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
+                                            <Text style={styles.kamloopsCanada}>{getUserData(ADDRESS)}</Text>
                                         </View>
                                         <View style={styles.group2}>
-                                            <Text style={styles.kamloopsCanada}>Urban Wear is the leading online destination for men's contemporary fashion and streetwear. Shop at our store and also enjoy the best in daily editorial content. </Text>
+                                            <Text style={styles.kamloopsCanada}>{getUserData(USERBIO)} </Text>
                                         </View>
                                         
                                         <View style={styles.banner}>
                                             <View style={styles.rating1}>
-                                                <Text style={styles.loremIpsum}>4.5</Text>
+                                                <Text style={styles.loremIpsum}>{getUserStats(RATING)}</Text>
                                                 <Text style={styles.rating}>RATING</Text>
                                             </View>
                                             <View style={styles.rating1}>
-                                                <Text style={styles.loremIpsum}>17</Text>
+                                                <Text style={styles.loremIpsum}>{getUserStats(REVIEWS)}</Text>
                                                 <Text style={styles.rating}>REVIEWS</Text>
                                             </View>
                                             <View style={styles.rating1}>
-                                                <Text style={styles.loremIpsum}>35</Text>
+                                                <Text style={styles.loremIpsum}>{getUserStats(SOLD)}</Text>
                                                 <Text style={styles.rating}>SOLD</Text>
                                             </View>
                                         </View>
