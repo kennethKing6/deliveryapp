@@ -21,9 +21,10 @@ const Product = (props)=>{
     const userId = firebase.auth().currentUser.uid;
     const ref = firebase.database().ref("users/" + userId).child("products");  
     
+    var listener = null;
     useEffect(() => {
         const unsubscribe = props.navigation.addListener('focus', () => {
-            ref.on("value",(snapshot)=>{
+           listener =  ref.on("value",(snapshot)=>{
                 getProducts(snapshot)
             })
         });
@@ -33,7 +34,7 @@ const Product = (props)=>{
 
       useEffect(() => {
         const unsubscribe = props.navigation.addListener('blur', () => {
-            ref.off();
+            ref.off("value",listener);
         });
     
         return unsubscribe;
