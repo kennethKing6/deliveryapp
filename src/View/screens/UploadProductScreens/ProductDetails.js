@@ -76,14 +76,17 @@ if(userId == undefined || userId == null){
    
     
     var product = new Product(userId);
+    console.log("Data")
     product.initProductRef().then(()=>{
     return product.uploadProductFileMeta(metadata);
     }).then(()=>{
+      return firebase.storage().ref(metadata.fullPath).getDownloadURL();
+    }).then((url)=>{
       //Find the selected product code
 
      
       console.log(productProps)
-      return product.initProductProperties(productProps.productCategory,productProps.productName,productProps.productDesc,productProps.productLocation,productProps.productPrice)
+      return product.initProductProperties(productProps.productCategory,productProps.productName,productProps.productDesc,productProps.productLocation,productProps.productPrice,url)
     }).then(()=>{
       return product.initProductRatings();
     }).then(()=>{
