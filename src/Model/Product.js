@@ -92,7 +92,7 @@ export class Product{
      * @param {*} productLocation 
      * @param {*} productPrice 
      */
-   async initProductProperties(productCategory,productName,productDescription,productLocation,productPrice){
+   async initProductProperties(productCategory,productName,productDescription,productLocation,productPrice,url){
 
         await firebase.database().ref(this.ref + "/properties").set({
             productCategory: productCategory,
@@ -100,7 +100,8 @@ export class Product{
             productDescription : productDescription,
             productLocation: productLocation,
             productPrice: productPrice,
-            productState : productState.IN_STOCK
+            productState : productState.IN_STOCK,
+            url : url
 
           }).then(()=>{}).catch(()=>{console.log("failed to set product properties")})
           

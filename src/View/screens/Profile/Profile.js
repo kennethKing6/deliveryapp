@@ -3,8 +3,11 @@ import { StyleSheet, View, StatusBar, Text, ImageBackground, TouchableOpacity,Sa
 import Feather from "react-native-vector-icons/Feather";
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
+import database from '@react-native-firebase/database';
+
 import analytics from '@react-native-firebase/analytics';
 import storage from '@react-native-firebase/storage';
+import productState from "../../../Model/Constants/ProductStateConstant";
 
 
 
@@ -13,97 +16,41 @@ const {width} = Dimensions.get("window");
 
 
 const Product = (props)=>{
-    const [imageUrls,setImageUrls] = React.useState(new Array());
-    const [newData,setnewData] = React.useState(false);
-    const [orientation,setOrientation] = React.useState(false);
+    const [productList,setProductList] = useState([]);
 
-
+  
     const userId = firebase.auth().currentUser.uid;
-        var ref = firebase.database().ref("users/" + userId).child("products");        
+    const ref = firebase.database().ref("users/" + userId);
+    
+    const productRef = ref.child("products");
+    
+    
+    useEffect(() => {
+        const unsubscribe = props.navigation.addListener('focus', () => {
+          
+            productRef.once("value",(snapshot)=>{
+                    getProducts(snapshot)
+            })
+
+           
+        });
+    
+        return unsubscribe;
+      }, [props.navigation]);
 
      
 
-    React.useEffect(() => {
-        let isSubscribed = (imageUrls.length === 0 && newData === false);
-
-       
-        if(isSubscribed){
-            getDatasnapshot();
-        }
-
-        ShowImage().then( urls => {
-        
-              setImageUrls(urls.reverse());
-            //   if(orientation == true)
-            //      setOrientation(false);
-  
-            
-          }).catch((err)=>{
-            console.log(err)
-            throw err;
-        })
-            
-          return () => isSubscribed = (imageUrls.length === 0)
-        
-      }, [newData]);
-    
-
-     function getDatasnapshot(){
-        ref.on("value",(dataSnapshot)=>{
-            if(dataSnapshot !== null){
-                setnewData(dataSnapshot);
-            }                         
-            else
-               setnewData(false)  
-       });
-
-       // Event Listener for orientation changes
-    //  Dimensions.addEventListener('change', () => {
-    //     setTimeout(()=>setOrientation(true),5000)
-    //     ;
-    //    });
-        
-        
-    
-       
-    }
-
-function getDownloadUrls(datasaphot){
-    console.log(datasaphot)
-
-
-    var urls = new Array();
-    var num = 1;
-   return new Promise((resolve,reject)=>{
-    datasaphot.forEach(product => {
-        firebase.storage().ref(product.val().productFileMetadata.fullPath).getDownloadURL().then((url)=>{
-           urls.push(url);
-        }).catch((err)=>{
-            console.log(err)
-            reject(err)
-            throw err;
-        }).finally(()=>{
-            if(datasaphot.numChildren() === num){
-               resolve(urls);
-            }else{
-                ++num;
-            }
-
-        })
-   })
-        
-       
-   });
+ function getProducts(datasnapshot){
+    var products = [];
+    datasnapshot.forEach(element => {
+        products.push(element.val());
+    });
+   setProductList(products.reverse());
 }
-async function ShowImage(){    
-    const urls = await getDownloadUrls(newData);
-    return urls;
-}
-   
 
 function layoutIdentifier(){
 
-    if(imageUrls.length === 0){
+    if(productList.length === 0){
         return (<View style={{flex:props.flex,justifyContent: 'center',alignSelf:'center', width:'80%',alignItems:'center' }}>
                 <Text style={{fontSize:20,color:'grey', fontWeight: '500',textAlign:'center'}}>You have no products to sell yet, please list an item 😁</Text>
 
@@ -113,28 +60,34 @@ function layoutIdentifier(){
               
 
                 <View style = {styles.Listed}>
-                    {imageUrls.map((url,index)=>{
-                        return(
+                    {productList.map((data,index)=>{
+                        try{
+                            return(
                             
-                                <View key={index} style={[{width:(width/3)},{height:(width/3)},{padding:0.5}]}>
-                                
+                            <View key={index} style={[{width:(width/3)},{height:(width/3)},{padding:0.5}]}>
+                            
+                                    
+                                    <ImageBackground style={{flex:1,width:undefined,height:undefined,resizeMode:"cover",borderRadius:3,flex:1,overflow:'hidden'}} 
+                                    source={{uri:data.properties.url}}
+                                    onError={(err)=>{
+                                        //Error loading the image
+                                    console.log(err)
+                                    }}>
+                                        <View style = {{margin: 5,flex:1,justifyContent:"flex-end"}}>
+
+                                            <Text style = {{color: 'black', fontWeight: "bold",padding:2,alignSelf:'flex-start',backgroundColor: 'white',borderRadius: 3,overflow: 'hidden'}}>${data.properties.productPrice}</Text>
+                                        </View>
+
                                         
-                                        <ImageBackground style={{flex:1,width:undefined,height:undefined,resizeMode:"cover",borderRadius:3,flex:1,overflow:'hidden'}} 
-                                        source={{uri:url}}
-                                        onError={(err)=>{
-                                            //Error loading the image
-                                        console.log(err)
-                                        }}>
-                                            <View style = {{margin: 5,flex:1,justifyContent:"flex-end"}}>
+                                    </ImageBackground>
+                            </View>
 
-                                                <Text style = {{color: 'black', fontWeight: "bold",padding:2,alignSelf:'flex-start',backgroundColor: 'white',borderRadius: 3,overflow: 'hidden'}}>$500</Text>
-                                            </View>
+                )
+                        }catch(error){
 
-                                            
-                                        </ImageBackground>
-                                </View>
-
-                    )})}
+                        }
+                        
+                       })}
                 </View>
         )
      }
@@ -150,8 +103,79 @@ function layoutIdentifier(){
 } 
 
  function Profile(props) {
+    const [userProperties,setUserProperties] = useState(null);
+
+    const userId = firebase.auth().currentUser.uid;
+    const ref = firebase.database().ref("users/" + userId);
+    const userPropertiesRef = ref.child("user_properties");
+
+    //user data constants
+    const PROFILEP_PICTURE = 0;
+    const USERNAME = 1;
+    const ADDRESS = 2;
+    const USERBIO = 3;
+    const RATING = 4;
+    const REVIEWS = 5;
+    const SOLD = 6;
+
+    useEffect(() => {
+        const unsubscribe = props.navigation.addListener('focus', () => {
+            userPropertiesRef.once("value",(datasnapshot)=>{
+                    setUserProperties(datasnapshot.val());
+            })
+          
+
+           
+        });
+    
+        return unsubscribe;
+      }, [props.navigation]);
 
 
+    function getUserData(requestedUserData){
+        var data = null;
+        try{
+            switch(requestedUserData){
+                case PROFILEP_PICTURE:
+                    data = userProperties.profilePicture;
+                    break;
+                case USERNAME:
+                    data = userProperties.username;
+                    break;
+                case ADDRESS:
+                    data = userProperties.address;
+                    break;
+                case USERBIO:
+                    data = userProperties.userBio;
+                        break;
+            }
+        }catch(err){
+            return ""; 
+        }
+        return data;
+    }
+
+
+    function getUserStats(requestedStats){
+        var data;
+        try{
+            switch(requestedStats){
+                case RATING:
+                        data = userProperties.rating;
+                            break;
+                    case REVIEWS:
+                        data = userProperties.reviews;
+                            break;
+                    case SOLD:
+                        data = userProperties.sold;
+                            break;
+            }
+        }catch(err){
+            return 0;
+        }
+       
+        return data ? data: 0; 
+    }
 // ShowImage().then(()=>{}).catch((err)=>{
 // throw err;
 // })
@@ -179,7 +203,7 @@ function layoutIdentifier(){
                 <View style={{ justifyContent: 'center', marginTop: 5 }}>
 
                         <Text style={{
-                            color: "black", fontSize:18 }}>urbanwear</Text>
+                            color: "black", fontSize:18 }}>{getUserData(USERNAME)}</Text>
 
                 </View>
 
@@ -213,24 +237,24 @@ function layoutIdentifier(){
                                             ></ImageBackground>
                                         </View>
                                         <View style={styles.group}>
-                                            <Text style={styles.shahbekMiru}>Urban Wear <Feather name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
-                                            <Text style={styles.kamloopsCanada}>Kamloops, Canada</Text>
+                                            <Text style={styles.shahbekMiru}>{getUserData(USERNAME)}<Feather name = 'check-circle' style = {{fontSize:20,color:'dodgerblue'}}/></Text>
+                                            <Text style={styles.kamloopsCanada}>{getUserData(ADDRESS)}</Text>
                                         </View>
                                         <View style={styles.group2}>
-                                            <Text style={styles.kamloopsCanada}>Urban Wear is the leading online destination for men's contemporary fashion and streetwear. Shop at our store and also enjoy the best in daily editorial content. </Text>
+                                            <Text style={styles.kamloopsCanada}>{getUserData(USERBIO)} </Text>
                                         </View>
                                         
                                         <View style={styles.banner}>
                                             <View style={styles.rating1}>
-                                                <Text style={styles.loremIpsum}>4.5</Text>
+                                                <Text style={styles.loremIpsum}>{getUserStats(RATING)}</Text>
                                                 <Text style={styles.rating}>RATING</Text>
                                             </View>
                                             <View style={styles.rating1}>
-                                                <Text style={styles.loremIpsum}>17</Text>
+                                                <Text style={styles.loremIpsum}>{getUserStats(REVIEWS)}</Text>
                                                 <Text style={styles.rating}>REVIEWS</Text>
                                             </View>
                                             <View style={styles.rating1}>
-                                                <Text style={styles.loremIpsum}>35</Text>
+                                                <Text style={styles.loremIpsum}>{getUserStats(SOLD)}</Text>
                                                 <Text style={styles.rating}>SOLD</Text>
                                             </View>
                                         </View>
@@ -240,7 +264,7 @@ function layoutIdentifier(){
 
             <View style = {{marginTop:30, width: '100%',alignSelf: 'center'}}>
 
-            <Product flex={0}/>
+            <Product flex={0} navigation={props.navigation}/>
             </View>
           </ScrollView>  
         
