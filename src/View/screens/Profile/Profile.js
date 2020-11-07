@@ -110,7 +110,7 @@ function layoutIdentifier(){
     const userPropertiesRef = ref.child("user_properties");
 
     //user data constants
-    const PROFILEP_PICTURE = 0;
+    const PROFILE_PICTURE = 0;
     const USERNAME = 1;
     const ADDRESS = 2;
     const USERBIO = 3;
@@ -136,9 +136,18 @@ function layoutIdentifier(){
         var data = null;
         try{
             switch(requestedUserData){
-                case PROFILEP_PICTURE:
-                    data = userProperties.profilePicture;
+                case PROFILE_PICTURE:
+                   var remoteImage = null;
+                   try{
+                       remoteImage = userProperties.userProfilePicture;
+                      
+                    }catch(err){remoteImage=null}
+
+
+                    remoteImage != null ? data = {uri : remoteImage}   : data = null ;
+
                     break;
+
                 case USERNAME:
                     data = userProperties.username;
                     break;
@@ -231,7 +240,7 @@ function layoutIdentifier(){
 
                                         <View style={styles.rect2}>
                                             <ImageBackground
-                                                source={require("../../../assets/images/vintage.jpg")}
+                                                source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE) }
                                                 resizeMode="cover"
                                                 style={styles.listingImage1}
                                             ></ImageBackground>

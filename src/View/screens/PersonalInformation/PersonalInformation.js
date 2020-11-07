@@ -14,6 +14,10 @@ import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommun
 import CustomTextInput from "../../components/CustomTextInput";
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
+import storage from '@react-native-firebase/storage';
+import ImagePicker from 'react-native-image-picker';
+import {ImageUploader} from '../../../Controller/AssetUploader/ImageUploader';
+
 
 function AccountSettings(props) {
     const [profilePicture,setProfilePic] = useState(null);
@@ -28,7 +32,7 @@ function AccountSettings(props) {
     const userPropertiesRef = ref.child("user_properties");
 
      //user data constants
-     const PROFILEP_PICTURE = 0;
+     const PROFILE_PICTURE = 0;
      const USERNAME = 1;
      const ADDRESS = 2;
      const USERBIO = 3;
@@ -40,9 +44,18 @@ function AccountSettings(props) {
         var data = null;
         try{
             switch(requestedUserData){
-                case PROFILEP_PICTURE:
-                   
-                    profilePicture === null? data = userProperties.profilePicture : data = profilePicture;
+                case PROFILE_PICTURE:
+                    var localImage = null;
+                   try{localImage = profilePicture.data}catch(err){localImage=null}
+
+                   var remoteImage = null;
+                   try{remoteImage = userProperties.userProfilePicture}catch(err){remoteImage=null}
+
+                    localImage != null ? data = {uri:`data:image/gif;base64,${localImage}`} :
+                    remoteImage != null? data =  {uri: remoteImage} : data = null;
+
+                  
+
                     break;
                 case USERNAME:
                     username === null?data = userProperties.username : data = username;
@@ -75,6 +88,28 @@ function AccountSettings(props) {
       }, [props.navigation]);
 
    
+      function getImageProfile(){
+        const options = {
+            title: 'Make your business shine',           
+            noData: false,
+            quality:0.3,
+          };
+
+          ImagePicker.showImagePicker(options, (response) => {
+          
+            if (response.didCancel) {
+              console.log('User cancelled image picker');
+            } else if (response.error) {
+              console.log('ImagePicker Error: ', response.error);
+            } else if (response.customButton) {
+              console.log('User tapped custom button: ', response.customButton);
+            } else {
+                setProfilePic(response);
+              
+          
+            }
+          });
+      }
 
     return (
         <View style={styles.container}>
@@ -109,16 +144,36 @@ function AccountSettings(props) {
 
                         var firebaseAddressValue = "";
                         try{firebaseAddressValue = userProperties.address}catch(err){}
+                        const imageUploader = new ImageUploader(userId);
+            
+                        imageUploader.uploadFile(profilePicture,"Profile Picture","profilePicture").then((uploadTask)=>{
+
+                            return firebase.storage().ref(uploadTask.metadata.fullPath).getDownloadURL();
+
+                        }).then((url)=>{
+
+                            userPropertiesRef.update({
+                                userProfilePicture: url,
+                                username:username === null ? firebaseUsernameValue:username,
+                                userBio:userBio === null ?firebaseBioValue:userBio,
+                                address:address === null ? firebaseAddressValue:address
+                            }).then(()=>{
+                                    props.navigation.navigate("ProfileScreen");
+                                }).catch()
+                    
+                        }).catch(()=>{
+                            userPropertiesRef.update({
+                            username:username === null ? firebaseUsernameValue:username,
+                            userBio:userBio === null ?firebaseBioValue:userBio,
+                            address:address === null ? firebaseAddressValue:address
+                        }).then(()=>{
+                                props.navigation.navigate("ProfileScreen");
+                            }).catch()
+                    
+                        })
+
                        
-                       
-                       userPropertiesRef.update({
-                        username:username === null ? firebaseUsernameValue:username,
-                        userBio:userBio === null ?firebaseBioValue:userBio,
-                        address:address === null ? firebaseAddressValue:address
-                       }).then(()=>{
-                            props.navigation.navigate("ProfileScreen");
-                        }).catch()
-                        
+                          
 
                     }}
                         >
@@ -148,13 +203,17 @@ function AccountSettings(props) {
 
         
 
-        <View style={styles.rect2}>
+        <TouchableOpacity style={styles.rect2}
+            onPress={()=>{
+                getImageProfile();
+            }}
+        >
             <ImageBackground
-                source={require("../../../assets/images/logo.png")}
-                resizeMode="cover"
+                source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE)}
+                resizeMode="center"
                 style={styles.listingImage1}
             ></ImageBackground>
-        </View>
+        </TouchableOpacity>
         <View style={styles.group}>
             <Text style={styles.shahbekMiru}>BUSINESS NAME</Text>
             <View style = {{flexDirection:'row'}}>
@@ -197,8 +256,11 @@ function AccountSettings(props) {
                 color="#0093fb"
                 onChangeText={(bio)=>setUserBio(bio)}
                 value={getUserData(USERBIO)}
-                
+                maxLength={400}
                 />
+                <Text style={{width:"100%",textAlign:"right",padding:2,color:"white"}}>
+                {(getUserData(USERBIO)== null ? 0 : getUserData(USERBIO).length) + "/400"}
+                </Text>
         </View>
         
         

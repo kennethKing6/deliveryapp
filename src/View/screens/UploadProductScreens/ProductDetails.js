@@ -10,9 +10,10 @@ import storage from '@react-native-firebase/storage';
 import ImagePicker from 'react-native-image-picker';
 import analytics from '@react-native-firebase/analytics';
 import database from '@react-native-firebase/database';
-import {Product } from '../../../Model/Product'
-import {request,check, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import {Product } from '../../../Model/Product';
 import { IndexPath, Layout, Select, SelectItem,Input,Button  } from '@ui-kitten/components';
+import {ImageUploader} from '../../../Controller/AssetUploader/ImageUploader';
+import {request,check, PERMISSIONS, RESULTS} from 'react-native-permissions';
 
 
 // Your web app's Firebase configuration
@@ -62,7 +63,7 @@ function  ProductDetails(props){
   
  
 
-  //Image Picker response
+
 
 
 
@@ -76,7 +77,6 @@ if(userId == undefined || userId == null){
    
     
     var product = new Product(userId);
-    console.log("Data")
     product.initProductRef().then(()=>{
     return product.uploadProductFileMeta(metadata);
     }).then(()=>{
@@ -85,7 +85,6 @@ if(userId == undefined || userId == null){
       //Find the selected product code
 
      
-      console.log(productProps)
       return product.initProductProperties(productProps.productCategory,productProps.productName,productProps.productDesc,productProps.productLocation,productProps.productPrice,url)
     }).then(()=>{
       return product.initProductRatings();
@@ -105,63 +104,9 @@ if(userId == undefined || userId == null){
 
 
 
-async function getCameraPermission(){
 
-  return request(
-    Platform.select({
-      android: PERMISSIONS.ANDROID.CAMERA,
-      android: PERMISSIONS.ANDROID.READ_EXTERNAL_STORAGE,
-      android: PERMISSIONS.ANDROID.WRITE_EXTERNAL_STORAGE,
-      ios: PERMISSIONS.IOS.CAMERA,
-      ios: PERMISSIONS.IOS.PHOTO_LIBRARY,
-      ios: PERMISSIONS.IOS.CAMERA,
-    }),
-  );
-}
-function uploadFile(imagePickerResponse) {
-  const firebaseStorage = storage();
-  const result = new Promise((resolve,reject)=>{
 
-    
-      if (imagePickerResponse !== null){
-        const imageName = getImageName(imagePickerResponse);
-        console.log(imageName)
 
-        var imagePath =  getImagePath(imagePickerResponse);
-     
-       resolve(firebaseStorage.ref(userId)
-       .child("My products")
-       .child(imageName)
-       .putFile(imagePath));
-      }else{
-        reject("Cant't upload")
-      } 
-    
-
-  })
- 
-  return result;
-
-};
-
-//Returns the image path using image picker library
-function getImagePath(ImagePickerResponse){
-  return Platform.OS=== "android" ?ImagePickerResponse.path: ImagePickerResponse.uri;
-}
-
-//Gets the correct image name using the image picker
-function getImageName(response){
-  var imageName = null;
-  if(Platform.OS === "android"){
-    imageName = response.fileName;
-  }else{
-    var tempPath = response.uri;
-    var image = tempPath.split("/");
-    imageName = image[image.length - 1];
-  }
-  console.log("the value " + imageName)
-  return imageName;
-}
 
 //Get user location
   async function getUserLocation(){
@@ -194,8 +139,10 @@ function getImageName(response){
       
         <TouchableOpacity  style={screenStyle.imageContainer}
            onPress={()=>{
-            getCameraPermission().then((response)=>{
-              console.log(response)
+             //Get Image Uploader to be able to upload user product
+            const imageUploader = new ImageUploader();
+
+            imageUploader.getCameraPermission().then((response)=>{
               if(response === RESULTS.GRANTED){
                   ImagePicker.showImagePicker({
                         noData: false,
@@ -274,7 +221,10 @@ function getImageName(response){
         status='danger'
         onPress={()=>{     
           if(imagePickerResponse !== null){
-            uploadFile(imagePickerResponse).then((uploadTask)=>{
+            //Get Image Uploader to be able to upload user product
+            const imageUploader = new ImageUploader(userId);
+
+            imageUploader.uploadFile(imagePickerResponse).then((uploadTask)=>{
             uploadFileMetadata(uploadTask.metadata);
           
             
