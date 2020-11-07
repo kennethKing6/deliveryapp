@@ -36,13 +36,16 @@ export default function ChatScreen() {
   }, [])
 
   return (
-    <GiftedChat
-      messages={messages}
-      onSend={messages => onSend(messages)}
-      user={{
-        _id: 1  ,
-      }}
-      style={{flex:1}}
-    />
+
+      <GiftedChat
+        messages={messages}
+        onSend={messages => onSend(messages)}
+        user={{
+          _id: 1  ,
+        }}
+        isTyping = {true}
+        style={{ flex:1}}
+      />
+
   )
 }
