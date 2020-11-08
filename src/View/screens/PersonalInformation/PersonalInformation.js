@@ -197,7 +197,6 @@ function AccountSettings(props) {
                 color="#0093fb"
                 onChangeText={(bio)=>setUserBio(bio)}
                 value={getUserData(USERBIO)}
-                maxLength = {250}
                 />
         </View>
         
