@@ -197,7 +197,7 @@ function AccountSettings(props) {
                 color="#0093fb"
                 onChangeText={(bio)=>setUserBio(bio)}
                 value={getUserData(USERBIO)}
-                
+                maxLength = {250}
                 />
         </View>
         
@@ -208,8 +208,17 @@ function AccountSettings(props) {
 </View>
 
 
+                <Text style = {{color:'white',fontSize:20}}> COLORS</Text>
+                
+                <TouchableOpacity>
+                <Text style = {{color:'white',fontSize:20}}> White</Text>
 
+                </TouchableOpacity>
+                
+                <TouchableOpacity>
+                <Text style = {{color:'white',fontSize:20}}> Blue</Text>
 
+                </TouchableOpacity>
                
             </ScrollView>
 
