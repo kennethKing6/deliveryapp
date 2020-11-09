@@ -1,47 +1,75 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { GiftedChat } from 'react-native-gifted-chat'
+import { GiftedChat, } from 'react-native-gifted-chat';
+import auth from '@react-native-firebase/auth';
+import firebase from "@react-native-firebase/app";
+import database from '@react-native-firebase/database';
 
-export default function ChatScreen() {
+export default function ChatScreen(props) {
   const [messages, setMessages] = useState([]);
+  const [datasnapshot,setDatasnapshot] = useState(null)
 
+
+  
+   //firebase references
+   const userId = firebase.auth().currentUser.uid;
+   const ref = firebase.database().ref("users/" + userId);
+   const messagesRef = ref.child("messages").child(props.correspondanceID);
+
+  
   useEffect(() => {
-    setMessages([
-        {
-            _id: 2,
-            author:"Kouad",
-            text: 'Hello Naruto',
-            createdAt: new Date(),
-            user: {
-              _id: 2,
-              name: 'React Native',
-              avatar: 'https://i.ytimg.com/vi/MDX049lqytI/maxresdefault.jpg',
-            },
-          },
-      {
-        _id: 1,
-        text: 'Hello Kenneth',
-        createdAt: new Date(),
-        user: {
-          _id: 1,
-          name: 'React Native',
-          avatar: 'https://vignette.wikia.nocookie.net/naruto/images/0/09/Naruto_newshot.png/revision/latest/scale-to-width-down/340?cb=20170621101134',
-        },
-      },
-      
-    ])
-  }, [])
 
-  const onSend = useCallback((messages = []) => {
-    setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
-  }, [])
+    const unsubscribe = props.navigation.addListener('focus', () => {
+      if(datasnapshot === null)
+        getUserProperties();
+     
 
+      GetMessages();
+
+  });
+
+  
+    return unsubscribe;
+
+  }, [messages])
+  
+ 
+
+  useEffect(()=>{
+    const addedMessages = messagesRef.on("child_added",(snapshot)=>{
+      GetMessages();
+
+    })
+    return ()=>addedMessages.off("child_added",addedMessages);
+  })
+
+ 
+  function GetMessages(){
+
+    messagesRef.once("value",(snapshot)=>{
+      var messagesList = [];
+      snapshot.forEach(element => {
+        messagesList.push(element.val());
+      });
+     setMessages(messagesList.reverse());
+  })
+}
+
+function getUserProperties(){
+  const profilePictureRef = ref.child("user_properties").child("userProfilePicture");
+  profilePictureRef.once("Value",(datasnapshot)=>{
+    setDatasnapshot(datasnapshot)
+  })
+
+}
   return (
 
       <GiftedChat
         messages={messages}
-        onSend={messages => onSend(messages)}
+        onSend={messages => messagesRef.push(messages)}
         user={{
-          _id: 1  ,
+          _id: userId,
+          name: datasnapshot == null? "unknown": datasnapshot.val().username,
+          avatar: datasnapshot == null? require("../../../assets/icons/profilephoto_placeholder.png") : datasnapshot.val().userProfilePicture
         }}
         isTyping = {true}
         style={{ flex:1}}
