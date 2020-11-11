@@ -11,6 +11,7 @@ import productState from "../../../Model/Constants/ProductStateConstant";
 
 
 
+
 const {width} = Dimensions.get("window");
 
 
@@ -191,6 +192,7 @@ function layoutIdentifier(){
 
     return (
         
+
 
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />

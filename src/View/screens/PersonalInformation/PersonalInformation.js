@@ -8,7 +8,8 @@ import {
     SafeAreaView, 
     ScrollView,
     ImageBackground,
-    TextInput 
+    TextInput,
+     
  } from "react-native";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import CustomTextInput from "../../components/CustomTextInput";
@@ -111,189 +112,210 @@ function AccountSettings(props) {
           });
       }
 
+      
+
     return (
-        <View style={styles.container}>
-            <StatusBar barStyle="light-content" />
 
 
-            <SafeAreaView >
+        
 
-            <View style={styles.TopNav}>
+            <View style={styles.container}>
+                <StatusBar barStyle="light-content" />
 
-                        <TouchableOpacity style={{ justifyContent: "center"}}
-                            onPress={() => props.navigation.navigate('AccountSettings')}>
 
-                            <Text style={{
-                                color: "white", fontSize: 20, fontWeight:'900'
-                            }}>Cancel</Text>
+                <SafeAreaView >
 
-                        </TouchableOpacity>
+                <View style={styles.TopNav}>
 
-                       
+                            <TouchableOpacity style={{ justifyContent: "center"}}
+                                onPress={() => props.navigation.navigate('AccountSettings')}>
 
-                        <View style={{ justifyContent: "center", opacity: 100 }}>
+                                <Text style={{
+                                    color: "white", fontSize: 20, fontWeight:'900'
+                                }}>Cancel</Text>
+
+                            </TouchableOpacity>
+
                         
-                        <TouchableOpacity 
-                        style = {{backgroundColor:'#e2e8fe',borderRadius:30}}
-                        onPress={()=>{
-                        var firebaseUsernameValue = "";
-                        try{firebaseUsernameValue = userProperties.username}catch(err){}
 
-                        var firebaseBioValue = "";
-                        try{firebaseBioValue = userProperties.userBio}catch(err){}
+                            <View style={{ justifyContent: "center", opacity: 100 }}>
+                            
+                            <TouchableOpacity 
+                            style = {{backgroundColor:'#e2e8fe',borderRadius:30}}
+                            onPress={()=>{
+                            var firebaseUsernameValue = "";
+                            try{firebaseUsernameValue = userProperties.username}catch(err){}
 
-                        var firebaseAddressValue = "";
-                        try{firebaseAddressValue = userProperties.address}catch(err){}
-                        const imageUploader = new ImageUploader(userId);
-            
-                        imageUploader.uploadFile(profilePicture,"Profile Picture","profilePicture").then((uploadTask)=>{
+                            var firebaseBioValue = "";
+                            try{firebaseBioValue = userProperties.userBio}catch(err){}
 
-                            return firebase.storage().ref(uploadTask.metadata.fullPath).getDownloadURL();
+                            var firebaseAddressValue = "";
+                            try{firebaseAddressValue = userProperties.address}catch(err){}
+                            const imageUploader = new ImageUploader(userId);
+                
+                            imageUploader.uploadFile(profilePicture,"Profile Picture","profilePicture").then((uploadTask)=>{
 
-                        }).then((url)=>{
+                                return firebase.storage().ref(uploadTask.metadata.fullPath).getDownloadURL();
 
-                            userPropertiesRef.update({
-                                userProfilePicture: url,
+                            }).then((url)=>{
+
+                                userPropertiesRef.update({
+                                    userProfilePicture: url,
+                                    username:username === null ? firebaseUsernameValue:username,
+                                    userBio:userBio === null ?firebaseBioValue:userBio,
+                                    address:address === null ? firebaseAddressValue:address
+                                }).then(()=>{
+                                        props.navigation.navigate("ProfileScreen");
+                                    }).catch()
+                        
+                            }).catch(()=>{
+                                userPropertiesRef.update({
                                 username:username === null ? firebaseUsernameValue:username,
                                 userBio:userBio === null ?firebaseBioValue:userBio,
                                 address:address === null ? firebaseAddressValue:address
                             }).then(()=>{
                                     props.navigation.navigate("ProfileScreen");
                                 }).catch()
-                    
-                        }).catch(()=>{
-                            userPropertiesRef.update({
-                            username:username === null ? firebaseUsernameValue:username,
-                            userBio:userBio === null ?firebaseBioValue:userBio,
-                            address:address === null ? firebaseAddressValue:address
-                        }).then(()=>{
-                                props.navigation.navigate("ProfileScreen");
-                            }).catch()
-                    
-                        })
+                        
+                            })
 
-                       
-                          
+                        
+                            
 
-                    }}
-                        >
-                        <Text style={{
-                                color: "black", fontSize: 20,fontWeight:'900',padding:10
-                            }}>Save</Text>
+                        }}
+                            >
+                            <Text style={{
+                                    color: "black", fontSize: 20,fontWeight:'900',padding:10
+                                }}>Save</Text>
 
-                        </TouchableOpacity>
+                            </TouchableOpacity>
+
+                            </View>
 
                         </View>
 
+                    
+
+                </SafeAreaView>
+
+
+                <ScrollView>
+
+                    
+
+                    <View style = {{flex:1,justifyContent:'center'}}>
+            
+            <View style={[styles.rect]}>
+                <View style={styles.profile}>
+
+            
+
+            <TouchableOpacity style={styles.rect2}
+                onPress={()=>{
+                    getImageProfile();
+                }}
+            >
+                <ImageBackground
+                    source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE)}
+                    resizeMode="center"
+                    style={styles.listingImage1}
+                ></ImageBackground>
+            </TouchableOpacity>
+            <View style={styles.group}>
+                <Text style={styles.shahbekMiru}>BUSINESS NAME</Text>
+                <View style = {{flexDirection:'row'}}>
+                    <Text style={{fontSize:35,color:'#00336b'}}>@</Text>
+                    <TextInput
+                    style = {{fontWeight:'900',fontSize:35,left:5}} 
+                    placeholder = "Business Name"
+                    placeholderTextColor = "#00336b"
+                    color="#0093fb"
+                    onChangeText={(username)=>setUsername(username)}
+                    value={getUserData(USERNAME)}
+                    
+                    />
+            </View>
+
+            <View style = {{borderColor:'#0093fb',width:'100%',height:1,borderWidth:0.5,borderRadius:2,marginBottom:10,marginTop:10}}/>
+
+            <Text style={styles.shahbekMiru}>ADRESS</Text>
+                    <TextInput
+                    style = {{fontWeight:'900',fontSize:30}} 
+                    placeholder = "Adress"
+                    placeholderTextColor = "#00336b"
+                    color="#0093fb"
+                    onChangeText={(address)=>setUserAddress(address)}
+                    value={getUserData(ADDRESS)}
+                    
+                    />
+            </View>
+
+            <View style = {{borderColor:'#0093fb',width:'100%',height:1,borderWidth:0.5,borderRadius:2,marginBottom:10,marginTop:10}}/>
+
+
+            <View style={styles.group2}>
+            <Text style={styles.shahbekMiru}>DESCRIPTION</Text>
+                    <TextInput
+                    style = {{fontWeight:'600',fontSize:18}} 
+                    placeholder = "Store description"
+                    multiline = {true}
+                    placeholderTextColor = "#00336b"
+                    color="#0093fb"
+                    onChangeText={(bio)=>setUserBio(bio)}
+                    value={getUserData(USERBIO)}
+                    maxLength={400}
+                    />
+                    <Text style={{width:"100%",textAlign:"right",padding:2,color:"white"}}>
+                    {(getUserData(USERBIO)== null ? 0 : getUserData(USERBIO).length) + "/400"}
+                    </Text>
+            </View>
+            
+            
+        </View>
+    </View>
+
+    </View>
+
+
+                    
+                    
+
+                    <View style = {{width: '90%', marginTop:10,alignSelf:'center',alignItems:'center'}}>
+
+                        <Text style = {{color:'white', fontSize:20, fontWeight:'900',marginBottom:10}}>Select your theme</Text>
+                    <View style = {{flexDirection:'row',justifyContent:'space-evenly',width:'100%'}}>
+                    
+                    
+                    <TouchableOpacity>
+                        <View style = {{width:70,height:70,borderRadius:70,backgroundColor:'#00336b'}}></View>
+                    </TouchableOpacity>
+                   
+
+                    <TouchableOpacity>
+                        <View style = {{width:70,height:70,borderRadius:70,backgroundColor:'white'}}></View>
+                    </TouchableOpacity>
+                    
+                    
+
                     </View>
 
+                    </View>
+                    
+                    
                 
-
-            </SafeAreaView>
-
-
-            <ScrollView>
-
-                
-
-                <View style = {{flex:1,justifyContent:'center'}}>
-
-        <View style={[styles.rect]}>
-            <View style={styles.profile}>
-
-        
-
-        <TouchableOpacity style={styles.rect2}
-            onPress={()=>{
-                getImageProfile();
-            }}
-        >
-            <ImageBackground
-                source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE)}
-                resizeMode="center"
-                style={styles.listingImage1}
-            ></ImageBackground>
-        </TouchableOpacity>
-        <View style={styles.group}>
-            <Text style={styles.shahbekMiru}>BUSINESS NAME</Text>
-            <View style = {{flexDirection:'row'}}>
-                <Text style={{fontSize:35,color:'#00336b'}}>@</Text>
-                <TextInput
-                style = {{fontWeight:'900',fontSize:35,left:5}} 
-                placeholder = "Business Name"
-                placeholderTextColor = "#00336b"
-                color="#0093fb"
-                onChangeText={(username)=>setUsername(username)}
-                value={getUserData(USERNAME)}
-                
-                />
-           </View>
-
-           <View style = {{borderColor:'#0093fb',width:'100%',height:1,borderWidth:0.5,borderRadius:2,marginBottom:10,marginTop:10}}/>
-
-           <Text style={styles.shahbekMiru}>ADRESS</Text>
-                <TextInput
-                style = {{fontWeight:'900',fontSize:30}} 
-                placeholder = "Adress"
-                placeholderTextColor = "#00336b"
-                color="#0093fb"
-                onChangeText={(address)=>setUserAddress(address)}
-                value={getUserData(ADDRESS)}
-                
-                />
-        </View>
-
-        <View style = {{borderColor:'#0093fb',width:'100%',height:1,borderWidth:0.5,borderRadius:2,marginBottom:10,marginTop:10}}/>
+                </ScrollView>
 
 
-        <View style={styles.group2}>
-        <Text style={styles.shahbekMiru}>DESCRIPTION</Text>
-                <TextInput
-                style = {{fontWeight:'600',fontSize:18}} 
-                placeholder = "Store description"
-                multiline = {true}
-                placeholderTextColor = "#00336b"
-                color="#0093fb"
-                onChangeText={(bio)=>setUserBio(bio)}
-                value={getUserData(USERBIO)}
-                maxLength={400}
-                />
-                <Text style={{width:"100%",textAlign:"right",padding:2,color:"white"}}>
-                {(getUserData(USERBIO)== null ? 0 : getUserData(USERBIO).length) + "/400"}
-                </Text>
-        </View>
-        
-        
-    </View>
-</View>
+            
+            </View>
 
-</View>
-
-
-                <Text style = {{color:'white',fontSize:20}}> COLORS</Text>
-                
-                <TouchableOpacity>
-                <Text style = {{color:'white',fontSize:20}}> White</Text>
-
-                </TouchableOpacity>
-                
-                <TouchableOpacity>
-                <Text style = {{color:'white',fontSize:20}}> Blue</Text>
-
-                </TouchableOpacity>
-               
-            </ScrollView>
-
-
-           
-        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "black"
+        backgroundColor: 'black',
     },
 
     TopNav: {
