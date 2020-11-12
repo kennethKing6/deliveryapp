@@ -228,7 +228,7 @@ export default function HomeScreen (props) {
                                 <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>For You</Text>
                             </View> 
 
-                                <TouchableOpacity onPress={()=>props.navigation.navigate("ChatScreen")}>
+                                <TouchableOpacity onPress={()=>props.navigation.navigate("MessageListScreen")}>
                                 <View style={styles.listing} >
                                     <ImageBackground
                                         source={require("../../../assets/images/volkswagen.jpg")}

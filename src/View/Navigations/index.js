@@ -28,6 +28,7 @@ import SelectCategories from '../screens/SelectCategory/SelectCategories';
 import Introduction from '../screens/Introduction/Introduction';
 import PaymentCard from '../screens/Payment/PaymentCard';
 import ChatScreen from '../screens/Message/ChatScreen';
+import MessageListScreen from '../screens/Message/MessageListScreen';
 
 
 
@@ -444,6 +445,11 @@ export const MainNavigator = () => {
             <Switch.Screen
                 name="ProductDetails"
                 component={ProductDetails}
+                options={{ headerShown: false }}
+            />
+            <Switch.Screen
+                name="MessageListScreen"
+                component={MessageListScreen}
                 options={{ headerShown: false }}
             />
              <Switch.Screen
