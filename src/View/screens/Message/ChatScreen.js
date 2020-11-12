@@ -17,7 +17,7 @@ export default function ChatScreen(props) {
    const userId = firebase.auth().currentUser.uid;
    const ref = firebase.database().ref("users/" + userId);
    const messagesRef = ref.child("messages").child(correspondance);
-   const correspondanceMessageRef = firebase.database().ref("users/" + correspondance).child("messages");
+   const correspondanceMessageRef = firebase.database().ref("users/" + correspondance).child("messages").child(userId);
    const userPropertiesRef = ref.child("user_properties");
 
   
