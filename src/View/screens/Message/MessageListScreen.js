@@ -20,19 +20,18 @@ import ChatScreen from './ChatScreen';
 
 
 
-export default class MessageListScreen extends Component {
+export default function MessageListScreen(props){
     
    
-    render() { 
         
         return (
 
-            <TouchableOpacity onPress = {() => {navigation.navigate("ChatScreen")}}>
+            <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen")}}>
                 <Text style = {{fontSize:30}}>Kenneth</Text>
             </TouchableOpacity>
     );
   }
-}
+
 
 const styles = StyleSheet.create({
   
