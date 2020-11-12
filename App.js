@@ -7,8 +7,6 @@ import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 
 
-
-
 import {
   Text,
   View,
