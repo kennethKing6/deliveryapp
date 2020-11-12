@@ -8,13 +8,16 @@ export default function ChatScreen(props) {
   const [messages, setMessages] = useState([]);
   const [datasnapshot,setDatasnapshot] = useState(null)
 
+  const {route} = props;
 
-  const correspondance = "QpcV2XFV8ZR3v1dOrS71aeGTxtv2";
+  
+  const correspondance = route.params.correspondence;
+  console.log("correspondance",correspondance)
    //firebase references
    const userId = firebase.auth().currentUser.uid;
    const ref = firebase.database().ref("users/" + userId);
    const messagesRef = ref.child("messages").child(correspondance);
-   const correspondanceMessageRef = firebase.database().ref("users/" + correspondance).child("messages");
+   const correspondanceMessageRef = firebase.database().ref("users/" + correspondance).child("messages").child(userId);
    const userPropertiesRef = ref.child("user_properties");
 
   
@@ -54,6 +57,7 @@ export default function ChatScreen(props) {
   function GetMessages(){
 
     messagesRef.once('value').then((snapshot)=>{
+     if(snapshot !== undefined){
       var messagesList = [];
       const newMessages = Object.values(snapshot.val());
       if(snapshot !== null && typeof snapshot !== 'string' && newMessages.length > messages.length){
@@ -61,11 +65,11 @@ export default function ChatScreen(props) {
           messagesList.push(element.val());
 
         })
-        console.log("messagesList",messagesList)
        setMessages(messagesList.reverse(                                                                           ));
        
 
       }
+     }
     }).then((failure)=>{
 
     }).catch()
