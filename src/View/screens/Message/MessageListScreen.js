@@ -15,9 +15,9 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native';
-import messaging from '@react-native-firebase/messaging'
+import messaging from '@react-native-firebase/messaging';
 import firebase from "@react-native-firebase/app";
-import database from '@react-native-firebase/database'
+import database from '@react-native-firebase/database';
 
 
 
