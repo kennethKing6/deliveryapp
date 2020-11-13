@@ -85,9 +85,11 @@
 37-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:14:5-16:36
 38        android:name="android.hardware.camera.autofocus"
 38-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:15:9-57
-39        android:required="false" />
+39        android:required="false" /> <!-- Required to access Google Play Licensing -->
 39-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:16:9-33
-40
+40    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+40-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-73
+40-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-70
 41    <uses-permission android:name="android.permission.STORAGE" />
 41-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-66
 41-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-63
@@ -108,17 +110,17 @@
 49        android:required="false" /> <!-- Required by older versions of Google Play services to create IID tokens -->
 49-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1fe0718a4a9d82fc422634a98e14585b\jetified-mapbox-android-sdk-9.1.0\AndroidManifest.xml:14:9-33
 50    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-50-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:26:5-82
-50-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:26:22-79
+50-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:26:5-82
+50-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:26:22-79
 51    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-51-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:26:5-110
-51-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:26:22-107
+51-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:26:5-110
+51-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:26:22-107
 52    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
-52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
+52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
+52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
 53    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
-53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
-53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
+53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
+53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
 54
 55    <application
 55-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:29:5-50:19
@@ -176,223 +178,395 @@
 83            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
 83-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
 84
-85        <provider
-85-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
-86            android:name="com.imagepicker.FileProvider"
-86-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
-87            android:authorities="com.deliveryapp.provider"
-87-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
-88            android:exported="false"
-88-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
-89            android:grantUriPermissions="true" >
-89-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
-90            <meta-data
-90-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
-91                android:name="android.support.FILE_PROVIDER_PATHS"
-91-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
-92                android:resource="@xml/provider_paths" />
-92-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
-93        </provider>
-94        <provider
-94-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-27:20
-95            android:name="expo.modules.filesystem.FileSystemFileProvider"
-95-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
-96            android:authorities="com.deliveryapp.FileSystemFileProvider"
-96-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-74
-97            android:exported="false"
-97-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-37
-98            android:grantUriPermissions="true" >
-98-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-47
-99            <meta-data
-99-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
-100                android:name="android.support.FILE_PROVIDER_PATHS"
-100-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
-101                android:resource="@xml/file_system_provider_paths" />
-101-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
-102        </provider>
-103
-104        <service
-104-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
-105            android:name="expo.modules.location.services.LocationTaskService"
-105-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
-106            android:exported="false" />
-106-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
-107
-108        <provider
-108-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:18:9-22:39
-109            android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
-109-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:19:13-93
-110            android:authorities="com.deliveryapp.mapboxtelemetryinitprovider"
-110-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:20:13-79
-111            android:exported="false"
-111-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:21:13-37
-112            android:initOrder="100" />
-112-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:22:13-36
-113
-114        <service
-114-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:24:9-26:72
-115            android:name="com.mapbox.android.telemetry.crash.CrashReporterJobIntentService"
-115-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:25:13-92
-116            android:permission="android.permission.BIND_JOB_SERVICE" />
-116-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:26:13-69
-117
-118        <activity
-118-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:24:9-31:50
-119            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-119-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:25:13-85
-120            android:excludeFromRecents="true"
-120-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:26:13-46
-121            android:exported="true"
-121-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:27:13-36
-122            android:launchMode="singleTask"
-122-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:28:13-44
-123            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-123-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:29:13-102
-124            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-124-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:30:13-72
-125
-126        <service
-126-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:33:9-39:19
-127            android:name="com.google.firebase.components.ComponentDiscoveryService"
-127-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:34:13-84
-128            android:directBootAware="true"
-128-->[com.google.firebase:firebase-common:19.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9f24b895ae9f01d9ba34cb6fc53bf840\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-129            android:exported="false" >
-129-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:35:13-37
-130            <meta-data
-130-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:36:13-38:85
-131                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-131-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:37:17-109
-132                android:value="com.google.firebase.components.ComponentRegistrar" />
-132-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fa07c24df09641879ec8a3fd4938a487\jetified-firebase-auth-19.3.1\AndroidManifest.xml:38:17-82
-133            <meta-data
-133-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\50fba9f85c46043d21626f3b24236db5\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
-134                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-134-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\50fba9f85c46043d21626f3b24236db5\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
-135                android:value="com.google.firebase.components.ComponentRegistrar" />
-135-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\50fba9f85c46043d21626f3b24236db5\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+85        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
+85-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-111
+85-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:18-108
+86        <service
+86-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-23:19
+87            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+87-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-95
+88            android:exported="false" >
+88-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-37
+89            <intent-filter>
+89-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-22:29
+90                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+90-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-78
+90-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-75
+91            </intent-filter>
+92        </service>
+93
+94        <receiver
+94-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-32:20
+95            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+95-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-96
+96            android:exported="true"
+96-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-36
+97            android:permission="com.google.android.c2dm.permission.SEND" >
+97-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-73
+98            <intent-filter>
+98-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
+99                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+99-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
+99-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
+100            </intent-filter>
+101        </receiver>
+102
+103        <meta-data
+103-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-36:36
+104            android:name="firebase_messaging_auto_init_enabled"
+104-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-64
+105            android:value="true" />
+105-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-33
+106        <meta-data
+106-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:9-39:32
+107            android:name="com.google.firebase.messaging.default_notification_channel_id"
+107-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-89
+108            android:value="" />
+108-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-29
+109        <meta-data
+109-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:9-42:47
+110            android:name="com.google.firebase.messaging.default_notification_color"
+110-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-84
+111            android:resource="@color/white" />
+111-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-44
+112
+113        <provider
+113-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
+114            android:name="com.imagepicker.FileProvider"
+114-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
+115            android:authorities="com.deliveryapp.provider"
+115-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
+116            android:exported="false"
+116-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
+117            android:grantUriPermissions="true" >
+117-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
+118            <meta-data
+118-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+119                android:name="android.support.FILE_PROVIDER_PATHS"
+119-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+120                android:resource="@xml/provider_paths" />
+120-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+121        </provider>
+122        <provider
+122-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+123            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+123-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+124            android:authorities="com.deliveryapp.fileprovider"
+124-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+125            android:exported="false"
+125-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+126            android:grantUriPermissions="true" >
+126-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+127            <meta-data
+127-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+128                android:name="android.support.FILE_PROVIDER_PATHS"
+128-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+129                android:resource="@xml/file_provider_paths" />
+129-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+130        </provider>
+131        <provider
+131-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:9-44:20
+132            android:name="com.RNFetchBlob.Utils.FileProvider"
+132-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-62
+133            android:authorities="com.deliveryapp.provider"
+133-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-60
+134            android:exported="false"
+134-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-37
+135            android:grantUriPermissions="true" >
+135-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-47
 136            <meta-data
-136-->[com.google.firebase:firebase-database:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6c14ffd8c160781ece84435520dc909a\jetified-firebase-database-19.3.1\AndroidManifest.xml:32:13-34:85
-137                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-137-->[com.google.firebase:firebase-database:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6c14ffd8c160781ece84435520dc909a\jetified-firebase-database-19.3.1\AndroidManifest.xml:33:17-109
-138                android:value="com.google.firebase.components.ComponentRegistrar" />
-138-->[com.google.firebase:firebase-database:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6c14ffd8c160781ece84435520dc909a\jetified-firebase-database-19.3.1\AndroidManifest.xml:34:17-82
-139            <meta-data
-139-->[com.google.android.gms:play-services-measurement-api:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\4af6b75e5028411a545c555c5d8045eb\jetified-play-services-measurement-api-17.4.3\AndroidManifest.xml:30:13-32:85
-140                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-140-->[com.google.android.gms:play-services-measurement-api:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\4af6b75e5028411a545c555c5d8045eb\jetified-play-services-measurement-api-17.4.3\AndroidManifest.xml:31:17-139
-141                android:value="com.google.firebase.components.ComponentRegistrar" />
-141-->[com.google.android.gms:play-services-measurement-api:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\4af6b75e5028411a545c555c5d8045eb\jetified-play-services-measurement-api-17.4.3\AndroidManifest.xml:32:17-82
-142            <meta-data
-142-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:32:13-34:85
-143                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-143-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:33:17-96
-144                android:value="com.google.firebase.components.ComponentRegistrar" />
-144-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:34:17-82
+136-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+137                android:name="android.support.FILE_PROVIDER_PATHS"
+137-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+138                android:resource="@xml/provider_paths" />
+138-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+139        </provider>
+140        <provider
+140-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-27:20
+141            android:name="expo.modules.filesystem.FileSystemFileProvider"
+141-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
+142            android:authorities="com.deliveryapp.FileSystemFileProvider"
+142-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-74
+143            android:exported="false"
+143-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-37
+144            android:grantUriPermissions="true" >
+144-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-47
 145            <meta-data
-145-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6f8f250bd85c0fd19d82d5785925376d\jetified-firebase-installations-16.2.1\AndroidManifest.xml:17:13-19:85
-146                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-146-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6f8f250bd85c0fd19d82d5785925376d\jetified-firebase-installations-16.2.1\AndroidManifest.xml:18:17-127
-147                android:value="com.google.firebase.components.ComponentRegistrar" />
-147-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6f8f250bd85c0fd19d82d5785925376d\jetified-firebase-installations-16.2.1\AndroidManifest.xml:19:17-82
-148        </service>
+145-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+146                android:name="android.support.FILE_PROVIDER_PATHS"
+146-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+147                android:resource="@xml/file_system_provider_paths" />
+147-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+148        </provider>
 149
-150        <receiver
-150-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:37:9-44:20
-151            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-151-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:38:13-78
-152            android:exported="true"
-152-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:39:13-36
-153            android:permission="com.google.android.c2dm.permission.SEND" >
-153-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:40:13-73
-154            <intent-filter>
-154-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:41:13-43:29
-155                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-155-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:42:17-81
-155-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\57242648d6daf04e97689e65da6a30d0\jetified-firebase-iid-20.1.5\AndroidManifest.xml:42:25-78
-156            </intent-filter>
-157        </receiver>
-158
-159        <activity
-159-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-160            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-160-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-161            android:exported="false"
-161-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-162            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-162-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-163
-164        <receiver
-164-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:29:9-33:20
-165            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-165-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:30:13-85
-166            android:enabled="true"
-166-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:31:13-35
-167            android:exported="false" >
-167-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:32:13-37
-168        </receiver>
-169
-170        <service
-170-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:35:9-38:40
-171            android:name="com.google.android.gms.measurement.AppMeasurementService"
-171-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:36:13-84
-172            android:enabled="true"
-172-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:37:13-35
-173            android:exported="false" />
-173-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:38:13-37
-174        <service
-174-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:39:9-43:72
-175            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-175-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:40:13-87
-176            android:enabled="true"
-176-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:41:13-35
-177            android:exported="false"
-177-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:42:13-37
-178            android:permission="android.permission.BIND_JOB_SERVICE" />
-178-->[com.google.android.gms:play-services-measurement:17.4.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\23181c6cb450e07b83bac09f39a01d00\jetified-play-services-measurement-17.4.3\AndroidManifest.xml:43:13-69
-179
-180        <provider
-180-->[com.google.firebase:firebase-common:19.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9f24b895ae9f01d9ba34cb6fc53bf840\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-181            android:name="com.google.firebase.provider.FirebaseInitProvider"
-181-->[com.google.firebase:firebase-common:19.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9f24b895ae9f01d9ba34cb6fc53bf840\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-182            android:authorities="com.deliveryapp.firebaseinitprovider"
-182-->[com.google.firebase:firebase-common:19.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9f24b895ae9f01d9ba34cb6fc53bf840\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-183            android:exported="false"
-183-->[com.google.firebase:firebase-common:19.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9f24b895ae9f01d9ba34cb6fc53bf840\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-184            android:initOrder="100" />
-184-->[com.google.firebase:firebase-common:19.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9f24b895ae9f01d9ba34cb6fc53bf840\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-185
-186        <meta-data
-186-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\18d7fa3102df174b1d86e2b4bf7f382c\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-187            android:name="com.google.android.gms.version"
-187-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\18d7fa3102df174b1d86e2b4bf7f382c\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-188            android:value="@integer/google_play_services_version" />
-188-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\18d7fa3102df174b1d86e2b4bf7f382c\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-189
-190        <service
-190-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
-191            android:name="androidx.room.MultiInstanceInvalidationService"
-191-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
-192            android:exported="false" />
-192-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
-193        <service
-193-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
-194            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-194-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
-195            android:exported="false" />
-195-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
-196        <service
-196-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
-197            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-197-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
-198            android:exported="false" />
-198-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
-199        <service
-199-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
-200            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-200-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
-201            android:exported="false" />
-201-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\7e8434218f6a74caa77b7559d256d9ff\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
-202    </application>
-203
-204</manifest>
+150        <service
+150-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
+151            android:name="expo.modules.location.services.LocationTaskService"
+151-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
+152            android:exported="false" />
+152-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+153        <!--
+154             FirebaseMessagingService performs security checks at runtime,
+155             but set to not exported to explicitly avoid allowing another app to call it.
+156        -->
+157        <service
+157-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:28:9-35:19
+158            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+158-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:29:13-82
+159            android:directBootAware="true"
+159-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:30:13-43
+160            android:exported="false" >
+160-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:31:13-37
+161            <intent-filter android:priority="-500" >
+161-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-22:29
+162                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+162-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-78
+162-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-75
+163            </intent-filter>
+164        </service>
+165        <service
+165-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:36:9-42:19
+166            android:name="com.google.firebase.components.ComponentDiscoveryService"
+166-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:37:13-84
+167            android:directBootAware="true"
+167-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+168            android:exported="false" >
+168-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:38:13-37
+169            <meta-data
+169-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:39:13-41:85
+170                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+170-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:40:17-119
+171                android:value="com.google.firebase.components.ComponentRegistrar" />
+171-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:41:17-82
+172            <meta-data
+172-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6208a03ceb8b606d4d8c072cc5079fae\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+173                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+173-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6208a03ceb8b606d4d8c072cc5079fae\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+174                android:value="com.google.firebase.components.ComponentRegistrar" />
+174-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\6208a03ceb8b606d4d8c072cc5079fae\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+175            <meta-data
+175-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
+176                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+176-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
+177                android:value="com.google.firebase.components.ComponentRegistrar" />
+177-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
+178            <meta-data
+178-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\43a08cab711d064f72735cbf684e217f\jetified-firebase-storage-19.2.0\AndroidManifest.xml:33:13-35:85
+179                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+179-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\43a08cab711d064f72735cbf684e217f\jetified-firebase-storage-19.2.0\AndroidManifest.xml:34:17-107
+180                android:value="com.google.firebase.components.ComponentRegistrar" />
+180-->[com.google.firebase:firebase-storage:19.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\43a08cab711d064f72735cbf684e217f\jetified-firebase-storage-19.2.0\AndroidManifest.xml:35:17-82
+181            <meta-data
+181-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\48d25fa5ee08ab0951f793e3af466725\jetified-firebase-database-19.5.0\AndroidManifest.xml:32:13-34:85
+182                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+182-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\48d25fa5ee08ab0951f793e3af466725\jetified-firebase-database-19.5.0\AndroidManifest.xml:33:17-109
+183                android:value="com.google.firebase.components.ComponentRegistrar" />
+183-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\48d25fa5ee08ab0951f793e3af466725\jetified-firebase-database-19.5.0\AndroidManifest.xml:34:17-82
+184            <meta-data
+184-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:32:13-34:85
+185                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+185-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:33:17-96
+186                android:value="com.google.firebase.components.ComponentRegistrar" />
+186-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:34:17-82
+187            <meta-data
+187-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ecab708448a9ddff40b5665184d01eb4\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:30:13-32:85
+188                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+188-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ecab708448a9ddff40b5665184d01eb4\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:31:17-139
+189                android:value="com.google.firebase.components.ComponentRegistrar" />
+189-->[com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ecab708448a9ddff40b5665184d01eb4\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:32:17-82
+190            <meta-data
+190-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\70f6506ea38ff4a99b656f7a73749005\jetified-firebase-installations-16.3.3\AndroidManifest.xml:17:13-19:85
+191                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+191-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\70f6506ea38ff4a99b656f7a73749005\jetified-firebase-installations-16.3.3\AndroidManifest.xml:18:17-127
+192                android:value="com.google.firebase.components.ComponentRegistrar" />
+192-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\70f6506ea38ff4a99b656f7a73749005\jetified-firebase-installations-16.3.3\AndroidManifest.xml:19:17-82
+193        </service>
+194        <service
+194-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\21df581717e1180c64f7b3d27b05c2d6\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+195            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+195-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\21df581717e1180c64f7b3d27b05c2d6\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+196            android:exported="false" >
+196-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\21df581717e1180c64f7b3d27b05c2d6\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+197            <meta-data
+197-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\21df581717e1180c64f7b3d27b05c2d6\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+198                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+198-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\21df581717e1180c64f7b3d27b05c2d6\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+199                android:value="cct" />
+199-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\21df581717e1180c64f7b3d27b05c2d6\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+200        </service>
+201        <service
+201-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+202            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+202-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+203            android:exported="false"
+203-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+204            android:permission="android.permission.BIND_JOB_SERVICE" >
+204-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+205        </service>
+206
+207        <receiver
+207-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+208            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+208-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+209            android:exported="false" />
+209-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\225f78eb80e0c89192133ec36e5cc601\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+210
+211        <provider
+211-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:18:9-22:39
+212            android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
+212-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:19:13-93
+213            android:authorities="com.deliveryapp.mapboxtelemetryinitprovider"
+213-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:20:13-79
+214            android:exported="false"
+214-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:21:13-37
+215            android:initOrder="100" />
+215-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:22:13-36
+216
+217        <service
+217-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:24:9-26:72
+218            android:name="com.mapbox.android.telemetry.crash.CrashReporterJobIntentService"
+218-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:25:13-92
+219            android:permission="android.permission.BIND_JOB_SERVICE" />
+219-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\788c0e012f25b3e5634d50c0b0c8406b\jetified-mapbox-android-telemetry-5.0.0\AndroidManifest.xml:26:13-69
+220
+221        <activity
+221-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:23:9-27:75
+222            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+222-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:24:13-93
+223            android:excludeFromRecents="true"
+223-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:25:13-46
+224            android:exported="false"
+224-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:26:13-37
+225            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+225-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:27:13-72
+226        <!--
+227            Service handling Google Sign-In user revocation. For apps that do not integrate with
+228            Google Sign-In, this service will never be started.
+229        -->
+230        <service
+230-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:33:9-37:51
+231            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+231-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:34:13-89
+232            android:exported="true"
+232-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:35:13-36
+233            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+233-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:36:13-107
+234            android:visibleToInstantApps="true" />
+234-->[com.google.android.gms:play-services-auth:18.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\ab7ddd1c2ae16103372186daa89cea7d\jetified-play-services-auth-18.1.0\AndroidManifest.xml:37:13-48
+235
+236        <activity
+236-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
+237            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+237-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
+238            android:excludeFromRecents="true"
+238-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
+239            android:exported="true"
+239-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
+240            android:launchMode="singleTask"
+240-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
+241            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+241-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
+242            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+242-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1e1a4f576f54531189a9222011cdb08e\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
+243
+244        <receiver
+244-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:37:9-44:20
+245            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+245-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:38:13-78
+246            android:exported="true"
+246-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:39:13-36
+247            android:permission="com.google.android.c2dm.permission.SEND" >
+247-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:40:13-73
+248            <intent-filter>
+248-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
+249                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+249-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
+249-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
+250            </intent-filter>
+251        </receiver>
+252
+253        <activity
+253-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+254            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+254-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+255            android:exported="false"
+255-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+256            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+256-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\e45c3bcec9556f6c305c7348090de509\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+257
+258        <provider
+258-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+259            android:name="com.google.firebase.provider.FirebaseInitProvider"
+259-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+260            android:authorities="com.deliveryapp.firebaseinitprovider"
+260-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+261            android:directBootAware="true"
+261-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+262            android:exported="false"
+262-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+263            android:initOrder="100" />
+263-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\5388d4664efac90cc4cb775def4a245e\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+264
+265        <receiver
+265-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:29:9-33:20
+266            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+266-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:30:13-85
+267            android:enabled="true"
+267-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:31:13-35
+268            android:exported="false" >
+268-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:32:13-37
+269        </receiver>
+270
+271        <service
+271-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:35:9-38:40
+272            android:name="com.google.android.gms.measurement.AppMeasurementService"
+272-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:36:13-84
+273            android:enabled="true"
+273-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:37:13-35
+274            android:exported="false" />
+274-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:38:13-37
+275        <service
+275-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:39:9-43:72
+276            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+276-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:40:13-87
+277            android:enabled="true"
+277-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:41:13-35
+278            android:exported="false"
+278-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:42:13-37
+279            android:permission="android.permission.BIND_JOB_SERVICE" />
+279-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:43:13-69
+280
+281        <meta-data
+281-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0994f80e577dd4de935a494dcd3f1665\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+282            android:name="com.google.android.gms.version"
+282-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0994f80e577dd4de935a494dcd3f1665\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+283            android:value="@integer/google_play_services_version" />
+283-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0994f80e577dd4de935a494dcd3f1665\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+284
+285        <service
+285-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+286            android:name="androidx.room.MultiInstanceInvalidationService"
+286-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+287            android:exported="false" />
+287-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+288        <service
+288-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
+289            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+289-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
+290            android:exported="false" />
+290-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
+291        <service
+291-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
+292            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+292-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
+293            android:exported="false" />
+293-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
+294        <service
+294-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
+295            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+295-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
+296            android:exported="false" />
+296-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
+297    </application>
+298
+299</manifest>

@@ -12,6 +12,8 @@ export default function ChatScreen(props) {
 
   
   const correspondance = route.params.correspondence;
+  //Token to send message
+  const corresponFCMToken = route.params.FCMToken;
   console.log("correspondance",correspondance)
    //firebase references
    const userId = firebase.auth().currentUser.uid;
@@ -85,17 +87,15 @@ function getUserProperties(){
 }
 
 const onSend = useCallback((messagesList) => {
-  // messagesList[0]._id = correspondance;
-
-  // messagesList.forEach(element=>{
-  //   messagesRef.push(element)
-  // })
-
   for(var i = 0; i < messagesList.length; ++i){
     messagesRef.push(messagesList[i])
-    correspondanceMessageRef.push(messagesList[i]);
+    correspondanceMessageRef.push(messagesList[i])
   }
 }, [])
+
+
+
+datasnapshot !==null ? console.log("username",datasnapshot.val().username):"";
 
   return (
 
@@ -104,8 +104,9 @@ const onSend = useCallback((messagesList) => {
         onSend={messages => onSend(messages)}
         user={{
           _id: userId,
-          // name: datasnapshot == null? "unknown": datasnapshot.val().username,
-          // avatar: datasnapshot == null? require("../../../assets/icons/profilephoto_placeholder.png") : datasnapshot.val().userProfilePicture
+          name: datasnapshot !==null ? datasnapshot.val().username:"",
+          FCMToken: datasnapshot !==null ? datasnapshot.val().FCMToken:"",
+          avatar: datasnapshot == null? "" : datasnapshot.val().userProfilePicture
         }}
         isTyping = {true}
         style={{ flex:1}}

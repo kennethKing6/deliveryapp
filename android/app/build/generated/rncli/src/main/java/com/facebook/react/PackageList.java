@@ -23,6 +23,8 @@ import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 import io.invertase.firebase.auth.ReactNativeFirebaseAuthPackage;
 // @react-native-firebase/database
 import io.invertase.firebase.database.ReactNativeFirebaseDatabasePackage;
+// @react-native-firebase/messaging
+import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 // @react-native-firebase/storage
 import io.invertase.firebase.storage.ReactNativeFirebaseStoragePackage;
 // @react-native-mapbox-gl/maps
@@ -49,6 +51,10 @@ import com.ijzerenhein.sharedelement.RNSharedElementPackage;
 import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+// react-native-webview
+import com.reactnativecommunity.webview.RNCWebViewPackage;
+// rn-fetch-blob
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -100,6 +106,7 @@ public class PackageList {
       new ReactNativeFirebaseAppPackage(),
       new ReactNativeFirebaseAuthPackage(),
       new ReactNativeFirebaseDatabasePackage(),
+      new ReactNativeFirebaseMessagingPackage(),
       new ReactNativeFirebaseStoragePackage(),
       new RCTMGLPackage(),
       new RNCameraPackage(),
@@ -112,7 +119,9 @@ public class PackageList {
       new RNScreensPackage(),
       new RNSharedElementPackage(),
       new SvgPackage(),
-      new VectorIconsPackage()
+      new VectorIconsPackage(),
+      new RNCWebViewPackage(),
+      new RNFetchBlobPackage()
     ));
   }
 }

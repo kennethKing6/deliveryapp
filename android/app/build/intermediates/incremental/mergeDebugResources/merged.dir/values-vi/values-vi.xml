@@ -45,6 +45,7 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Mở trên điện thoại"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Đăng nhập"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Đăng nhập bằng Google"</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Khác"</string>
     <string name="mapbox_attributionErrorNoBrowser">Không thể mở trang Web vì thiết bị thiếu trình duyệt.</string>
     <string name="mapbox_attributionTelemetryMessage">Bạn đang giúp cải tiến các bản đồ OpenStreetMap và Mapbox bằng cách đóng góp dữ liệu vô danh hóa về cách sử dụng.</string>
     <string name="mapbox_attributionTelemetryNegative">Phản đối</string>
