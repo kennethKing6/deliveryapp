@@ -45,6 +45,7 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"在手機開啟"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"登入"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"透過 Google 登入"</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"其他"</string>
     <string name="mapbox_attributionErrorNoBrowser">設備中未安裝任何瀏覽器，不能打開該網頁</string>
     <string name="mapbox_attributionTelemetryMessage">您的匿名數據幫助OpenStreetMap和Mapbox的地圖變得更好。</string>
     <string name="mapbox_attributionTelemetryNegative">不再參與</string>
