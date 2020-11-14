@@ -79,6 +79,7 @@ export default function ChatScreen(props) {
 
 function getUserProperties(){
   return userPropertiesRef.once("value").then((datasnapshot)=>{
+    // console.log("The refer",datasnapshot.ref)
     setDatasnapshot(datasnapshot)
   }).then((failure)=>{
 
@@ -87,6 +88,7 @@ function getUserProperties(){
 }
 
 const onSend = useCallback((messagesList) => {
+ 
   for(var i = 0; i < messagesList.length; ++i){
     messagesRef.push(messagesList[i])
     correspondanceMessageRef.push(messagesList[i])
@@ -106,7 +108,8 @@ datasnapshot !==null ? console.log("username",datasnapshot.val().username):"";
           _id: userId,
           name: datasnapshot !==null ? datasnapshot.val().username:"",
           FCMToken: datasnapshot !==null ? datasnapshot.val().FCMToken:"",
-          avatar: datasnapshot == null? "" : datasnapshot.val().userProfilePicture
+          avatar: datasnapshot == null? "" : datasnapshot.val().userProfilePicture,
+          corresponFCMToken:corresponFCMToken
         }}
         isTyping = {true}
         style={{ flex:1}}

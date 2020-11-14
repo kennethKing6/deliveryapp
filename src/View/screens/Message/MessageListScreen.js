@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 import messaging from '@react-native-firebase/messaging'
 import firebase from "@react-native-firebase/app";
-import database from '@react-native-firebase/database'
+import database from '@react-native-firebase/database';
 
 
 
@@ -47,10 +47,10 @@ export default function MessageListScreen(props) {
         return (
 
            <View>
-              <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:"sOf5W0LrhXdvNGJbo9raJS8F3if1"})}}>
+              <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:"sOf5W0LrhXdvNGJbo9raJS8F3if1",FCMToken:"eQ3IJwy6QT-vutJQ6Tfpyf:APA91bFIvfAZIYTCGqR47kVo9dXJexKtF1IfW35llPKUbtbnyabk2uAKX5NcYl8P8RaAJIIltlTCTJ8K11cdKHQMFwVv6UBEmTBuZEtR8TyDv7bF0Tdf5zFxJMKjhcEpJTCvj21W32CO"})}}>
                 <Text style = {{fontSize:30}}>Kenneth</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:"QpcV2XFV8ZR3v1dOrS71aeGTxtv2"})}}>
+            <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:"QpcV2XFV8ZR3v1dOrS71aeGTxtv2",FCMToken:""})}}>
                 <Text style = {{fontSize:30}}>Shahbek</Text>
             </TouchableOpacity>
            </View>
