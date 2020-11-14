@@ -291,11 +291,10 @@ export const styles = StyleSheet.create({
         alignSelf: "center",
         shadowOffset: {
             width: 0,
-            height: 7
+            height: 5
         },
-        elevation: 15,
-        shadowOpacity: 0.5,
-        shadowRadius: 8,
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
         
     },
     
@@ -313,7 +312,7 @@ export const styles = StyleSheet.create({
     TextOverlay: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: 'white',
+        color: 'black',
     },
     TextOverlay2: {
         fontSize: 25,
@@ -325,6 +324,7 @@ export const styles = StyleSheet.create({
         width: "90%",
         height: 'auto',
         marginTop: 10,
+        marginBottom: 10,
         alignSelf: "center",
         borderRadius: 15,
         backgroundColor: "rgba(0,0,0,1)",

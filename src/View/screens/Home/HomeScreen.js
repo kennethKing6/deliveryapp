@@ -18,6 +18,8 @@ import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture
 import Profiles from '../../../Model/Constants/CategoriesAppData';
 import {SharedElement} from 'react-navigation-shared-element';
 import {styles} from './styles';
+import SellerData from './Sellers';
+import ProductData from './Products';
 
 
 export default function HomeScreen (props) {
@@ -29,20 +31,22 @@ export default function HomeScreen (props) {
         
         
         <View style={styles.container}>
+        <SafeAreaView>
+
                 <StatusBar animated barStyle="dark-content" />
+        </SafeAreaView>
                 
                 
                     
-        <SafeAreaView>
                     <ScrollView
                     showsVerticalScrollIndicator={false}>
                     <View style = {{alignSelf:'center', justifyContent:'center'}}>
-
+                    
                     <Image
                         style = {{width:30,height:30,marginTop:5}}
                         source = {require('../../../assets/images/DispatchLogo.png')}
                     />
-
+            
                     </View>
                         <View style={styles.header}>
                         
@@ -55,81 +59,7 @@ export default function HomeScreen (props) {
                             <SearchBar
                                 style={styles.cupertinoSearchBarBasic1}
                             ></SearchBar>
-
-                            <View style={styles.categories}>
-                                <ScrollView
-                                    showsHorizontalScrollIndicator = {false}
-                                    horizontal={true}
-                                    contentContainerStyle={styles.categories_contentContainerStyle}
-                                >
-                                    <View style={styles.group1Row}>
-                                        <View style={styles.group1}>
-                                            <View style={styles.rect1}>
-                                                <View style={styles.rect2}>
-                                                    <MaterialCommunityIconsIcon
-                                                        name="bus"
-                                                        style={styles.icon1}
-                                                    ></MaterialCommunityIconsIcon>
-                                                </View>
-                                                <Text style={styles.vehicles1}>Vehicles</Text>
-                                                <Text style={styles.loremIpsum1}>
-                                                    Find the cars of your{"\n"}dreams
-                                                </Text>
-                                            </View>
-                                        </View>
-                                        <View style={styles.group2}>
-                                            <View style={styles.rect3}>
-                                                <View style={styles.rect4}>
-                                                    <MaterialCommunityIconsIcon
-                                                        name="home"
-                                                        style={styles.icon2}
-                                                    ></MaterialCommunityIconsIcon>
-                                                </View>
-                                                <Text style={styles.rentals1}>Rentals</Text>
-                                                <Text style={styles.findHomes1}>Find homes</Text>
-                                            </View>
-                                        </View>
-                                        <View style={styles.group3}>
-                                            <View style={styles.rect5}>
-                                                <View style={styles.rect6}>
-                                                    <MaterialCommunityIconsIcon
-                                                        name="cellphone-iphone"
-                                                        style={styles.icon3}
-                                                    ></MaterialCommunityIconsIcon>
-                                                </View>
-                                                <Text style={styles.electronics1}>Electronics</Text>
-                                                <Text style={styles.findNewTech1}>Find new tech</Text>
-                                            </View>
-                                        </View>
-                                        <View style={styles.group4}>
-                                            <View style={styles.rect7}>
-                                                <View style={styles.rect8}>
-                                                    <MaterialCommunityIconsIcon
-                                                        name="recycle"
-                                                        style={styles.icon4}
-                                                    ></MaterialCommunityIconsIcon>
-                                                </View>
-                                                <Text style={styles.free1}>Free</Text>
-                                                <Text style={styles.promoteEcoLife1}>Promote eco life</Text>
-                                            </View>
-                                        </View>
-                                        <View style={styles.group5}>
-                                            <View style={styles.rect9}>
-                                                <View style={styles.rect10}>
-                                                    <MaterialCommunityIconsIcon
-                                                        name="bus"
-                                                        style={styles.icon5}
-                                                    ></MaterialCommunityIconsIcon>
-                                                </View>
-                                                <Text style={styles.vehicles2}>Vehicles</Text>
-                                                <Text style={styles.loremIpsum2}>
-                                                    Find the cars of your{"\n"}dreams
-                                                </Text>
-                                            </View>
-                                        </View>
-                                    </View>
-                                </ScrollView>
-                            </View>
+                            
                         </View>
 
                         
@@ -140,7 +70,7 @@ export default function HomeScreen (props) {
                         
                             
                             <View style = {{width: '95%', marginTop: 10, height : 'auto', alignSelf: 'center'}}>
-                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>Popular items</Text>
+                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>BROWSE CATEGORIES</Text>
                             </View> 
 
                             
@@ -222,56 +152,82 @@ export default function HomeScreen (props) {
 
                                     </View>
                            
-                            
+                                    <View style = {{width:'100%', backgroundColor:'#EEEEEE',marginTop:10,marginBottom:10}}>
+
+                                        <View style = {{width:'100%',alignSelf:'center', marginTop:15,marginBottom:15}}>
+
+                                        <View style = {{width:'90%',alignSelf:'center',marginBottom:10}}>
+
+                                            <Text style = {{fontSize:20, fontWeight:'900'}}>TOP SELLERS</Text>
+                                        </View>
+                                            
+
+                                            <FlatList
+                                            data = {SellerData}
+                                            horizontal = {true}
+                                            showsHorizontalScrollIndicator={false}
+                                            keyExtractor={(item, index) => item.id}
+                                            renderItem={({item, index}) => {
+                                            
+                                                        
+                                            return(
+                                                <View style = {{marginRight:10,alignItems:'center',paddingLeft:10}}>
+                                                
+                                                <View style = {{borderWidth:1.5,borderColor:'black',borderRadius:100}}>
+                                                <ImageBackground
+                                                source = {item.src}
+                                                resizeMode = {'cover'}
+                                                style = {{width: 100,height:100, borderRadius:100,overflow:'hidden',borderWidth:2,borderColor:'white'}}/>
+                                                </View>
+                                        
+                                                <Text style = {{fontSize:18,fontWeight:'400'}}>{item.name}</Text>
+                                            </View>
+                                            );
+                                            }
+                                            }
+                                        />
+
+                                            
+                                        </View>
+
+                                        </View>
                                 
                                     <View style = {{width: '95%', marginTop: 10, height : 'auto', alignSelf: 'center'}}>
-                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>For You</Text>
+                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>FOR YOU</Text>
                             </View> 
 
-                                <TouchableOpacity onPress={()=>props.navigation.navigate("MessageListScreen")}>
-                                <View style={styles.listing} >
-                                    <ImageBackground
-                                        source={require("../../../assets/images/volkswagen.jpg")}
-                                        resizeMode="cover"
-                                        style={styles.listingImage1}
-                                        
-                                    >
+                                        <FlatList
+                                            data = {ProductData}
+                                            showsHorizontalScrollIndicator={false}
+                                            keyExtractor={(item, index) => item.id}
+                                            renderItem={({item, index}) => {
+                                            
+                                                        
+                                            return(
+                                                <TouchableOpacity>
+                                                <View style={styles.listing} >
+                                                    <ImageBackground
+                                                        source={item.src}
+                                                        resizeMode="cover"
+                                                        style={styles.listingImage1}
+                                                        
+                                                    >
 
-                                    <View style = {styles.bLMTEXT}>
-                                        <Text style = {styles.TextOverlay}>Volkswagen Golf</Text>
-                                    </View>
-                                    </ImageBackground>
-                                    
-                                </View>
-                                </TouchableOpacity>
+                                                    <View style = {styles.bLMTEXT}>
+                                                        <Text style = {styles.TextOverlay}>{item.name}</Text>
+                                                    </View>
+                                                    </ImageBackground>
+                                                    
+                                                </View>
+                                                </TouchableOpacity>
+                                            );
+                                            }
+                                            }
+                                        />
 
-                                <View style={styles.listing}>
+                                
 
-                                    <ImageBackground
-                                        source={require("../../../assets/images/macbook.jpg")}
-                                        resizeMode="cover"
-                                        style={styles.listingImage1}
-                                    >
-                                    <View style = {styles.bLMTEXT}>
-                                        <Text style = {styles.TextOverlay}>MacBook Pro</Text>
-                                    </View>
-
-                                    </ImageBackground>
-                                </View>
-
-                                <View style={styles.listing}>
-
-                                    <ImageBackground
-                                        source={require("../../../assets/images/keyboard.jpg")}
-                                        resizeMode="cover"
-                                        style={styles.listingImage1}
-                                    >
-                                         <View style = {styles.bLMTEXT}>
-                                        <Text style = {styles.TextOverlay}>Keyboard</Text>
-                                    </View>
-                                    </ImageBackground>
-                                </View>
-
+                                
 
                             
 
@@ -295,7 +251,7 @@ export default function HomeScreen (props) {
                                 
                             
                             
-
+                        
 
                         </View>
             
@@ -304,7 +260,7 @@ export default function HomeScreen (props) {
                     
                     
 
-        </SafeAreaView>
+        
                     
 
                 </View>
