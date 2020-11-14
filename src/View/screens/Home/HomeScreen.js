@@ -193,8 +193,8 @@ export default function HomeScreen (props) {
                                         </View>
                                 
                                     <View style = {{width: '95%', marginTop: 10, height : 'auto', alignSelf: 'center'}}>
-                                <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>FOR YOU</Text>
-                            </View> 
+                                        <Text style = {{fontSize: 20, fontWeight: '900', color: 'black'}}>FOR YOU</Text>
+                                    </View> 
 
                                         <FlatList
                                             data = {ProductData}
