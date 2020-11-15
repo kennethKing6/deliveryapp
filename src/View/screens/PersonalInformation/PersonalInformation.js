@@ -240,13 +240,12 @@ function AccountSettings(props) {
 
             <Text style={styles.shahbekMiru}>ADRESS</Text>
                     <TextInput
-                    style = {{fontWeight:'900',fontSize:30}} 
+                    style = {{fontWeight:'900',fontSize:13}} 
                     placeholder = "Adress"
                     placeholderTextColor = "#00336b"
                     color="#0093fb"
                     onChangeText={(address)=>setUserAddress(address)}
                     value={getUserData(ADDRESS)}
-                    
                     />
             </View>
 
