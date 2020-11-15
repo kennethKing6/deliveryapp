@@ -243,7 +243,7 @@ function layoutIdentifier(){
                                         <View style={styles.rect2}>
                                             <ImageBackground
                                                 source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE) }
-                                                resizeMode="cover"
+                                                resizeMode="center"
                                                 style={styles.listingImage1}
                                             ></ImageBackground>
                                         </View>
