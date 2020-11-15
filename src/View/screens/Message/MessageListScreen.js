@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import {
     StyleSheet, 
     View,
     ScrollView,
     StatusBar,
-    useState,
     Button, 
     ImageBackground,
     SafeAreaView,
@@ -15,15 +14,28 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native';
-import messaging from '@react-native-firebase/messaging'
+import messaging from '@react-native-firebase/messaging';
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
 
 
 
+import UserMessageProfile from './UserMessageProfile';
+
+
+
 export default function MessageListScreen(props) {
-  const userId = firebase.auth().currentUser.uid;
-  const ref = firebase.database().ref("users/" + userId); 
+
+  
+  function getUserProperties(){
+    return userPropertiesRef.once("value").then((datasnapshot)=>{
+      setDatasnapshot(datasnapshot)
+    }).then((failure)=>{
+  
+    }).catch()
+  
+  }
+
   async function requestUserPermission() {
     const authStatus = await messaging().requestPermission();
     const enabled =
@@ -46,14 +58,49 @@ export default function MessageListScreen(props) {
         
         return (
 
-           <View>
-              <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:"sOf5W0LrhXdvNGJbo9raJS8F3if1",FCMToken:"eQ3IJwy6QT-vutJQ6Tfpyf:APA91bFIvfAZIYTCGqR47kVo9dXJexKtF1IfW35llPKUbtbnyabk2uAKX5NcYl8P8RaAJIIltlTCTJ8K11cdKHQMFwVv6UBEmTBuZEtR8TyDv7bF0Tdf5zFxJMKjhcEpJTCvj21W32CO"})}}>
-                <Text style = {{fontSize:30}}>Kenneth</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:"QpcV2XFV8ZR3v1dOrS71aeGTxtv2",FCMToken:""})}}>
-                <Text style = {{fontSize:30}}>Shahbek</Text>
-            </TouchableOpacity>
-           </View>
+
+          <View style = {styles.container}>
+          <SafeAreaView>
+            <View style = {{width:'90%',alignSelf:'center'}}>
+                <Text style = {{fontSize:40,fontWeight:'900',marginTop:30,marginBottom:20}}>Your messages</Text>
+            </View>
+
+          </SafeAreaView>
+           
+           
+
+           <FlatList
+             data = {UserMessageProfile}
+             numColumns = {2}
+             keyExtractor={(item, index) => item.id}
+             renderItem={({item, index}) => {
+             
+                           
+              return(
+                <View style = {{alignItems:'center',alignItems:'center',flexDirection:'column', width:'50%'}}>
+
+              
+                  <TouchableOpacity onPress = {() => {props.navigation.navigate("ChatScreen",{correspondence:item.correspondence})}}>
+                  <ImageBackground 
+                  source = {item.src}
+                  resizeMode = {'cover'}
+                  style = {{width:130,height:130,borderRadius:130,overflow:'hidden'}}/>
+                  </TouchableOpacity>
+
+                  <View style = {{bottom:20,alignItems:'center',alignSelf:'center'}}>
+                    <Text style = {{fontSize:22,padding:6,borderRadius:17,overflow:'hidden',backgroundColor:'white',fontWeight:'700'}}>{item.name}</Text>
+
+                  </View>
+
+                  </View>
+               );
+             }
+             }
+           />
+
+          
+
+          </View>
     );
   
 }
