@@ -206,6 +206,7 @@
     <orderEntry type="module" module-name="android-unimodules-font-interface" />
     <orderEntry type="module" module-name="android-unimodules-sensors-interface" />
     <orderEntry type="module" module-name="android-unimodules-task-manager-interface" />
+    <orderEntry type="module" module-name="react-native-async-storage_async-storage" />
     <orderEntry type="module" module-name="android-react-native-community_blur" />
     <orderEntry type="module" module-name="react-native-community_masked-view" />
     <orderEntry type="module" module-name="react-native-mapbox-gl_maps" />
