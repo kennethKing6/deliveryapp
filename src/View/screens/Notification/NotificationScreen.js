@@ -54,7 +54,8 @@ const NotificationScreen = (props) => {
     props.navigation.navigate("SelectCategories")
   }).catch((err)=>{
   console.log('error',err)
-  });}}
+  });
+  }}
             style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
             <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
         </TouchableOpacity>    

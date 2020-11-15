@@ -4,12 +4,48 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/Feather';
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
+import Geocoder from 'react-native-geocoding';
+import Autocomplete from 'react-native-autocomplete-input';
+
 const {width,height} = Dimensions.get("window");
+Geocoder.init("AIzaSyCVObze8pBBjZEVdBDgHysPKcih0P9mmLw"); // use a valid API key
 
 const AddressScreen = (props) => {
-    const [location,setLocation] = useState({
-        country: 'uk'
-    })
+   
+
+    function GetAddresses(){
+        const [addresses,setAddresses] = useState([]);
+        const [location,setLocation] = useState("");
+        // Initialize the module (needs to be done only once)
+
+Geocoder.from(location)
+		.then(json => {
+            var locations = [];
+            json.results.forEach(location=>{
+                locations.push(location.formatted_address)
+            })
+			setAddresses(locations)
+			console.log("locations",locations);
+		})
+        .catch(error => console.warn(error));
+        
+        return(
+            <View style={{width:width * (80/90),height:30}}>
+                    <Autocomplete
+                    containerStyle={{flex: 1}}
+            data={addresses}
+            
+            defaultValue={location}
+            onChangeText={text => setLocation(text)}
+            renderItem={({ item, i }) => (
+              <TouchableOpacity onPress={() =>{setLocation(item)}}>
+                <Text>{item}</Text>
+              </TouchableOpacity>
+            )}
+          />
+            </View>
+        )
+    }
 
      //firebase references
      const userId = firebase.auth().currentUser.uid;
@@ -19,24 +55,7 @@ const AddressScreen = (props) => {
     <ImageBackground style={{flex:1}}source={require("../../../assets/images/deliveryLocation.jpg")}>
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View style={{height:"85%"}}>
-      <DropDownPicker
-        items={[
-            {label: 'USA', value: 'usa', icon: () => <Icon name="flag" size={18} color="#900" />, hidden: true},
-            {label: 'UK', value: 'uk', icon: () => <Icon name="flag" size={18} color="#900" />},
-            {label: 'France', value: 'france', icon: () => <Icon name="flag" size={18} color="#900" />},
-        ]}
-        defaultValue={location.country}
-        containerStyle={{width: (90/100) * width,height:50,marginTop:(height * (12/100))}}
-        style={{backgroundColor: '#fafafa'}}
-        itemStyle={{
-            justifyContent: 'flex-start'
-        }}
-        dropDownStyle={{backgroundColor: '#fafafa'}}
-        onChangeItem={item => setLocation({
-            country: item.value
-        })}
-        
-    />
+        <GetAddresses/>
     </View>
       <TouchableOpacity 
             onPress={()=>{
