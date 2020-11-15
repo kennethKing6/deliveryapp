@@ -4,6 +4,8 @@ import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommun
 import Feather from "react-native-vector-icons/Feather";
 import Ion from "react-native-vector-icons/Ionicons";
 import { BlurView, VibrancyView } from "@react-native-community/blur";
+import firebase from "@react-native-firebase/app";
+import auth from '@react-native-firebase/auth';
 
 
 import LoginButtons from "../../components/LoginButtons";
@@ -202,7 +204,10 @@ function AccountSettings(props) {
                 </View>
                 
                 <LoginButtons
-                    onPress={() => props.navigation.navigate('signedOut')}
+                    onPress={() => {
+                        firebase.auth()
+                        .signOut()
+                        .then()}}
                     style={{
                         backgroundColor: "black"
                     }}

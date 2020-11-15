@@ -139,7 +139,6 @@ function Register(props) {
                                                         firebase.auth()
                                                     .createUserWithEmailAndPassword(email, password)
                                                     .then(() => {
-                                                        props.navigation.navigate('signedIn');
                                                     })
                                                     .catch(error => {
                                                         if (error.code === 'auth/email-already-in-use') {

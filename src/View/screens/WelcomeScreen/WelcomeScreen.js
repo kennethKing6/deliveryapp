@@ -47,12 +47,12 @@ function WelcomeScreen(props) {
                 
                 <View style={styles.buttons}>
                     <LoginButtons
-                        onPress={() => props.navigation.navigate('SignUp')}
+                        onPress={() => props.navigation.navigate('SignUpScreen')}
                         text='Sign Up'
 
                     />
                     <LoginButtons
-                        onPress={() => props.navigation.navigate('SignIn')}
+                        onPress={() => props.navigation.navigate('SignInScreen')}
                         style={{
                             backgroundColor:"black" }}
                         color = 'black'

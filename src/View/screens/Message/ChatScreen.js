@@ -14,7 +14,8 @@ export default function ChatScreen(props) {
   const correspondance = route.params.correspondence;
   //Token to send message
   const corresponFCMToken = route.params.FCMToken;
-  console.log("correspondance",correspondance)
+
+  console.log("corresponFCMToken",corresponFCMToken)
    //firebase references
    const userId = firebase.auth().currentUser.uid;
    const ref = firebase.database().ref("users/" + userId);
@@ -90,14 +91,29 @@ function getUserProperties(){
 const onSend = useCallback((messagesList) => {
  
   for(var i = 0; i < messagesList.length; ++i){
+    messagesList[i]['createdAt'] = new Date();
     messagesRef.push(messagesList[i])
     correspondanceMessageRef.push(messagesList[i])
   }
 }, [])
 
+const USERNAME = 0;
+const FCMTOKEN = 1;
+const USER_PROFILE_PIC = 2;
+function getUserData(data){
+  var result = ""; 
+  if(data === USERNAME){
+    try{result = datasnapshot.val().username}catch(err){}
+  }else if(data === FCMTOKEN){
+    try{result = datasnapshot.val().FCMToken}catch(err){}
+  }else if(data === USER_PROFILE_PIC){
+    try{result = datasnapshot.val().userProfilePicture}catch(err){}
+
+  }
+  return result;
+}
 
 
-datasnapshot !==null ? console.log("username",datasnapshot.val().username):"";
 
   return (
 
@@ -106,9 +122,9 @@ datasnapshot !==null ? console.log("username",datasnapshot.val().username):"";
         onSend={messages => onSend(messages)}
         user={{
           _id: userId,
-          name: datasnapshot !==null ? datasnapshot.val().username:"",
-          FCMToken: datasnapshot !==null ? datasnapshot.val().FCMToken:"",
-          avatar: datasnapshot == null? "" : datasnapshot.val().userProfilePicture,
+          name: getUserData(USERNAME),
+          FCMToken: getUserData(FCMTOKEN),
+          avatar: getUserData(USER_PROFILE_PIC),
           corresponFCMToken:corresponFCMToken
         }}
         isTyping = {true}

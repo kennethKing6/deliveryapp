@@ -60,7 +60,6 @@ function Login(props) {
                                 firebase.auth()
                                 .signInWithEmailAndPassword (email, password)
                                 .then(() => {
-                                    props.navigation.navigate('SelectCategories')
                                 
                                 })
                                 .catch(error => {

@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {
     StyleSheet, 
     View,
     ScrollView,
     StatusBar,
-    useState,
     Button, 
     ImageBackground,
     SafeAreaView,
@@ -16,23 +15,19 @@ import {
     TouchableOpacity
 } from 'react-native';
 import Dots from 'react-native-dots-pagination';
-
+import firebase from "@react-native-firebase/app";
+import database from '@react-native-firebase/database';
 
 const {width,height} = Dimensions.get("window");
 
 
 
-export default class Introduction extends Component {
-    
-    constructor(props) {
-        super(props);
-        this.state = {
-          active: 0
-        }
-      }
-    
-    render() { 
-        
+export default function Introduction(props) {
+    const [active,setActive] = useState(0)
+         //firebase references
+     const userId = firebase.auth().currentUser.uid;
+     const ref = firebase.database().ref("users/" + userId);
+     const userPropertiesRef = ref.child("user_properties");
         return (
       <View style={styles.page}>
                       <StatusBar animated barStyle="dark-content" />
@@ -110,10 +105,16 @@ export default class Introduction extends Component {
 
                                 
                       </ScrollView>
-                      <Dots length={2} active={this.state.active} />
+                      <Dots length={2} active={active} />
                       
                       <TouchableOpacity 
-                      onPress={() => this.props.navigation.navigate('signedIn')}
+                      onPress={() => {
+                        userPropertiesRef.update({userId: userId}).then(()=>{
+                          props.navigation.navigate('AddressScreen')
+                    }).catch((err)=>{
+                        alert("An error occured, please try again later")
+                    })
+                        }}
                       style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
                         <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
                       </TouchableOpacity>
@@ -122,7 +123,7 @@ export default class Introduction extends Component {
 
       </View>
     );
-  }
+  
 }
 
 const styles = StyleSheet.create({

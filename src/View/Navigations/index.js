@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 
 import { View, TouchableOpacity, Text, Dimensions } from "react-native";
 
@@ -8,46 +8,49 @@ import Feather from 'react-native-vector-icons/Feather';
 
 //SCREENS
 import HomeScreen from "../screens/Home/HomeScreen";
-
 import MapScreen from "../screens/Map/MapScreen";
-import UploadScreen from "../screens/ListItems/ListItem";
-import ProductTitleScreen from '../screens/ListItems/ProductTitle';
-import ProductDescriptionScreen from '../screens/ListItems/ProductDescription';
-import ProductPriceScreen from '../screens/ListItems/ProductPrice';
-import ProductCategoryScreen from '../screens/ListItems/ProductCategory';
-import ProductImageScreen from '../screens/ListItems/ProductImage';
-import FinishListingScreen from '../screens/ListItems/FinishListing';
 import WelcomeScreen from "../screens/WelcomeScreen/WelcomeScreen";
 import ProfileScreen from "../screens/Profile/Profile";
 import AccountSettings from "../screens/AccountSettings/AccountSettings";
 import PersonalInformation from '../screens/PersonalInformation/PersonalInformation';
-import AddListing from '../screens/AddListing/AddListing';
 import UploadProductScreen from '../screens/UploadProductScreens/UploadProductScreen';
 import ProductDetails from '../screens/UploadProductScreens/ProductDetails';
-import SelectCategories from '../screens/SelectCategory/SelectCategories';
 import Introduction from '../screens/Introduction/Introduction';
+import AddressScreen from '../screens/Address/AddressScreen';
+import UsernameScreen from '../screens/Username/UsernameScreen';
+import NotificationScreen from '../screens/Notification/NotificationScreen';
+import SelectCategories from '../screens/SelectCategory/SelectCategories';
 import PaymentCard from '../screens/Payment/PaymentCard';
 import ChatScreen from '../screens/Message/ChatScreen';
 import MessageListScreen from '../screens/Message/MessageListScreen';
-
-
-
-
-
 import SignIn from "../screens/Login/Login";
 import SignUp from "../screens/Register/Register";
+import AddListingScreen from '../screens/AddListing/AddListing';
 //END OF SCREENS
-
 import {createStackNavigator} from '@react-navigation/stack';
-
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
 import {enableScreens} from 'react-native-screens';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
-import {NavigationContainer} from '@react-navigation/native';
-import { Message } from "react-native-gifted-chat";
+import * as firebase from 'firebase';
+import auth from '@react-native-firebase/auth';
 
 enableScreens();
+//Add firebase
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyB5nb54BH2M3yKurqTRvR3C-kN0x5CEoO0",
+    authDomain: "deliveryapp-bd7d8.firebaseapp.com",
+    databaseURL: "https://deliveryapp-bd7d8.firebaseio.com",
+    projectId: "deliveryapp-bd7d8",
+    storageBucket: "deliveryapp-bd7d8.appspot.com",
+    messagingSenderId: "257715845585",
+    appId: "1:257715845585:web:d30eb92a5b8fa30a9f48f0",
+    measurementId: "G-JNM1GWZ4B1"
+  };
+  if (!firebase.apps.length) {
+  // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+  }
 
 const Stack = createSharedElementStackNavigator ();
 
@@ -55,31 +58,65 @@ export const SignedOut = () => {
     return(
         
         <Stack.Navigator
-        initialRouteName = "Welcome"
+        initialRouteName = "WelcomeScreen"
         >
             
         <Stack.Screen
-                name="Welcome"
+                name="WelcomeScreen"
                 component={WelcomeScreen}
                 options={{ headerShown: false }}
          />
         <Stack.Screen
-            name = "SignIn"
+            name = "SignInScreen"
             component = {SignIn}
             options = {{headerShown: false}}
         />
         <Stack.Screen
-                name="SignUp"
+                name="SignUpScreen"
                 component={SignUp}
                 options={{ headerShown: false }}
         />
-        
+       
 
         </Stack.Navigator>
     )
 }
 
+const IntroductionNavigator = createSharedElementStackNavigator ();
 
+export const AppIntroductions = ()=>{
+    return(
+        <IntroductionNavigator.Navigator
+        initialRouteName="IntroductionScreen">
+         <IntroductionNavigator.Screen
+                name="IntroductionScreen"
+                component={Introduction}
+                options={{ headerShown: false }}
+            />
+               <IntroductionNavigator.Screen
+                name="AddressScreen"
+                component={AddressScreen}
+                options={{ headerShown: false }}
+            />
+            <IntroductionNavigator.Screen
+                name="UsernameScreen"
+                component={UsernameScreen}
+                options={{ headerShown: false }}
+            />
+            <IntroductionNavigator.Screen
+                name="NotificationScreen"
+                component={NotificationScreen}
+                options={{ headerShown: false }}
+            />
+               <IntroductionNavigator.Screen
+                name="SelectCategories"
+                component={SelectCategories}
+                options={{ headerShown: false }}
+            />
+            
+        </IntroductionNavigator.Navigator>
+    )
+}
 
 
 const MyTabBar = ({ state, descriptors, navigation }) => {
@@ -191,7 +228,7 @@ const HomeScreenNavigator = () => {
             screenOptions={defaultStackNavigationOptions}
         >
             <HomeScreenStackNavigator.Screen
-                name="HomeScreenNav"
+                name="HomeScreen"
                 component={HomeScreen}
                 options = {{headerShown: false}}
             />
@@ -262,54 +299,6 @@ const ProfileScreenNavigator = () => {
 };
 
 
-const ListItemsScreenStackNavigator = createSharedElementStackNavigator();
-
-const ListItemsScreenNavigator = () => {
-    return (
-        <ListItemsScreenStackNavigator.Navigator
-            screenOptions={defaultStackNavigationOptions}
-        >
-            <ListItemsScreenStackNavigator.Screen
-                name="ProductTitleScreen"
-                component={ProductTitleScreen}
-                options={{ headerShown: false }}
-
-            />
-            <ListItemsScreenStackNavigator.Screen
-                name="ProductDescriptionScreen"
-                component={ProductDescriptionScreen}
-                options={{ headerShown: false }}
-
-            />
-            <ListItemsScreenStackNavigator.Screen
-                name="ProductPriceScreen"
-                component={ProductPriceScreen}
-                options={{ headerShown: false }}
-
-            />
-            <ListItemsScreenStackNavigator.Screen
-                name="ProductCategoryScreen"
-                component={ProductCategoryScreen}
-                options={{ headerShown: false }}
-
-            />
-            <ListItemsScreenStackNavigator.Screen
-                name="ProductImageScreen"
-                component={ProductImageScreen}
-                options={{ headerShown: false }}
-
-            />
-            <ListItemsScreenStackNavigator.Screen
-                name="FinishListingScreen"
-                component={FinishListingScreen}
-                options={{ headerShown: false }}
-
-            />
-
-            
-        </ListItemsScreenStackNavigator.Navigator>
-    );
-};
 
 
 const BottomNavigationBar = createBottomTabNavigator();
@@ -385,84 +374,118 @@ export const AppNavigator = () => {
     );
 };
 
+const NormalNavigator = createSharedElementStackNavigator();
+function GetNormalScreens(){
+    return(
+        <>
+             <NormalNavigator.Navigator>
+                <NormalNavigator.Screen 
+                    name = "AppIntroductions" 
+                    component = {AppIntroductions}
+                    options = {{headerShown:false}}
+                    /> 
+                <NormalNavigator.Screen 
+                    name = "SignedInScreens" 
+                    component = {AppNavigator}
+                    options = {{headerShown:false}}
+                    /> 
+                    <NormalNavigator.Screen
+                        name="PaymentCard"
+                        component={PaymentCard}
+                        options={{ headerShown: false }}
+                    />
+                   
+                    <NormalNavigator.Screen
+                        name="AccountSettings"
+                        component={AccountSettings}
+                        options={{ headerShown: false }}
+                    />
+                    <NormalNavigator.Screen
+                        name="PersonalInformation"
+                        component={PersonalInformation}
+                        options={{ headerShown: false }}
+                    />
+                   
+                   
+                    <NormalNavigator.Screen
+                        name="UploadProductScreen"
+                        component={UploadProductScreen}
+                        options={{ headerShown: false }}
+                    />
+                    <NormalNavigator.Screen
+                        name="ProductDetails"
+                        component={ProductDetails}
+                        options={{ headerShown: false }}
+                    />
+                   
+                     <NormalNavigator.Screen
+                        name="ChatScreen"
+                        component={ChatScreen}
+                        options={{ headerShown: false }}
+                    />
+                     <NormalNavigator.Screen
+                        name="AddListingScreen"
+                        component={AddListingScreen}
+                        options={{ headerShown: false }}
+                    />
+                   
+                    
+                </NormalNavigator.Navigator>
+        </>
+    )
+}
+const SignedOutNavigator = createSharedElementStackNavigator();
+
+function GetSignedOutScreen(){
+    return(
+        <>
+             <SignedOutNavigator.Navigator>
+                <SignedOutNavigator.Screen 
+                    name = "signedOut" 
+                    component = {SignedOut}
+                    options = {{headerShown:false}}
+                    />
+                </SignedOutNavigator.Navigator>
+        </>
+    )
+}
+function GetScreens(){
+    const [isSignedIn,setIsSignedIn] = useState(false);
+   
+  
+         auth().onAuthStateChanged((user)=>{
+            console.log("user",user)
+            if(user === null){
+              setIsSignedIn(false);
+            }else{
+                setIsSignedIn(true);
+
+            }
+          })
+
+    
+    
+    
+    
+    
+     return( isSignedIn? <GetNormalScreens/> : <GetSignedOutScreen/>)
+    }
 const Switch = createSharedElementStackNavigator();
 
 export const MainNavigator = () => {
-    return(
-
+  
         
-        <Switch.Navigator>
+            return(
+                <>   
 
-            <Switch.Screen 
-            name = "signedOut" 
-            component = {SignedOut}
-            options = {{headerShown:false}}
-            />
-            <Switch.Screen
-                name="SelectCategories"
-                component={SelectCategories}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="Introduction"
-                component={Introduction}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="PaymentCard"
-                component={PaymentCard}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen 
-            name = "signedIn" 
-            component = {AppNavigator}
-            options = {{headerShown:false}}
-            /> 
-            <Switch.Screen
-                name="AccountSettings"
-                component={AccountSettings}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="PersonalInformation"
-                component={PersonalInformation}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="AddListing"
-                component={AddListing}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="ListItems"
-                component={ListItemsScreenNavigator}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="UploadProductScreen"
-                component={UploadProductScreen}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="ProductDetails"
-                component={ProductDetails}
-                options={{ headerShown: false }}
-            />
-            <Switch.Screen
-                name="MessageListScreen"
-                component={MessageListScreen}
-                options={{ headerShown: false }}
-            />
-             <Switch.Screen
-                name="ChatScreen"
-                component={ChatScreen}
-                options={{ headerShown: false }}
-            />
-            
-            
-            
-        </Switch.Navigator>
-        
-    )
+                <GetScreens/>
 
-}
+                </>
+            )
+      
+        }
+    
+   
+    
+
+

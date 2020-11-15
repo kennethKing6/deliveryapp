@@ -155,7 +155,7 @@ export default class SelectCategories extends Component {
                       onPress={() => {
                         var account = new Account(firebase.auth().currentUser.uid);
                         account.updateDbUserCategory(userSelectedCategories).then(()=>{
-                          this.props.navigation.navigate('Introduction')
+                          this.props.navigation.navigate('SignedInScreens')
 
                         }).catch(()=>{
                           alert("Select at least 3 categories")

@@ -105,7 +105,7 @@ export default function HomeScreen (props) {
                                                 width:200,
                                                 height:200,
                                                 margin:10}]} onPress={()=>{
-                                                props.navigation.push('AddListing',{item})
+                                                props.navigation.navigate('AddListingScreen',{item})
                                             }}>
                                                 
                                                 <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]}>

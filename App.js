@@ -15,14 +15,12 @@ import {
 } from 'react-native';
 import * as Font from 'expo-font';
 
-// Register background handler
+// Register background handle
 messaging().setBackgroundMessageHandler(async remoteMessage => {
   console.log('Message handled in the background!', remoteMessage);
 });
 export default function App ({navigation}) {
 
-  const [loading, setLoading] = useState(false);
-  const[assetsLoaded,setAssetsLoaded] = useState(false);
   
 
  
@@ -49,7 +47,6 @@ export default function App ({navigation}) {
           );
           navigation.navigate(remoteMessage.data.chat_screen,{correspondance:remoteMessage.data.correspondance});
         }
-        setLoading(false);
       });
   }, []);
 
@@ -69,23 +66,13 @@ export default function App ({navigation}) {
 
    
       return (
-          (
+          
           <ApplicationProvider {...eva} theme={eva.light}>
             <NavigationContainer />
           </ApplicationProvider>
-          )
+          
       );
-    // } else {
-    //   return (
-    //     <ApplicationProvider {...eva} theme={eva.light}>
-    //     <View>
-    //       <ActivityIndicator />
-    //       <StatusBar barStyle="default" />
-    //     </View>
-    //     </ApplicationProvider>
-    //   );
-    // }
-  
+    
 }
 
 

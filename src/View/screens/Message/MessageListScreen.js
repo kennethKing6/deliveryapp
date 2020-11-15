@@ -47,14 +47,7 @@ export default function MessageListScreen(props) {
     }
   }
    
-  requestUserPermission().then(()=>{
-    return messaging().getToken();
-  }).then((token)=>{
-  console.log("FCMToken",token)
-  return ref.child("user_properties").update({FCMToken: token})
-  }).then().catch((err)=>{
-  console.log('error',err)
-  });
+  
         
         return (
 
