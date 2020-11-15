@@ -214,7 +214,7 @@ function layoutIdentifier(){
                 <View style={{ justifyContent: 'center', marginTop: 5 }}>
 
                         <Text style={{
-                            color: "black", fontSize:18 }}>{getUserData(USERNAME)}</Text>
+                            color: "black", fontSize:24,fontWeight:'900' }}>{getUserData(USERNAME)}</Text>
 
                 </View>
 

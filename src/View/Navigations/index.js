@@ -45,6 +45,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {enableScreens} from 'react-native-screens';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import {NavigationContainer} from '@react-navigation/native';
+import { Message } from "react-native-gifted-chat";
 
 enableScreens();
 
@@ -108,7 +109,7 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
 
-                const IconNames = ["home","map","tag","user"];
+                const IconNames = ["home","map","message-square","user"];
 
                 const isFocused = state.index === index;
                 const onPress = () => {
@@ -225,8 +226,8 @@ const UploadScreenNavigator = () => {
 
                 <UploadScreenStackNavigator.Navigator initialRouteName="UploadScreen">
                     <UploadScreenStackNavigator.Screen
-                        name="UploadScreen"
-                        component={UploadScreen}
+                        name="MessageListScreen"
+                        component={MessageListScreen}
                         options={{ headerShown: false }}
 
                     />

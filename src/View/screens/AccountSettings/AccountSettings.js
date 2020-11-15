@@ -32,7 +32,7 @@ function AccountSettings(props) {
                     <View style={{ justifyContent: 'center', marginTop: 5 }}>
 
                         <Text style={{
-                            color: "black", fontSize: 18
+                            color: "black", fontSize: 24, fontWeight:'900'
                         }}>Settings</Text>
 
                     </View>
@@ -53,7 +53,7 @@ function AccountSettings(props) {
             <ScrollView>
 
 
-                <Text style={styles.heyShahbek}>Urban wear</Text>
+                {/* <Text style={styles.heyShahbek}>Urban wear</Text> */}
                 
                 <View style={styles.settingsOptions}>
                     
