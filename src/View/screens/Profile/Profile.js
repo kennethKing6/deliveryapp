@@ -68,7 +68,7 @@ function layoutIdentifier(){
                             <View key={index} style={[{width:(width/3)},{height:(width/3)},{padding:0.5}]}>
                             
                                     
-                                    <ImageBackground style={{flex:1,width:undefined,height:undefined,resizeMode:"cover",borderRadius:3,flex:1,overflow:'hidden'}} 
+                                    <ImageBackground style={{flex:1,width:undefined,height:undefined,resizeMode:'cover',borderRadius:3,flex:1,overflow:'hidden'}} 
                                     source={{uri:data.properties.url}}
                                     onError={(err)=>{
                                         //Error loading the image
@@ -243,7 +243,7 @@ function layoutIdentifier(){
                                         <View style={styles.rect2}>
                                             <ImageBackground
                                                 source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE) }
-                                                resizeMode="cover"
+                                                resizeMode= 'cover'
                                                 style={styles.listingImage1}
                                             ></ImageBackground>
                                         </View>
@@ -353,7 +353,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 120,
         marginTop: 20,
-        backgroundColor: "#E6E6E6",
+        backgroundColor: "white",
         borderRadius: 100,
         
     },
