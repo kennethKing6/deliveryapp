@@ -31,12 +31,12 @@ export default function SelectCategories() {
 	
 	const numOfColumns = 3;
 
-const formatData = (Profiles,numOfColumns) => {
-  const numberOfFullRows = Math.floor(Profiles.length/numOfColumns);
+const formatData = (Profiles) => {
+  const numberOfFullRows = Math.floor(Profiles.length/3);
 
-  let numOfElementsInLastRow = Profiles.length-(numberOfFullRows*numOfColumns);
+  let numOfElementsInLastRow = Profiles.length-(numberOfFullRows*3);
 
-  while(numOfElementsInLastRow!==numOfColumns && numOfElementsInLastRow!==0){
+  while(numOfElementsInLastRow!== 3 && numOfElementsInLastRow!==0){
     Profiles.push({key: 'blank-${numOfElementsInLastRow}', empty: true});
     numOfElementsInLastRow = numOfElementsInLastRow+1;
   }
@@ -103,7 +103,7 @@ const handleRemoveItem = (item) =>{
                         <FlatList
                           extraData={indexChecked}
                           columnWrapperStyle = {{flex:1, justifyContent:'space-between'}}
-                          data={formatData(Profiles, numOfColumns)}
+                          data={formatData(Profiles, 3)}
                           keyExtractor={(item, index) => item.key}
                           renderItem={({item}) => (
                             
@@ -142,7 +142,7 @@ const handleRemoveItem = (item) =>{
 
                             </TouchableOpacity>
                           )}
-                          numColumns = {numOfColumns}
+                          numColumns = {3}
                         />
                       
 
@@ -208,8 +208,8 @@ const styles = StyleSheet.create({
       alignSelf:'center'
   },
   card: {
-    width:(width/numOfColumns)*0.85,
-    height:(width/numOfColumns)*0.85, 
+    width:(width/3)*0.85,
+    height:(width/3)*0.85, 
     borderRadius:10,
     overflow :'hidden'
   },
