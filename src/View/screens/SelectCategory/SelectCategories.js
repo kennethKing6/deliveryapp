@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {
     StyleSheet, 
     View,
@@ -23,7 +23,13 @@ import firebase from "@react-native-firebase/app";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const {width} = Dimensions.get("window");
 
-const numOfColumns = 3;
+
+
+export default function SelectCategories() {
+  
+  const [indexChecked,setIndexChecked] = useState('0')
+	
+	const numOfColumns = 3;
 
 const formatData = (Profiles,numOfColumns) => {
   const numberOfFullRows = Math.floor(Profiles.length/numOfColumns);
@@ -38,7 +44,7 @@ const formatData = (Profiles,numOfColumns) => {
   return Profiles;
 }
 
-var userSelectedCategories =[];
+const userSelectedCategories =[];
 
 const handleUserSelection = (selectedValue) => {
 
@@ -75,17 +81,7 @@ const handleRemoveItem = (item) =>{
 
 }
 
-export default class SelectCategories extends Component {
-  
-  constructor(props) {
-		super(props);
-		this.state = {
-      indexChecked: '0',
-      
-		};
-	}
-
-  render() { 
+   
     return (
       <View style={styles.page}>
                       <StatusBar animated barStyle="dark-content" />
@@ -105,7 +101,7 @@ export default class SelectCategories extends Component {
                     <ScrollView>
 
                         <FlatList
-                          extraData={this.state}
+                          extraData={indexChecked}
                           columnWrapperStyle = {{flex:1, justifyContent:'space-between'}}
                           data={formatData(Profiles, numOfColumns)}
                           keyExtractor={(item, index) => item.key}
@@ -115,7 +111,7 @@ export default class SelectCategories extends Component {
                             onPress={() => {
                               handleUserSelection(item);
                               console.log(item.selected)
-                              this.setState({ indexChecked: item.key});
+                              setIndexChecked(item.key);
                               console.log(userSelectedCategories)
                               }}
                             style = {{marginBottom:8.5}}>
@@ -152,15 +148,40 @@ export default class SelectCategories extends Component {
 
                       <TouchableOpacity 
                       onPress={() => {
-                        var account = new Account(firebase.auth().currentUser.uid);
-                        account.updateDbUserCategory(userSelectedCategories).then(()=>{
-       
-                          return AsyncStorage.setItem('@IntroductionScreen', "true")
-                        }).then(()=>{
-                          this.props.navigation.navigate('SignedInScreens')
-                        }).catch(()=>{
-                          alert("Select at least 3 categories")
-                        })
+                            if(userSelectedCategories.length > 3){
+                              AsyncStorage.getItem('@user_properties').then((data)=>{
+                                var result =  data != null ? JSON.parse(data) : null;
+                                if(result != null){
+                                  result['category'] = userSelectedCategories
+                                }else{
+                                  result = {};
+                                  result['category'] = userSelectedCategories
+                                }
+                                return result
+                                }).then((savingObj)=>{
+                                   return AsyncStorage.setItem('@user_properties', JSON.stringify(savingObj)).then(()=>{
+                                    firebase.auth()
+                                                    .createUserWithEmailAndPassword(savingObj.email, savingObj.password)
+                                                    .then()
+                                                    .catch(error => {
+                                                        if (error.code === 'auth/email-already-in-use') {
+                                                        alert('That email address is already in use!');
+                                                        }else if (error.code === 'auth/invalid-email') {
+                                                        alert('That email address is invalid!');
+                                                        }else{
+                                                            alert(error);
+                                                            console.error(error);
+
+                                                        }
+
+                                                    });
+                                   }).catch(()=>{
+                                  alert("Failed to save your location, please try again later!")
+                                })
+                                }).catch()
+                            }else{
+                              alert("Please select at least 3 categories")
+                            }                 
                         }}
                       style = {{width:'100%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center'}}>
                         <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
@@ -173,7 +194,7 @@ export default class SelectCategories extends Component {
 
       </View>
     );
-  }
+  
 }
 
 const styles = StyleSheet.create({

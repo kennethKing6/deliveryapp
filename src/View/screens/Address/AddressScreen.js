@@ -8,7 +8,7 @@ import Geocoder from 'react-native-geocoding';
 import Autocomplete from 'react-native-autocomplete-input';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import GetLocation from 'react-native-get-location';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const {width,height} = Dimensions.get("window");
 // use a valid API key
 const AddressScreen = (props) => {
@@ -40,10 +40,10 @@ const AddressScreen = (props) => {
     
 
      //firebase references
-     const userId = firebase.auth().currentUser.uid;
-     const ref = firebase.database().ref("users/" + userId);
-     const userPropertiesRef = ref.child("user_properties");
-     console.log("location",location);
+    //  const userId = firebase.auth().currentUser.uid;
+    //  const ref = firebase.database().ref("users/" + userId);
+    //  const userPropertiesRef = ref.child("user_properties");
+    //  console.log("location",location);
 
   return (
     <ImageBackground style={{flex:1}} source={require("../../../assets/images/deliveryLocation.jpg")}>
@@ -105,11 +105,27 @@ const AddressScreen = (props) => {
                 if(location === null){
                     alert("Please select your location")
                 }else{
-                    userPropertiesRef.update({address: location}).then(()=>{
-                        props.navigation.navigate("UsernameScreen")
+                    // userPropertiesRef.update({address: location}).then(()=>{
+                    //     props.navigation.navigate("UsernameScreen")
 
-                    }).catch((err)=>{
-                        alert("An error occured, please try again later")
+                    // }).catch((err)=>{
+                    //     alert("An error occured, please try again later")
+                    // })
+                    AsyncStorage.getItem('@user_properties').then((data)=>{
+                     var result =  data != null ? JSON.parse(data) : null;
+                     if(result != null){
+                      result['address'] = location
+                     }else{
+                      result = {};
+                      result['address'] = location
+                     }
+                     return result
+                    }).then((savingObj)=>{
+                      return AsyncStorage.setItem('@user_properties', JSON.stringify(savingObj))
+                    }).then(()=>{
+                      props.navigation.navigate("UsernameScreen")
+                    }).catch(()=>{
+                      alert("Failed to save your location, please try again later!")
                     })
                 }
                 

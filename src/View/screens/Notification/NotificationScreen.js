@@ -5,16 +5,13 @@ import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
 import messaging from '@react-native-firebase/messaging';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const {width,height} = Dimensions.get("window");
 
 const NotificationScreen = (props) => {
 
 
-     //firebase references
-     const userId = firebase.auth().currentUser.uid;
-     const ref = firebase.database().ref("users/" + userId);
-     const userPropertiesRef = ref.child("user_properties");
+     
 
      async function requestUserPermission() {
         const authStatus = await messaging().requestPermission();
@@ -37,24 +34,21 @@ const NotificationScreen = (props) => {
     </View>
      
       <TouchableOpacity 
-            onPress={()=>{
+            onPress={()=> {
                 requestUserPermission({
-    alert:true,
-    announcement:true,
-    badge:true,
-    sound:true,
-    provisional: true,
-  }).then((status)=>{
-    console.log("status",status)
-    return messaging().getToken();
-  }).then((token)=>{
-  console.log("FCMToken",token)
-  return userPropertiesRef.update({FCMToken: token})
-  }).then(()=>{
-    props.navigation.navigate("SelectCategories")
-  }).catch((err)=>{
-  console.log('error',err)
-  });
+          alert:true,
+          announcement:true,
+          badge:true,
+          sound:true,
+          provisional: true,
+        }).then(()=>{
+          console.log("User accepted to receive notifications")
+          props.navigation.navigate("SelectCategories")
+        }).catch(()=>{
+          console.log("User refused to receive notifications")
+          props.navigation.navigate("SelectCategories")
+        })
+  
   }}
             style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
             <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>

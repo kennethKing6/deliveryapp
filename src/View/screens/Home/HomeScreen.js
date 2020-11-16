@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {
     StyleSheet,
     View,
@@ -16,16 +16,62 @@ import {
 import SearchBar from "../../components/SearchBar";
 import Feather from "react-native-vector-icons/Feather";
 import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture-handler";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Profiles from '../../../Model/Constants/CategoriesAppData';
 import {SharedElement} from 'react-navigation-shared-element';
 import {styles} from './styles';
 import SellerData from './Sellers';
 import ProductData from './Products';
+<<<<<<< HEAD
 
 const {width,height} = Dimensions.get("window")*0.9;
+=======
+import firebase from "@react-native-firebase/app";
+import database from '@react-native-firebase/database';
+import messaging from '@react-native-firebase/messaging';
+>>>>>>> d41e163943f47f2f326684cb6553796193e1fb41
 
 export default function HomeScreen (props) {
 
+
+     //  firebase references
+     const userId = firebase.auth().currentUser.uid;
+     const ref = firebase.database().ref("users/" + userId);
+     const userPropertiesRef = ref.child("user_properties");
+
+
+     useEffect(() => {
+        const unsubscribe = props.navigation.addListener('focus', () => {
+            messaging().getToken().then((token)=>{
+                return uploadUserData(token)
+             }).catch(()=>{
+                return uploadUserData(null)
+             })
+        
+        });
+    
+        // Return the function to unsubscribe from the event so it gets removed on unmount
+        return unsubscribe;
+      }, [props.navigation]);
+    
+     async function uploadUserData(token){
+        AsyncStorage.getItem('@user_properties').then((properties)=>{
+            const values =  properties != null ? JSON.parse(properties) : null;
+            
+            if(token != null){
+                values['token'] = token;
+            }
+            if(values){
+                return ref.update({user_properties:values})
+
+            }else{
+                return null;
+            }
+        }).catch((err)=>{
+            console.log("err",err)
+        })
+     }
+   
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
     return (

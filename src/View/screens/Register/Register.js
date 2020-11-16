@@ -5,6 +5,7 @@ import LoginButtons from "../../components/LoginButtons";
 import CustomTextInput from '../../components/CustomTextInput';
 import firebase from "@react-native-firebase/app";
 import auth from '@react-native-firebase/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 /**
@@ -33,7 +34,7 @@ function validateForm(email,password,resetPassword,phone,firstName,lastName){
         alert("Please enter a valid email address");
         return false;
     }else if(! (resetPassword === password)){
-        alert("Password need to match");
+        alert("Passwords need to match");
         return false;
     }
     else if(firstName == "" || lastName == ""){
@@ -136,22 +137,20 @@ function Register(props) {
                             <LoginButtons
                                         onPress={() => {
                                                 if(validateForm(email,password,resetPassword,phoneNumber,firstName,lastName)){
-                                                        firebase.auth()
-                                                    .createUserWithEmailAndPassword(email, password)
-                                                    .then(() => {
+                                                    const credentials = {
+                                                        email:email,
+                                                        password:password,
+                                                        phoneNumber:phoneNumber,
+                                                        firstName:firstName,
+                                                        lastName:lastName
+                                                    }
+                                                    AsyncStorage.setItem('@user_properties', JSON.stringify(credentials))
+                                                    .then(()=>{
+                                                        props.navigation.navigate("IntroductionScreen")
+                                                    }).catch(()=>{
+                                                        alert("Registration failed please try again later!")
                                                     })
-                                                    .catch(error => {
-                                                        if (error.code === 'auth/email-already-in-use') {
-                                                        alert('That email address is already in use!');
-                                                        }else if (error.code === 'auth/invalid-email') {
-                                                        alert('That email address is invalid!');
-                                                        }else{
-                                                            alert(error);
-                                                            console.error(error);
-
-                                                        }
-
-                                                    });
+                                                    
                                                 }
                                             }}
                                         text = 'Sign Up'

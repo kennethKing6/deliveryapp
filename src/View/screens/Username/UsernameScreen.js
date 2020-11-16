@@ -3,16 +3,13 @@ import { Text, View,TouchableOpacity,ImageBackground,Dimensions } from 'react-na
 import { Input } from '@ui-kitten/components';
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const {width,height} = Dimensions.get("window");
 
 const UsernameScreen = (props) => {
     const [username,setUsername] = useState(null);
 
-     //firebase references
-     const userId = firebase.auth().currentUser.uid;
-     const ref = firebase.database().ref("users/" + userId);
-     const userPropertiesRef = ref.child("user_properties");
+   
      const usernames = firebase.database().ref("usernames");
 
 
@@ -70,20 +67,36 @@ const UsernameScreen = (props) => {
                     alert("Username is required")
                 }else{
                    getUsernames().then(()=>{
+                    return usernames.child(username).set(username);
+
+                   }).then(()=>{
                     //     const pair = {};
                     //    pair[username] = username;
                     //    console.log("pair",pair)
-                       return usernames.child(username).set(username);
-                   }).then(()=>{
-                      
-                    return userPropertiesRef.update({username:username})
-                   }).then(()=>{
+                       return AsyncStorage.getItem('@user_properties').then((data)=>{
+                     var result =  data != null ? JSON.parse(data) : null;
+                     if(result != null){
+                      result['username'] = username
+                     }else{
+                      result = {};
+                      result['username'] = username
+                     }
+                     return result
+                    }).then((savingObj)=>{
+                      return AsyncStorage.setItem('@user_properties', JSON.stringify(savingObj))
+                    }).then(()=>{
                         props.navigation.navigate("NotificationScreen")
-
+                    }).catch(()=>{
+                      alert("Failed to save your username, please try again later!")
+                    })
+                   }).catch((err)=>{
+                        alert("Username already exists")
+                        console.log("err",err)
                     }).catch((err)=>{
                         alert("Username already exists")
                         console.log("err",err)
                     })
+             
                 }
                 }}
             style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>

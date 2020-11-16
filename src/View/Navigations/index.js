@@ -52,9 +52,22 @@ var firebaseConfig = {
  firebase.initializeApp(firebaseConfig);
   }
 
+
+// const IntroductionNavigator = createSharedElementStackNavigator ();
+
+// export const AppIntroductions = ()=>{
+//     return(
+//         <IntroductionNavigator.Navigator
+//         initialRouteName="IntroductionScreen">
+       
+            
+//         </IntroductionNavigator.Navigator>
+//     )
+// }
+
 const Stack = createSharedElementStackNavigator ();
 
-export const SignedOut = () => {
+export const SignedOutScreens = () => {
     return(
         
         <Stack.Navigator
@@ -76,48 +89,34 @@ export const SignedOut = () => {
                 component={SignUp}
                 options={{ headerShown: false }}
         />
-       
-
-        </Stack.Navigator>
-    )
-}
-
-const IntroductionNavigator = createSharedElementStackNavigator ();
-
-export const AppIntroductions = ()=>{
-    return(
-        <IntroductionNavigator.Navigator
-        initialRouteName="IntroductionScreen">
-         <IntroductionNavigator.Screen
+         <Stack.Screen
                 name="IntroductionScreen"
                 component={Introduction}
                 options={{ headerShown: false }}
             />
-               <IntroductionNavigator.Screen
+               <Stack.Screen
                 name="AddressScreen"
                 component={AddressScreen}
                 options={{ headerShown: false }}
             />
-            <IntroductionNavigator.Screen
+            <Stack.Screen
                 name="UsernameScreen"
                 component={UsernameScreen}
                 options={{ headerShown: false }}
             />
-            <IntroductionNavigator.Screen
+            <Stack.Screen
                 name="NotificationScreen"
                 component={NotificationScreen}
                 options={{ headerShown: false }}
             />
-               <IntroductionNavigator.Screen
+               <Stack.Screen
                 name="SelectCategories"
                 component={SelectCategories}
                 options={{ headerShown: false }}
             />
-            
-        </IntroductionNavigator.Navigator>
+        </Stack.Navigator>
     )
 }
-
 
 const MyTabBar = ({ state, descriptors, navigation }) => {
     return (
@@ -379,11 +378,14 @@ function GetNormalScreens(){
     return(
         <>
              <NormalNavigator.Navigator>
+<<<<<<< HEAD
              <NormalNavigator.Screen 
                     name = "AppIntroductions" 
                     component = {AppIntroductions}
                     options = {{headerShown:false}}
                     /> 
+=======
+>>>>>>> d41e163943f47f2f326684cb6553796193e1fb41
                 <NormalNavigator.Screen 
                     name = "SignedInScreens" 
                     component = {AppNavigator}
@@ -434,88 +436,88 @@ function GetNormalScreens(){
         </>
     )
 }
-const AppNavigatorOnly = createSharedElementStackNavigator();
-function GetOnlyAppNavigator(){
-   return(
-       <>
-         <AppNavigatorOnly.Navigator>
+// const AppNavigatorOnly = createSharedElementStackNavigator();
+// function GetOnlyAppNavigator(){
+//    return(
+//        <>
+//          <AppNavigatorOnly.Navigator>
     
-    <AppNavigatorOnly.Screen 
-        name = "SignedInScreens" 
-        component = {AppNavigator}
-        options = {{headerShown:false}}
-        /> 
-        <AppNavigatorOnly.Screen
-            name="PaymentCard"
-            component={PaymentCard}
-            options={{ headerShown: false }}
-        />
+//     <AppNavigatorOnly.Screen 
+//         name = "SignedInScreens" 
+//         component = {AppNavigator}
+//         options = {{headerShown:false}}
+//         /> 
+//         <AppNavigatorOnly.Screen
+//             name="PaymentCard"
+//             component={PaymentCard}
+//             options={{ headerShown: false }}
+//         />
        
-        <AppNavigatorOnly.Screen
-            name="AccountSettings"
-            component={AccountSettings}
-            options={{ headerShown: false }}
-        />
-        <AppNavigatorOnly.Screen
-            name="PersonalInformation"
-            component={PersonalInformation}
-            options={{ headerShown: false }}
-        />
+//         <AppNavigatorOnly.Screen
+//             name="AccountSettings"
+//             component={AccountSettings}
+//             options={{ headerShown: false }}
+//         />
+//         <AppNavigatorOnly.Screen
+//             name="PersonalInformation"
+//             component={PersonalInformation}
+//             options={{ headerShown: false }}
+//         />
        
        
-        <AppNavigatorOnly.Screen
-            name="UploadProductScreen"
-            component={UploadProductScreen}
-            options={{ headerShown: false }}
-        />
-        <AppNavigatorOnly.Screen
-            name="ProductDetails"
-            component={ProductDetails}
-            options={{ headerShown: false }}
-        />
+//         <AppNavigatorOnly.Screen
+//             name="UploadProductScreen"
+//             component={UploadProductScreen}
+//             options={{ headerShown: false }}
+//         />
+//         <AppNavigatorOnly.Screen
+//             name="ProductDetails"
+//             component={ProductDetails}
+//             options={{ headerShown: false }}
+//         />
        
-         <AppNavigatorOnly.Screen
-            name="ChatScreen"
-            component={ChatScreen}
-            options={{ headerShown: false }}
-        />
-         <AppNavigatorOnly.Screen
-            name="AddListingScreen"
-            component={AddListingScreen}
-            options={{ headerShown: false }}
-        />
+//          <AppNavigatorOnly.Screen
+//             name="ChatScreen"
+//             component={ChatScreen}
+//             options={{ headerShown: false }}
+//         />
+//          <AppNavigatorOnly.Screen
+//             name="AddListingScreen"
+//             component={AddListingScreen}
+//             options={{ headerShown: false }}
+//         />
        
         
-    </AppNavigatorOnly.Navigator>
-       </>
-   )
-}
+//     </AppNavigatorOnly.Navigator>
+//        </>
+//    )
+// }
 
-const SignedOutNavigator = createSharedElementStackNavigator();
+// const SignedOutNavigator = createSharedElementStackNavigator();
 
-function GetSignedOutScreen(){
-    return(
-        <>
-             <SignedOutNavigator.Navigator>
-                <SignedOutNavigator.Screen 
-                    name = "signedOut" 
-                    component = {SignedOut}
-                    options = {{headerShown:false}}
-                    />
-                </SignedOutNavigator.Navigator>
-        </>
-    )
-}
+// function GetSignedOutScreen(){
+//     return(
+//         <>
+//              <SignedOutNavigator.Navigator>
+//                 <SignedOutNavigator.Screen 
+//                     name = "signedOut" 
+//                     component = {SignedOut}
+//                     options = {{headerShown:false}}
+//                     />
+//                 </SignedOutNavigator.Navigator>
+//         </>
+//     )
+// }
 function GetScreens(){
     const [isSignedIn,setIsSignedIn] = useState(false);
-    const [sawIntroduction,setSawIntroduction] = useState(null);
-    AsyncStorage.getItem('@IntroductionScreen').then((value)=>{
-        if(value !== null) {
-            setSawIntroduction(true)
-          }
-    }).catch((err)=>{
+    // const [sawIntroduction,setSawIntroduction] = useState(null);
+    // AsyncStorage.getItem('@IntroductionScreen').then((value)=>{
+    //     if(value !== null) {
+    //         setSawIntroduction(true)
+    //       }
+    // }).catch((err)=>{
         
-    })
+    // })
   
          auth().onAuthStateChanged((user)=>{
             console.log("user",user)
@@ -532,7 +534,7 @@ function GetScreens(){
     
     
     
-     return( isSignedIn? sawIntroduction === null? <GetNormalScreens/>: <GetOnlyAppNavigator/>: <GetSignedOutScreen/>)
+     return( isSignedIn? <GetNormalScreens/>:  <SignedOutScreens/>)
     }
 const Switch = createSharedElementStackNavigator();
 
