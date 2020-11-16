@@ -294,7 +294,7 @@ export const styles = StyleSheet.create({
             height: 5
         },
         shadowOpacity: 0.2,
-        shadowRadius: 3,
+        shadowRadius: 4,
         
     },
     

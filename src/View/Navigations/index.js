@@ -379,7 +379,7 @@ function GetNormalScreens(){
     return(
         <>
              <NormalNavigator.Navigator>
-                <NormalNavigator.Screen 
+             <NormalNavigator.Screen 
                     name = "AppIntroductions" 
                     component = {AppIntroductions}
                     options = {{headerShown:false}}

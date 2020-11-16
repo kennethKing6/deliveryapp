@@ -9,11 +9,12 @@ import {
     SafeAreaView,
     Image,
     Animated,
+    Dimensions,
     ImageBackground
 
 } from "react-native";
 import SearchBar from "../../components/SearchBar";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import Feather from "react-native-vector-icons/Feather";
 import { TouchableWithoutFeedback, TouchableOpacity } from "react-native-gesture-handler";
 import Profiles from '../../../Model/Constants/CategoriesAppData';
 import {SharedElement} from 'react-navigation-shared-element';
@@ -21,6 +22,7 @@ import {styles} from './styles';
 import SellerData from './Sellers';
 import ProductData from './Products';
 
+const {width,height} = Dimensions.get("window")*0.9;
 
 export default function HomeScreen (props) {
 
@@ -204,22 +206,55 @@ export default function HomeScreen (props) {
                                             
                                                         
                                             return(
+
+                                                <View style = {{marginTop:20}}>
+                                                <View style = {{width:'95%',alignSelf:'center',flexDirection:'row',marginBottom:10}}>
+                                                    <ImageBackground
+                                                    source = {item.sellerimg}
+                                                    resizeMode = {'cover'}
+                                                    style = {{width: 35, height:35, borderRadius:35,borderWidth:1,borderColor:'black', overflow: 'hidden'}}
+                                                    />
+                                                    <View style ={{marginLeft:10}}>
+                                                        <Text style = {{fontSize: 16, fontWeight: '900'}}>{item.seller}</Text>
+                                                        <Text style = {{fontSize: 14, fontWeight: '500',color:'grey'}}>{item.time}</Text>
+                                                    </View>
+                                                </View>
+
+                                                <View style = {{width:'95%',alignSelf:'center'}}>
+                                                    <Text style = {{fontSize:20,fontWeight:'500'}}>{item.name}</Text>
+                                                </View>
                                                 <TouchableOpacity>
-                                                <View style={styles.listing} >
+                                                <View style={[styles.listing, {marginBottom:20}]} >
                                                     <ImageBackground
                                                         source={item.src}
                                                         resizeMode="cover"
                                                         style={styles.listingImage1}
                                                         
-                                                    >
+                                                    />
 
-                                                    <View style = {styles.bLMTEXT}>
-                                                        <Text style = {styles.TextOverlay}>{item.name}</Text>
-                                                    </View>
-                                                    </ImageBackground>
                                                     
                                                 </View>
                                                 </TouchableOpacity>
+
+                                                   
+                                                    <View style = {{width:'95%',alignSelf:'center',flexDirection:'row'}}>
+
+                                                        <Feather
+                                                            name = {'heart'}
+                                                            style = {{fontSize: 25,color:'black', marginRight:5}}
+                                                        />
+                                                        <Feather
+                                                            name = {'message-circle'}
+                                                            style = {{fontSize: 25,color:'black',marginRight:5}}
+                                                        />
+                                                        <Feather
+                                                            name = {'send'}
+                                                            style = {{fontSize: 25,color:'black', marginRight:5}}
+                                                        />
+                                                    
+                                                    </View>
+
+                                                </View>
                                             );
                                             }
                                             }
