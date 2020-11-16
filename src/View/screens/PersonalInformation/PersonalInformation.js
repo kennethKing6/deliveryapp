@@ -217,7 +217,7 @@ function AccountSettings(props) {
             >
                 <ImageBackground
                     source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE)}
-                    resizeMode="center"
+                    resizeMode="cover"
                     style={styles.listingImage1}
                 ></ImageBackground>
             </TouchableOpacity>
