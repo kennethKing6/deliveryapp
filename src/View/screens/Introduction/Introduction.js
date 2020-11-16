@@ -25,9 +25,9 @@ const {width,height} = Dimensions.get("window");
 export default function Introduction(props) {
     const [active,setActive] = useState(0)
          //firebase references
-     const userId = firebase.auth().currentUser.uid;
-     const ref = firebase.database().ref("users/" + userId);
-     const userPropertiesRef = ref.child("user_properties");
+    //  const userId = firebase.auth().currentUser.uid;
+    //  const ref = firebase.database().ref("users/" + userId);
+    //  const userPropertiesRef = ref.child("user_properties");
         return (
       <View style={styles.page}>
                       <StatusBar animated barStyle="dark-content" />
@@ -109,11 +109,12 @@ export default function Introduction(props) {
                       
                       <TouchableOpacity 
                       onPress={() => {
-                        userPropertiesRef.update({userId: userId}).then(()=>{
-                          props.navigation.navigate('AddressScreen')
-                    }).catch((err)=>{
-                        alert("An error occured, please try again later")
-                    })
+                    //     userPropertiesRef.update({userId: userId}).then(()=>{
+                    //       props.navigation.navigate('AddressScreen')
+                    // }).catch((err)=>{
+                    //     alert("An error occured, please try again later")
+                    // })
+                    props.navigation.navigate('AddressScreen')
                         }}
                       style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
                         <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>

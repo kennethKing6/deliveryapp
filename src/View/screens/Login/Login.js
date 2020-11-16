@@ -55,17 +55,14 @@ function Login(props) {
                 <View style={styles.buttons}>
 
                 <LoginButtons
-                        onPress={ 
-                            ()=>{
+                        onPress={ ()=>{
+                            console.log("email",email)
                                 firebase.auth()
                                 .signInWithEmailAndPassword (email, password)
-                                .then(() => {
-                                
-                                })
+                                .then()
                                 .catch(error => {
-                                
-                            
-                                alert(error);
+                                    console.log("Sign in error",error)
+                                     alert(error);
                                 });
                             }
                         }
