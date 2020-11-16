@@ -24,11 +24,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const {width} = Dimensions.get("window");
 
 
-const numOfColumns = 3;
 
 export default function SelectCategories() {
-  
-  const [indexChecked,setIndexChecked] = useState('0')
+
+const [indexChecked,setIndexChecked] = useState('0')
 	
 	
 
