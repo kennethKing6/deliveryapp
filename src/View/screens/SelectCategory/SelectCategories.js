@@ -157,7 +157,13 @@ const handleRemoveItem = (tempArray,index) =>{
 
                       <TouchableOpacity 
                       onPress={() => {
-                            if(selectedCategroryList.length >= 3){
+                        var count = 0;
+                        for(var i = 0; i < selectedCategroryList.length; i++){
+                          if(selectedCategroryList[i] === undefined){
+                            ++count;
+                          }
+                        }
+                            if(count <= selectedCategroryList.length - 3){
                               AsyncStorage.getItem('@user_properties').then((data)=>{
                                 var result =  data != null ? JSON.parse(data) : null;
                                 if(result != null){
