@@ -216,7 +216,7 @@ function AccountSettings(props) {
                 }}
             >
                 <ImageBackground
-                    source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.png") : getUserData(PROFILE_PICTURE)}
+                    source={getUserData(PROFILE_PICTURE) === null? require("../../../assets/icons/profilephoto_placeholder.jpeg") : getUserData(PROFILE_PICTURE)}
                     resizeMode="center"
                     style={styles.listingImage1}
                 ></ImageBackground>
