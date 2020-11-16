@@ -147,7 +147,8 @@ export default function HomeScreen (props) {
                                             <TouchableWithoutFeedback style = {[{
                                                 width:200,
                                                 height:200,
-                                                margin:10}]} onPress={()=>{
+                                                margin:10}]} 
+                                                onPress={()=>{
                                                 props.navigation.navigate('AddListingScreen',{item})
                                             }}>
                                                 
@@ -264,8 +265,14 @@ export default function HomeScreen (props) {
                                                 <View style = {{width:'95%',alignSelf:'center'}}>
                                                     <Text style = {{fontSize:20,fontWeight:'500'}}>{item.name}</Text>
                                                 </View>
-                                                <TouchableOpacity>
+                                                <TouchableOpacity
+                                                onPress={()=>{
+                                                props.navigation.navigate('AddListingScreen',{item})
+                                            }}
+                                                >
+
                                                 <View style={[styles.listing, {marginBottom:20}]} >
+                                                <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]}>
                                                     <ImageBackground
                                                         source={item.src}
                                                         resizeMode="cover"
@@ -274,6 +281,7 @@ export default function HomeScreen (props) {
                                                     />
 
                                                     
+                                                </SharedElement>
                                                 </View>
                                                 </TouchableOpacity>
 

@@ -422,7 +422,19 @@ function GetNormalScreens(){
                         component={AddListingScreen}
                         options={{ headerShown: false }}
                     />
-                   
+
+                    //remove later
+                   <NormalNavigator.Screen
+                        name="MessageListScreen"
+                        component={MessageListScreen}
+                        options={{ headerShown: false }}
+                    />
+                    <NormalNavigator.Screen
+                        name="MapScreen"
+                        component={MapScreen}
+                        options={{ headerShown: false }}
+                    />
+                    
                     
                 </NormalNavigator.Navigator>
         </>

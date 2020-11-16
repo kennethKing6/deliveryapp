@@ -10,7 +10,7 @@ MapboxGL.setAccessToken(
   'pk.eyJ1Ijoic2hhaGJla21pcnUiLCJhIjoiY2tjNnNyNGw0MDNndDMwbWZ3eGNwaHFqbCJ9.bJ2sqsCvcrOUmr_YeWFtJg',
 );
 
-export default function AddListing({props, route, navigation: { goBack } }) {
+export default function AddListing({props, navigation, route, navigation: { goBack } }) {
 
     const { item } = route.params;
 
@@ -60,7 +60,7 @@ export default function AddListing({props, route, navigation: { goBack } }) {
 
                                     <ImageBackground
                                         resizeMode = "cover"
-                                        source = {require('../../../assets/images/face1.jpg')}
+                                        source = {item.sellerimg}
                                         style = {styles.inner}
 
                                         />
@@ -69,7 +69,7 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                                     </View>
                                     
                                     <View style={{alignSelf:'center',marginLeft:5}}>
-                                        <Text style = {{fontSize:18,fontWeight:'500'}}>shahbeklukas</Text>
+                                        <Text style = {{fontSize:18,fontWeight:'500'}}>{item.seller}</Text>
                                         
                                         <View style = {{flexDirection:"row"}}>
                                         <Feather name = 'map-pin'></Feather>
@@ -86,7 +86,7 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                                                            
                                 
 
-                                <Text style = {{fontSize:25, fontWeight:'600',color:'#2ecc71'}}>CA$12,500</Text>
+                                <Text style = {{fontSize:25, fontWeight:'600',color:'#2ecc71'}}>CA${item.price}</Text>
                                
                                 <View style={{flexDirection:'row',flex:1,alignContent:'center'}}>
                                     <Feather name='star' style={{fontSize:20,color:'#F7CA18'}}></Feather>
@@ -134,24 +134,12 @@ export default function AddListing({props, route, navigation: { goBack } }) {
 
                             </View>
 
-                            <View style = {{marginBottom:5,marginTop:5}}>
+                            <View style = {{marginBottom:100,marginTop:5}}>
                             <Text style={{fontSize:25,fontWeight:'500',marginBottom:5}}>Product description</Text>
-                            <Text style={{fontSize:20,fontWeight:'300'}}>The car is a German multinational company which produces luxury vehicles and motorcycles. The company was founded in 1916 as a manufacturer of aircraft engines, which it produced from 1917 until 1918 and again from 1933 to 1945.</Text>
+                            <Text style={{fontSize:20,fontWeight:'300'}}>I am selling this because I recently just upraded my system. Message for more info.</Text>
                             </View>
 
-                            <View style = {{marginBottom:100,marginTop:5,height:'auto'}}>
-                            <Text style={{fontSize:30,fontWeight:'300',marginBottom:5}}>Tags</Text>
                             
-                                    <View style={{flexDirection:'row'}}>
-                                        <Text style={styles.tags}>Cars</Text>
-                                        <Text style={styles.tags}>BMW</Text>
-                                        <Text style={styles.tags}>Racing</Text>
-                                        <Text style={styles.tags}>Rims</Text>
-
-                                    </View>
-
-                            </View>
-
 
                             </View>
 
@@ -165,8 +153,10 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                         
                         <View style = {{flex:1,flexDirection:'row',justifyContent:'space-evenly'}}>
 
-
-                            <View style = {{
+                            
+                            <TouchableOpacity
+                            onPress = {()=> navigation.navigate('MessageListScreen')}
+                            style = {{
                                 backgroundColor:'black',
                                  borderRadius: 30, 
                                  width:50,
@@ -178,10 +168,16 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                                     },
                                     shadowOpacity: 0.3,
                                     shadowRadius: 4,}}>
+
+                            <View>
                                 <Feather name = 'mail' style={{color:'white',alignSelf:'center',fontSize:30}}></Feather>
                             </View>
+                            </TouchableOpacity>
+                            
 
-                            <View style = {{
+                            <TouchableOpacity
+                            onPress = {()=> navigation.navigate('MapScreen')}
+                            style = {{
                                 backgroundColor:'#2ecc71',
                                  borderRadius: 30, 
                                  width:150, 
@@ -195,12 +191,15 @@ export default function AddListing({props, route, navigation: { goBack } }) {
                                     shadowRadius: 4,
                                  }}>
 
+                            <View>
+
                             <Text style={{color:'white',fontWeight:'300',alignSelf:'center',fontSize:20}}> Buy now</Text>
                             </View>
+                            </TouchableOpacity>
 
-                            <View style = {{width:'auto', justifyContent:'center'}}>
+                            <View style = {{width:'auto', justifyContent:'center', backgroundColor:'white', padding:10, borderRadius:10}}>
                             <Text style={{color:'black',fontWeight:'900',alignSelf:'flex-start',fontSize:20}}> Price</Text>
-                            <Text style={{color:'black',fontWeight:'300',alignSelf:'flex-start',fontSize:20}}> $12.5k</Text>
+                            <Text style={{color:'black',fontWeight:'300',alignSelf:'flex-start',fontSize:20}}> ${item.price}</Text>
                             
                             </View>
                             

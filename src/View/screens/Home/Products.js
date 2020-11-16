@@ -1,6 +1,7 @@
 const ProductData=[
     {
     "key" : "1",
+    "price": "399",
     "seller" : "Jessica",
     "sellerimg": require('../../../../src/assets/images/sellers/Jessica.jpg'),
     "time": "10 minutes ago",
@@ -9,6 +10,7 @@ const ProductData=[
   },
   {
     "key" : "2",
+    "price": "1,299",
     "seller" : "techsolutions",
     "sellerimg": require('../../../../src/assets/images/shahbek.jpg'),
     "time": "An hour ago",
@@ -19,6 +21,7 @@ const ProductData=[
     },
     {
       "key" : "3",
+      "price": "499",
       "seller" : "techsolutions",
       "sellerimg": require('../../../../src/assets/images/shahbek.jpg'),
       "time": "An hour ago",
@@ -29,6 +32,7 @@ const ProductData=[
       },
       {
         "key" : "4",
+        "price": "599",
         "seller" : "techsolutions",
         "sellerimg": require('../../../../src/assets/images/shahbek.jpg'),
         "time": "An hour ago",
@@ -39,6 +43,7 @@ const ProductData=[
         },
         {
           "key" : "5",
+          "price": "99",
           "seller" : "techsolutions",
           "sellerimg": require('../../../../src/assets/images/shahbek.jpg'),
           "time": "An hour ago",
@@ -49,6 +54,7 @@ const ProductData=[
           },
   {
   "key" : "6",
+  "price": "659",
   "seller" : "Nicholas",
   "sellerimg": require('../../../../src/assets/images/kenneth.jpg'),
   "time": "57 minutes ago",

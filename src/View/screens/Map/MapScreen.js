@@ -193,6 +193,8 @@ export default class AppClass extends Component {
                     <View>
                     <Text style = {{fontSize:20,fontWeight:'900',color:'white'}}>V2A4F5</Text>
                     <Text style = {{fontSize:20,fontWeight:'300',color:'white'}}>VW GOLF</Text>
+                    <Text style = {{fontSize:15,fontWeight:'800',color:'red'}}>Arrival in 5 min</Text>
+
                     </View>
                 </View>
 
