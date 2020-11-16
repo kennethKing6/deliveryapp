@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1628767908/@react-native-async-storage_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-1628767908/@react-native-async-storage_async-storage.iml" group="deliveryapp/@react-native-async-storage_async-storage" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1066001259/android-expo-constants.iml" filepath="$PROJECT_DIR$/.idea/modules/-1066001259/android-expo-constants.iml" group="deliveryapp/expo-constants" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1705796620/android-expo-error-recovery.iml" filepath="$PROJECT_DIR$/.idea/modules/-1705796620/android-expo-error-recovery.iml" group="deliveryapp/expo-error-recovery" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1483050086/android-expo-file-system.iml" filepath="$PROJECT_DIR$/.idea/modules/1483050086/android-expo-file-system.iml" group="deliveryapp/expo-file-system" />
@@ -46,6 +47,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-962065709/expo-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/-962065709/expo-splash-screen.iml" group="deliveryapp/expo-splash-screen" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-418408533/expo-sqlite.iml" filepath="$PROJECT_DIR$/.idea/modules/-418408533/expo-sqlite.iml" group="deliveryapp/expo-sqlite" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1813683765/expo-updates.iml" filepath="$PROJECT_DIR$/.idea/modules/-1813683765/expo-updates.iml" group="deliveryapp/expo-updates" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1628767908/react-native-async-storage_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-1628767908/react-native-async-storage_async-storage.iml" group="deliveryapp/react-native-async-storage_async-storage" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/211629873/react-native-camera.iml" filepath="$PROJECT_DIR$/.idea/modules/211629873/react-native-camera.iml" group="deliveryapp/react-native-camera" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1724463855/react-native-community_blur.iml" filepath="$PROJECT_DIR$/.idea/modules/-1724463855/react-native-community_blur.iml" group="deliveryapp/react-native-community_blur" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1204007043/react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-1204007043/react-native-community_masked-view.iml" group="deliveryapp/react-native-community_masked-view" />

@@ -20,8 +20,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Root, Popup } from 'popup-ui';
 import {Account} from '../../../Model/Account';
 import firebase from "@react-native-firebase/app";
-
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const {width} = Dimensions.get("window");
 
 const numOfColumns = 3;
@@ -155,8 +154,10 @@ export default class SelectCategories extends Component {
                       onPress={() => {
                         var account = new Account(firebase.auth().currentUser.uid);
                         account.updateDbUserCategory(userSelectedCategories).then(()=>{
+       
+                          return AsyncStorage.setItem('@IntroductionScreen', "true")
+                        }).then(()=>{
                           this.props.navigation.navigate('SignedInScreens')
-
                         }).catch(()=>{
                           alert("Select at least 3 categories")
                         })

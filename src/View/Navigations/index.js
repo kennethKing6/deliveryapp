@@ -33,7 +33,7 @@ import {enableScreens} from 'react-native-screens';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import * as firebase from 'firebase';
 import auth from '@react-native-firebase/auth';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 enableScreens();
 //Add firebase
 // Your web app's Firebase configuration
@@ -434,6 +434,63 @@ function GetNormalScreens(){
         </>
     )
 }
+const AppNavigatorOnly = createSharedElementStackNavigator();
+function GetOnlyAppNavigator(){
+   return(
+       <>
+         <AppNavigatorOnly.Navigator>
+    
+    <AppNavigatorOnly.Screen 
+        name = "SignedInScreens" 
+        component = {AppNavigator}
+        options = {{headerShown:false}}
+        /> 
+        <AppNavigatorOnly.Screen
+            name="PaymentCard"
+            component={PaymentCard}
+            options={{ headerShown: false }}
+        />
+       
+        <AppNavigatorOnly.Screen
+            name="AccountSettings"
+            component={AccountSettings}
+            options={{ headerShown: false }}
+        />
+        <AppNavigatorOnly.Screen
+            name="PersonalInformation"
+            component={PersonalInformation}
+            options={{ headerShown: false }}
+        />
+       
+       
+        <AppNavigatorOnly.Screen
+            name="UploadProductScreen"
+            component={UploadProductScreen}
+            options={{ headerShown: false }}
+        />
+        <AppNavigatorOnly.Screen
+            name="ProductDetails"
+            component={ProductDetails}
+            options={{ headerShown: false }}
+        />
+       
+         <AppNavigatorOnly.Screen
+            name="ChatScreen"
+            component={ChatScreen}
+            options={{ headerShown: false }}
+        />
+         <AppNavigatorOnly.Screen
+            name="AddListingScreen"
+            component={AddListingScreen}
+            options={{ headerShown: false }}
+        />
+       
+        
+    </AppNavigatorOnly.Navigator>
+       </>
+   )
+}
+
 const SignedOutNavigator = createSharedElementStackNavigator();
 
 function GetSignedOutScreen(){
@@ -451,7 +508,14 @@ function GetSignedOutScreen(){
 }
 function GetScreens(){
     const [isSignedIn,setIsSignedIn] = useState(false);
-   
+    const [sawIntroduction,setSawIntroduction] = useState(null);
+    AsyncStorage.getItem('@IntroductionScreen').then((value)=>{
+        if(value !== null) {
+            setSawIntroduction(true)
+          }
+    }).catch((err)=>{
+        
+    })
   
          auth().onAuthStateChanged((user)=>{
             console.log("user",user)
@@ -468,7 +532,7 @@ function GetScreens(){
     
     
     
-     return( isSignedIn? <GetNormalScreens/> : <GetSignedOutScreen/>)
+     return( isSignedIn? sawIntroduction === null? <GetNormalScreens/>: <GetOnlyAppNavigator/>: <GetSignedOutScreen/>)
     }
 const Switch = createSharedElementStackNavigator();
 

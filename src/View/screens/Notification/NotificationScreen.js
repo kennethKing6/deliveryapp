@@ -38,23 +38,24 @@ const NotificationScreen = (props) => {
      
       <TouchableOpacity 
             onPress={()=>{
-  //               requestUserPermission({
-  //   alert:true,
-  //   announcement:true,
-  //   badge:true,
-  //   sound:true,
-  //   provisional: true,
-  // }).then((status)=>{
-  //   console.log("status",status)
-  //   return messaging().getToken();
-  // }).then((token)=>{
-  // console.log("FCMToken",token)
-  // return userPropertiesRef.update({FCMToken: token})
-  // }).then(()=>{
-    props.navigation.navigate("SelectCategories")}}
-  // }).catch((err)=>{
-  // console.log('error',err)
-  // });}}
+                requestUserPermission({
+    alert:true,
+    announcement:true,
+    badge:true,
+    sound:true,
+    provisional: true,
+  }).then((status)=>{
+    console.log("status",status)
+    return messaging().getToken();
+  }).then((token)=>{
+  console.log("FCMToken",token)
+  return userPropertiesRef.update({FCMToken: token})
+  }).then(()=>{
+    props.navigation.navigate("SelectCategories")
+  }).catch((err)=>{
+  console.log('error',err)
+  });
+  }}
             style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
             <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
         </TouchableOpacity>    
