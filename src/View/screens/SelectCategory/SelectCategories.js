@@ -26,12 +26,17 @@ const {width} = Dimensions.get("window");
 
 
 export default function SelectCategories() {
+<<<<<<< HEAD
 
 const [indexChecked,setIndexChecked] = useState('0')
+=======
+  const [userSelectedCategories,setuserSelectedCategories] = useState([])
+  const [indexChecked,setIndexChecked] = useState('0')
+>>>>>>> 35506ec233c999091dbbc68929814fe83591833e
 	
 	
 
-const formatData = (Profiles) => {
+const formatData = () => {
   const numberOfFullRows = Math.floor(Profiles.length/3);
 
   let numOfElementsInLastRow = Profiles.length-(numberOfFullRows*3);
@@ -44,7 +49,6 @@ const formatData = (Profiles) => {
   return Profiles;
 }
 
-const userSelectedCategories =[];
 
 const handleUserSelection = (selectedValue) => {
 
@@ -103,7 +107,7 @@ const handleRemoveItem = (item) =>{
                         <FlatList
                           extraData={indexChecked}
                           columnWrapperStyle = {{flex:1, justifyContent:'space-between'}}
-                          data={formatData(Profiles, 3)}
+                          data={formatData()}
                           keyExtractor={(item, index) => item.key}
                           renderItem={({item}) => (
                             
