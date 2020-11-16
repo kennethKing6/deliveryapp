@@ -26,13 +26,8 @@ const {width} = Dimensions.get("window");
 
 
 export default function SelectCategories() {
-<<<<<<< HEAD
-
-const [indexChecked,setIndexChecked] = useState('0')
-=======
   const [userSelectedCategories,setuserSelectedCategories] = useState([])
   const [indexChecked,setIndexChecked] = useState('0')
->>>>>>> 35506ec233c999091dbbc68929814fe83591833e
 	
 	
 
