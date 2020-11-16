@@ -297,6 +297,15 @@ export default class AppClass extends Component {
               /> */}
               <SafeAreaView>
 
+                
+                    <View style = {{backgroundColor:"white", width:150, alignSelf:'center',alignItems:'center',borderRadius:50,paddingTop:5,paddingBottom:5}}>
+                      <Text style = {{fontWeight:'900',fontSize:15,color: '#23cc70'}}>DELIVERING TO</Text>
+                      <View style = {{flexDirection:'row'}}>
+                        <Text style = {{fontWeight:'600',fontSize:20}}>V2C 6N2</Text>
+                        <Feather name = {'chevron-down'} style = {{fontSize:20, color: '#23cc70'}}/>
+                      </View>
+                    </View>
+               
               
               </SafeAreaView>
               
