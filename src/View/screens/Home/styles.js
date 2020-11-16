@@ -316,7 +316,7 @@ export const styles = StyleSheet.create({
     },
     TextOverlay2: {
         fontSize: 25,
-        fontWeight: '600',
+        fontWeight: '900',
         color: 'white',
     },
 

@@ -53,11 +53,13 @@ const UsernameScreen = (props) => {
 
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View style={{height:"85%"}}>
+
+      <Text style = {{fontSize:30, color:'white',fontWeight:'900', marginTop:100}}>Please enter a username</Text>
       <Input
       placeholder='username'
       value={username}
       onChangeText={nextValue => setUsername(nextValue)}
-      style={{width: (90/100) * width,height:50,marginTop:(height * (12/100))}}
+      style={{width: (90/100) * width,height:50}}
     />
     </View> 
      

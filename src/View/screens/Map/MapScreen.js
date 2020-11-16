@@ -41,8 +41,8 @@ Icon.loadFont();
 MapboxGL.setAccessToken(accessToken);
 
 // Coordinates
-const UserLocation = [-120.340300, 50.655503]; // [longitude, latitude]
-const DestinationLocation = [-120.3490,50.7575]; // [longitude, latitude]
+const UserLocation = [-120.36352873, 50.66815075]; // [longitude, latitude]
+const DestinationLocation = [-120.32874584,50.67248898]; // [longitude, latitude]
 const StartLocation = UserLocation;
 const CenterCoordinate = UserLocation;
 
@@ -290,6 +290,12 @@ export default class AppClass extends Component {
                 }}
                 ref={camera => (_camera = camera)}
               />
+              <MapboxGL.PointAnnotation
+        id="destination"
+        title="destination location"
+        
+        coordinate={[-120.35391569,50.67019072]}
+        />
 
               {/* <MapboxGL.UserLocation
                 visible={true}

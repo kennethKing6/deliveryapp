@@ -49,6 +49,8 @@ const AddressScreen = (props) => {
     <ImageBackground style={{flex:1}} source={require("../../../assets/images/deliveryLocation.jpg")}>
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View style={{height:"85%"}}>
+
+      <Text style = {{fontSize:30, color:'white',fontWeight:'900', marginTop:100}}>Please enter your adress</Text>
       <View style={{width:width * (80/90),height:30}}>
                     <Autocomplete
                     containerStyle={{flex: 1}}

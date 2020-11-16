@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
   cardText: {
     color: 'white', 
     fontSize:15,
-    fontWeight: "bold",
+    fontWeight: '900',
     alignSelf:'flex-start',
   }
   
