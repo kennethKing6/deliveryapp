@@ -22,14 +22,9 @@ import {SharedElement} from 'react-navigation-shared-element';
 import {styles} from './styles';
 import SellerData from './Sellers';
 import ProductData from './Products';
-<<<<<<< HEAD
-
-const {width,height} = Dimensions.get("window")*0.9;
-=======
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
 import messaging from '@react-native-firebase/messaging';
->>>>>>> d41e163943f47f2f326684cb6553796193e1fb41
 
 export default function HomeScreen (props) {
 

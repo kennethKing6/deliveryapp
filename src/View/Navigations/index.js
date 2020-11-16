@@ -378,14 +378,6 @@ function GetNormalScreens(){
     return(
         <>
              <NormalNavigator.Navigator>
-<<<<<<< HEAD
-             <NormalNavigator.Screen 
-                    name = "AppIntroductions" 
-                    component = {AppIntroductions}
-                    options = {{headerShown:false}}
-                    /> 
-=======
->>>>>>> d41e163943f47f2f326684cb6553796193e1fb41
                 <NormalNavigator.Screen 
                     name = "SignedInScreens" 
                     component = {AppNavigator}
