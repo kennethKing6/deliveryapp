@@ -25,12 +25,22 @@ const {width} = Dimensions.get("window");
 
 
 const numOfColumns = 3;
+const userSelectedCategories = [];
 
-export default function SelectCategories() {
-  const [userSelectedCategories,setuserSelectedCategories] = useState([])
-  const [indexChecked,setIndexChecked] = useState('0')
-	
-	
+export default function SelectCategories({navigation}) {
+    const [selectedCategroryList,setSelectedCategroryList] = useState(new Array(Profiles.length))
+    // React.useEffect(() => {
+    //   const unsubscribe = navigation.addListener('focus', () => {
+    //     const tempCategory = []
+    //     selectedCategroryList.forEach(element =>{
+    //       tempCategory.push(null);
+    //     })
+    //     setSelectedCategroryList(tempCategory)
+
+    //   });
+    //   // Return the function to unsubscribe from the event so it gets removed on unmount
+    //   return unsubscribe;
+    // }, [navigation]);
 
 const formatData = () => {
   const numberOfFullRows = Math.floor(Profiles.length/3);
@@ -46,23 +56,31 @@ const formatData = () => {
 }
 
 
-const handleUserSelection = (selectedValue) => {
-
-  if (selectedValue.selected === false){
-    selectedValue.selected =true;
-    userSelectedCategories.push({categoryName:selectedValue.name,categoryNum:selectedValue.category});
+const handleUserSelection = (selectedValue,index) => {
+  var category = {categoryName:selectedValue.name,categoryNum:selectedValue.category}
+  var tempValues = new Array(Profiles.length);
+ 
+  for(var i = 0; i < selectedCategroryList.length; ++i){
+    tempValues[i] = selectedCategroryList[i];
   }
-  else {
+  if (selectedValue.selected === false && selectedCategroryList.includes(category) === false){
+    selectedValue.selected = true;
+    
+    tempValues[index] = category;
+  }else {
     selectedValue.selected = false;
-    handleRemoveItem(selectedValue);
+    tempValues =  handleRemoveItem(tempValues,index);
+   
 
   }
+  console.log("tempValues",tempValues)
+
+  setSelectedCategroryList(tempValues)
 
 }
 
 const handleTickSelection = (item) => {
-
-  if (item === true){
+  if (item){
     return 100
   }
   else {
@@ -70,15 +88,10 @@ const handleTickSelection = (item) => {
   }
 }
 
-const handleRemoveItem = (item) =>{
+const handleRemoveItem = (tempArray,index) =>{
+  tempArray[index] = undefined;
 
-  for ( var i = userSelectedCategories.length-1; i >= 0; --i){
-    if (userSelectedCategories[i].categoryName == item.name){
-      userSelectedCategories.splice(i,1);
-    }
-  }
-  
-
+  return tempArray;
 }
 
    
@@ -101,18 +114,14 @@ const handleRemoveItem = (item) =>{
                     <ScrollView>
 
                         <FlatList
-                          extraData={indexChecked}
                           columnWrapperStyle = {{flex:1, justifyContent:'space-between'}}
                           data={formatData()}
                           keyExtractor={(item, index) => item.key}
-                          renderItem={({item}) => (
+                          renderItem={({item,index}) => (
                             
                             <TouchableOpacity 
                             onPress={() => {
-                              handleUserSelection(item);
-                              console.log(item.selected)
-                              setIndexChecked(item.key);
-                              console.log(userSelectedCategories)
+                              handleUserSelection(item,index);
                               }}
                             style = {{marginBottom:8.5}}>
 
@@ -132,7 +141,7 @@ const handleRemoveItem = (item) =>{
                                     padding:2,
                                     color:'#53d769',
                                     alignSelf:'flex-end',
-                                    opacity:handleTickSelection(item.selected)
+                                    opacity:handleTickSelection(selectedCategroryList[index])
                                     }}/>
 
                                 
@@ -148,14 +157,14 @@ const handleRemoveItem = (item) =>{
 
                       <TouchableOpacity 
                       onPress={() => {
-                            if(userSelectedCategories.length > 3){
+                            if(selectedCategroryList.length >= 3){
                               AsyncStorage.getItem('@user_properties').then((data)=>{
                                 var result =  data != null ? JSON.parse(data) : null;
                                 if(result != null){
-                                  result['category'] = userSelectedCategories
+                                  result['category'] = selectedCategroryList
                                 }else{
                                   result = {};
-                                  result['category'] = userSelectedCategories
+                                  result['category'] = selectedCategroryList
                                 }
                                 return result
                                 }).then((savingObj)=>{
