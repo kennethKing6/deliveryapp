@@ -74,23 +74,33 @@ export default function HomeScreen (props) {
         
         
         <View style={styles.container}>
-        <SafeAreaView>
 
                 <StatusBar animated barStyle="dark-content" />
-        </SafeAreaView>
                 
                 
                     
-                    <ScrollView
-                    showsVerticalScrollIndicator={false}>
-                    <View style = {{alignSelf:'center', justifyContent:'center'}}>
                     
-                    <Image
-                        style = {{width:30,height:30,marginTop:5}}
-                        source = {require('../../../assets/images/DispatchLogo.png')}
-                    />
+        <SafeAreaView>
+
+                    <View style = {{alignSelf:'center',flexDirection:'row',justifyContent:'space-between',width:'90%',marginBottom:5}}>
+                    
+                        <Text style = {{fontSize:25,fontWeight:'700',marginRight:10}}>D I S P A T C H</Text>
+                        
+                        <View style ={{flexDirection:'row'}}>
+
+                        <Image
+                            style = {{width:25,height:25,marginRight:15}}
+                            source = {require('../../../assets/images/DispatchLogo.png')}
+                        />
+                        <Feather name = {'heart'} style = {{fontSize:25,marginRight:15}}/>
+                        <Feather name = {'shopping-bag'} style = {{fontSize:25}}/>
+                        </View>
             
                     </View>
+
+        </SafeAreaView>
+        <ScrollView
+                    showsVerticalScrollIndicator={false}>
                         <View style={styles.header}>
                         
                             <View style={styles.marketplace}>

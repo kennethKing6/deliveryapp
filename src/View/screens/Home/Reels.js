@@ -10,7 +10,9 @@ export default function Reels({props, navigation, route, navigation: { goBack } 
 
     return (
         <View style={{flex:1}}>
-        
+
+                            
+                                        
                                 <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]} >
                                 
                                         <Image 
@@ -22,6 +24,33 @@ export default function Reels({props, navigation, route, navigation: { goBack } 
                                 
                                 </SharedElement>
 
+                                <View style = {{flex:1}}>
+                                        
+                                        <View style = {{flex:1,alignItems:'flex-end',justifyContent:'center',margin:10}}>
+
+                                        <View style = {{alignItems:'center'}}>
+
+                                            <ImageBackground source = {item.sellerimg} style = {{width:50,height:50,borderRadius:50,borderWidth:1.5,borderColor:'white',overflow:'hidden',marginBottom:10}}/>
+                                            <Feather name = {'eye'} style = {{fontSize:25,color:'white',marginBottom:10}}/>
+                                            <Feather name = {'heart'} style = {{fontSize:25,color:'white',marginBottom:10}}/>
+                                            <Feather name = {'message-circle'} style = {{fontSize:25,color:'white',marginBottom:10}}/>
+                                            <Feather name = {'send'} style = {{fontSize:25,color:'white',marginBottom:10}}/>
+
+                                            
+                                        </View>
+                                        </View>
+                                
+                                    
+
+                                        
+                                        <TouchableOpacity 
+                                    style={{top:50,left:20,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white',position:'absolute'}} 
+                                    onPress = {()=> goBack()}>
+                                        
+                                        <Feather style={{color: "black",fontSize:30}} name = 'x'/>
+                                    </TouchableOpacity>
+
+                                </View>
                              
                         {/* <TouchableOpacity 
                             style={{ margin:10,marginTop:20,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white'}} 
@@ -31,7 +60,7 @@ export default function Reels({props, navigation, route, navigation: { goBack } 
 
                         </TouchableOpacity> */}
                         
-        
+                        
                             
         </View>
 

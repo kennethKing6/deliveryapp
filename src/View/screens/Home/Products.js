@@ -63,7 +63,28 @@ const ProductData=[
 
  
   },
+  {
+    "key" : "7",
+    "price": "250",
+    "seller" : "Piercy",
+    "sellerimg": require('../../../../src/assets/images/Piercy.jpg'),
+    "time": "57 minutes ago",
+    "name" : "Supreme Joggers",
+    "src" : require('../../../../src/assets/images/products/hypebeast.jpg'),
   
+   
+    },
+    {
+      "key" : "8",
+      "price": "659",
+      "seller" : "Piercy",
+      "sellerimg": require('../../../../src/assets/images/Piercy.jpg'),
+      "time": "57 minutes ago",
+      "name" : "Nike sneakers",
+      "src" : require('../../../../src/assets/images/products/nike.gif'),
+    
+     
+      },
   
   
   
