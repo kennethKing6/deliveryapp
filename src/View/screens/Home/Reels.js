@@ -28,7 +28,7 @@ export default function Reels({props, navigation, route, navigation: { goBack } 
                                         
                                         <View style = {{flex:1,alignItems:'flex-end',justifyContent:'center',margin:10}}>
 
-                                        <View style = {{alignItems:'center'}}>
+                                        <View style = {{alignItems:'center',borderRadius:40,padding:5,backgroundColor:'black'}}>
 
                                             <ImageBackground source = {item.sellerimg} style = {{width:50,height:50,borderRadius:50,borderWidth:1.5,borderColor:'white',overflow:'hidden',marginBottom:10}}/>
                                             <Feather name = {'eye'} style = {{fontSize:25,color:'white',marginBottom:10}}/>
