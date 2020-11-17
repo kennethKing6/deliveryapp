@@ -243,8 +243,8 @@ export default function HomeScreen (props) {
                                         <FlatList
                                             data = {ProductData}
                                             showsHorizontalScrollIndicator={false}
-                                            keyExtractor={(item, index) => item.id}
-                                            renderItem={({item, index}) => {
+                                            keyExtractor={(item) => item.key}
+                                            renderItem={({item}) => {
                                             
                                                         
                                             return(
@@ -265,7 +265,8 @@ export default function HomeScreen (props) {
                                                 <View style = {{width:'95%',alignSelf:'center'}}>
                                                     <Text style = {{fontSize:20,fontWeight:'500'}}>{item.name}</Text>
                                                 </View>
-                                                <TouchableOpacity
+                                                
+                                                <TouchableWithoutFeedback
                                                 onPress={()=>{
                                                 props.navigation.navigate('AddListingScreen',{item})
                                             }}
@@ -283,10 +284,11 @@ export default function HomeScreen (props) {
                                                     
                                                 </SharedElement>
                                                 </View>
-                                                </TouchableOpacity>
+                                                </TouchableWithoutFeedback>
 
                                                    
-                                                    <View style = {{width:'95%',alignSelf:'center',flexDirection:'row'}}>
+                                                    <View style = {{width:'95%',alignSelf:'center',flexDirection:'row',justifyContent:"space-between"}}>
+                                                        <View style = {{flexDirection:'row'}}>
 
                                                         <Feather
                                                             name = {'heart'}
@@ -300,6 +302,20 @@ export default function HomeScreen (props) {
                                                             name = {'send'}
                                                             style = {{fontSize: 25,color:'black', marginRight:5}}
                                                         />
+                                                        </View>
+
+                                                        <View style = {{flexDirection:'row'}}>
+                                                        <TouchableOpacity onPress = {() => props.navigation.navigate('ReelsScreen',{item})}>
+                                                        <Feather
+                                                            name = {'play-circle'}
+                                                            style = {{fontSize: 25,color:'black', marginRight:5}}
+                                                        />
+                                                        </TouchableOpacity>
+                                                        <Feather
+                                                            name = {'bookmark'}
+                                                            style = {{fontSize: 25,color:'black', marginRight:5}}
+                                                        />
+                                                        </View>
                                                     
                                                     </View>
 

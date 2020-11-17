@@ -30,7 +30,7 @@ export default function AddListing({props, navigation, route, navigation: { goBa
                             <View style = {[styles.AddPhotos]}>
                             
                             <SharedElement id= {`item.${item.key}.photo`} style = {[StyleSheet.absoluteFillObject]}>
-                            <View style = {[StyleSheet.absoluteFillObject, {borderRadius:0}]}>
+                            
 
                                     <Image 
                                     resizeMode = "cover"
@@ -38,16 +38,20 @@ export default function AddListing({props, navigation, route, navigation: { goBa
                                     style = {styles.inner}
 
                                     />
-                            </View>
                                 </SharedElement>
-                             
-                                <TouchableOpacity 
-                            style={{ margin:10,marginTop:20,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white'}} 
+                        
+                        
+                        <SafeAreaView>
+                        <TouchableOpacity 
+                            style={{ margin:10,width:30,justifyContent: "center", borderRadius: 20, backgroundColor: 'white'}} 
                             onPress = {()=> goBack()}>
                                 
                                 <Feather style={{color: "black",fontSize:30}} name = 'x'/>
 
                         </TouchableOpacity>
+
+                        </SafeAreaView>
+
                             </View>
 
                             <View style = {{width:'90%',alignSelf:'center'}}>
@@ -230,6 +234,7 @@ AddListing.sharedElements = (route, otherRoute, showing) => {
         {
             id: `item.${item.key}.title`
         },
+        
     
     ];
   };

@@ -8,6 +8,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 //SCREENS
 import HomeScreen from "../screens/Home/HomeScreen";
+import ReelsScreen from "../screens/Home/Reels";
 import MapScreen from "../screens/Map/MapScreen";
 import WelcomeScreen from "../screens/WelcomeScreen/WelcomeScreen";
 import ProfileScreen from "../screens/Profile/Profile";
@@ -420,6 +421,11 @@ function GetNormalScreens(){
                      <NormalNavigator.Screen
                         name="AddListingScreen"
                         component={AddListingScreen}
+                        options={{ headerShown: false }}
+                    />
+                    <NormalNavigator.Screen
+                        name="ReelsScreen"
+                        component={ReelsScreen}
                         options={{ headerShown: false }}
                     />
 
