@@ -1,10 +1,11 @@
 import React,{useState }from "react";
-import { StyleSheet, View, StatusBar, Text} from "react-native";
+import { StyleSheet, View, StatusBar, Text,Image} from "react-native";
 import LoginButtons from "../../components/LoginButtons";
 import CustomTextInput from '../../components/CustomTextInput';
 import firebase from "@react-native-firebase/app";
 import auth from '@react-native-firebase/auth';
 import Modal from 'react-native-modal';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 function Login(props) {
@@ -24,33 +25,50 @@ function Login(props) {
 
             
 
-                <View style={styles.header}>
 
-                    <Text style={styles.signUp}>Login</Text>
-                    <Text style={styles.subtitle}>Don't have an account? SignUp.</Text>
+
+                <View style = {{backgroundColor:'white', borderRadius:30, padding:5,
+                shadowOffset: {
+                    width: 0,
+                    height: 0
+                },
+                shadowOpacity: 0.2,
+                shadowRadius: 10,
+                }}>
+
+                    <Image
+                        style = {{width:100,height:100}}
+                        source={require("../../../../src/assets/images/DispatchLogo.png")}
+                    />
                     
 
                 </View>
 
-
-
-                <View style={styles.scroll}>
+                <View style = {{width:'90%'}}>
                 
                     <CustomTextInput 
 
                         placeholder="Email or Username"
                         clearButtonMode='always'
                         onChangeText={(text) => {setEmail(text)}}
-                         defaultValue={email}
+                        placeholderTextColor = {'black'}
+                        defaultValue={email}
 
                     />
                     <CustomTextInput
                         placeholder="Password"
                         clearButtonMode='always'
                         secureTextEntry={true}
+                        placeholderTextColor = {'black'}
+
                         onChangeText={(text) => {setPassword(text)}}
                     />
-                </View>
+                    
+                    <View style = {{alignSelf:'flex-end',marginTop:10,marginBottom:10}}>
+                    
+                        <Text style = {{fontSize:17,fontWeight:'500', color:'#00a3ff'}}>Forgot your password?</Text>
+
+                    </View>
 
                 <View style={styles.buttons}>
 
@@ -66,10 +84,35 @@ function Login(props) {
                                 });
                             }
                         }
+                        style = {{
+                            marginTop:10,
+                            marginBottom:10,
+                            backgroundColor:'#00a3ff',
+                            shadowColor: "#222222",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 4
+                                    },
+                                    shadowOpacity: 0.4,
+                                    shadowRadius: 5,
+                            }}
                         text='Login'
                      />
 
                 </View>
+                
+                <View style = {{alignItems:'center',marginTop:10}}>
+                    <Text style = {{fontSize:17, fontWeight:'500',color:'grey',marginBottom:10}}>OR</Text>
+                    
+                    <TouchableOpacity onPress = {() => {props.navigation.navigate('SignUpScreen')}}>
+                    <Text style = {{fontSize:17, fontWeight:'500',color:'black'}}>Sign Up</Text>
+                    </TouchableOpacity>
+                </View>
+
+                </View>
+
+
+
 
 
             </View>
@@ -92,15 +135,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: "100%",
         height: "100%",
-        flex: 1
     },
-    header: {
-        justifyContent: "flex-end",
-        alignItems: "stretch",
-        alignSelf: "stretch",
-        flex: 1,
-
-    },
+   
     signUp: {
         color: "#121212",
         fontSize: 50,
@@ -109,27 +145,19 @@ const styles = StyleSheet.create({
         alignSelf: "center",
     },
     subtitle: {
+       
         fontSize: 20,
         color: "rgba(155,155,155,1)",
-        width: "80%",
+        width: "100%",
         height: "auto",
         alignSelf: "center",
     },
-    scroll: {
-        height: 398,
-        alignSelf: "stretch",
-        alignItems: "center",
-        justifyContent: 'center',
-        overflow: "hidden",
-        flex: 2,
-    },
-
+    
 
     buttons: {
         justifyContent: "center",
         alignItems: "stretch",
         alignSelf: "stretch",
-        flex: 1,
     },
 
 });

@@ -10,11 +10,10 @@ function CustomTextInput(props) {
                     <TextInput
                     style = {styles.input} 
                     placeholder = {props.placeholder}
+                    placeholderTextColor = {props.placeholderTextColor}
                     clearButtonMode = {props.clearButtonMode}
                     secureTextEntry = {props.secureTextEntry}
-
                     onChangeText = {(text) =>props.onChangeText(text)}
-
                     keyboardType = {props.keyboardType}
                     
                     />
@@ -30,9 +29,8 @@ const styles = StyleSheet.create({
 
     searchRectangle: {
         flexDirection: 'row',
-        width: "80%",
-        height: 38,
-        backgroundColor: "#E6E6E6",
+        height: 50,
+        backgroundColor: "#F7F7F7",
         borderRadius: 10,
         overflow: "hidden",
         justifyContent: 'center',

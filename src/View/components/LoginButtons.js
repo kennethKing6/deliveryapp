@@ -15,19 +15,19 @@ function LoginButtons(props) {
 const styles = StyleSheet.create({
     
     registerButton: {
-        width: "90%",
+        width: "100%",
         height: 50,
         backgroundColor: "rgba(240,52,52,1)",
         borderRadius: 12,
         justifyContent: "center",
         alignSelf: "center",
         margin:5,
-        bottom: 10,
     
     },
     signUp: {
         color: "rgba(255,255,255,1)",
         fontSize: 22,
+        fontWeight:'500',
         alignSelf: "center",
         justifyContent: "center",
     },
