@@ -93,8 +93,8 @@ function Login(props) {
                                         width: 0,
                                         height: 4
                                     },
-                                    shadowOpacity: 0.4,
-                                    shadowRadius: 5,
+                                    shadowOpacity: 0.3,
+                                    shadowRadius: 7,
                             }}
                         text='Login'
                      />
