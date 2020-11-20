@@ -1,5 +1,5 @@
 import React, { Component,useState} from "react";
-import { StyleSheet, View, StatusBar, Text} from "react-native";
+import { StyleSheet, View, StatusBar, Text,Image} from "react-native";
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import LoginButtons from "../../components/LoginButtons";
 import CustomTextInput from '../../components/CustomTextInput';
@@ -78,40 +78,57 @@ function Register(props) {
                     <View style = {styles.pageView}>
 
 
-                            <View style = {styles.header}>
-                                <Text style={styles.signUp}>Sign up</Text>
-                                <Text style={styles.subtitle}>Already have an account? Log in.</Text>
-                             </View>
 
-                             <View style={styles.scroll}>
-                                  
+                             <View style = {{backgroundColor:'white', borderRadius:30, padding:5,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowOpacity: 0.2,
+                                shadowRadius: 10,
+                                }}>
+
+                                    <Image
+                                        style = {{width:100,height:100}}
+                                        source={require("../../../../src/assets/images/DispatchLogo.png")}
+                                    />
+                                    
+
+                            </View>      
+                             <View style={{width:'90%'}}>
+                            
 
                                         <CustomTextInput
                                         
                                         placeholder = "First name"
                                         clearButtonMode = 'always'
+                                        placeholderTextColor = {'black'}
                                         onChangeText = {(firstName) => {getFirstName(firstName)}}
                                         />
                                         <CustomTextInput 
                                         placeholder="Last name"
                                         clearButtonMode='always'
+                                        placeholderTextColor = {'black'}
                                         onChangeText = {(lastName) => {getLastName(lastName)}}
                                         />
                                         <CustomTextInput
                                             placeholder="Phone number"
                                             keyboardType = 'phone-pad'
                                             clearButtonMode='always'
+                                            placeholderTextColor = {'black'}
                                             onChangeText = {(phoneNumber) => {setPhoneNumber(phoneNumber)}}
                                         />
                                         <CustomTextInput 
                                         placeholder="Email address"
                                         keyboardType = 'email-address'
                                         clearButtonMode='always'
+                                        placeholderTextColor = {'black'}
                                         onChangeText = {(email) => {setEmail(email)}}
                                         />
                                         <CustomTextInput
                                         placeholder="Password"
                                         clearButtonMode='always'
+                                        placeholderTextColor = {'black'}
                                         secureTextEntry={true}
                                         onChangeText = {(password) => {setPassword(password)}}
 
@@ -120,6 +137,7 @@ function Register(props) {
                                             placeholder="Confirm password"
                                             clearButtonMode='always'
                                             secureTextEntry = {true}
+                                            placeholderTextColor = {'black'}
                                             onChangeText = {(resetPassword) => {setresetPassword(resetPassword)}}
 
                                         />
@@ -130,8 +148,6 @@ function Register(props) {
                         
 
                                     
-                                </View>
-
                             <View style = {styles.buttons}>
 
                             <LoginButtons
@@ -153,14 +169,27 @@ function Register(props) {
                                                     
                                                 }
                                             }}
+                                        style = {{
+                                            backgroundColor:'#00a3ff',
+                                            marginBottom:10,
+                                            shadowColor: "#222222",
+                                            shadowOffset: {
+                                                width: 0,
+                                                height: 4
+                                            },
+                                            shadowOpacity: 0.3,
+                                            shadowRadius: 7,
+                                    }}
                                         text = 'Sign Up'
                                         
                                     />
 
-                                <Text style = {{alignSelf:'center', color:'grey',fontSize:13,fontWeight:'400' ,width:'80%',textAlign:'center'}}>
-                                By tapping 'Sign Up'and using the Dispatch app, you're agreeing with our <Text style = {{color:"rgba(240,52,52,1)"}}>terms of service</Text> and <Text style = {{color:"rgba(240,52,52,1)"}}>privacy policy.</Text></Text>
+                                <Text style = {{alignSelf:'center', color:'grey',fontSize:13,fontWeight:'500' ,textAlign:'center'}}>
+                                I have read and agreed to the <Text style = {{color:"#00a3ff",fontWeight:'500'}}>terms of service</Text></Text>
 
                                 </View>
+                                </View>
+
 
 
                     </View>
@@ -180,19 +209,12 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(255,255,255,1)"
     },
     pageView: {
-        justifyContent: "space-around",
-        flex:4,
+        justifyContent: "space-evenly",
         alignItems: "center",
         width: "100%",
         height: "100%",
     },
-    header: {
-        justifyContent: "flex-end",
-        alignItems: "stretch",
-        alignSelf: "stretch",
-        flex: 1,
-
-    },
+   
     signUp: {
         color: "#121212",
         fontSize: 50,
@@ -201,30 +223,20 @@ const styles = StyleSheet.create({
         alignSelf: "center",
     },
     subtitle: {
+       
         fontSize: 20,
         color: "rgba(155,155,155,1)",
-        width: "80%",
+        width: "100%",
         height: "auto",
         alignSelf: "center",
     },
-     
     
+
     buttons: {
         justifyContent: "center",
         alignItems: "stretch",
         alignSelf: "stretch",
-        flex: 1,
     },
-    scroll: {
-        alignSelf: "stretch",
-        alignItems: "center",
-        overflow: "hidden",
-        flex: 2,
-        flexGrow: 2, 
-        justifyContent: 'center' 
-    },
-    
-  
     
 });
 
