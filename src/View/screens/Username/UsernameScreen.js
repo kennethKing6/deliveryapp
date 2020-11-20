@@ -56,7 +56,7 @@ const UsernameScreen = (props) => {
 
       <Text style = {{fontSize:40, color:'black',fontWeight:'900'}}>Finishing up with{"\n"}your account</Text>
       <CustomTextInput
-      style = {{fontWeight:'900',fontSize:30,borderRadius:100}}
+      style = {{fontWeight:'900',fontSize:30,borderRadius:100,color:'#00a3ff'}}
       placeholder='@ username'
       placeholderTextColor = {'lightgrey'}
       value={username}

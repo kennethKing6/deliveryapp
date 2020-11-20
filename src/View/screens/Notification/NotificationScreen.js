@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View,TouchableOpacity, ImageBackground,Dimensions } from 'react-native';
+import { Text, View,TouchableOpacity, ImageBackground,Dimensions,Image } from 'react-native';
 import { Card } from '@ui-kitten/components';
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";
@@ -24,13 +24,14 @@ const NotificationScreen = (props) => {
         }
       }
   return (
-    <ImageBackground style={{flex:1}}source={require("../../../assets/images/deliveryLocation.jpg")}>
 
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-     <View style={{height:"85%"}}>
-     <Card       style={{width: (90/100) * width,height:"30%",marginTop:(height * (10/100))}}>
-        <Text style={{fontWeight:"bold"}}>We require you to accept the notification</Text>
-      </Card>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center",backgroundColor:'white' }}>
+     <View>
+     <Image
+        style = {{width:150,height:150,alignSelf:'center'}}
+        source = {require('../../../assets/images/megaphone.png')}
+      />
+     <Text style = {{fontSize:30,fontWeight:'900'}}>Turn on notifications</Text>
     </View>
      
       <TouchableOpacity 
@@ -50,12 +51,19 @@ const NotificationScreen = (props) => {
         })
   
   }}
-            style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
+            style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#00a3ff',justifyContent:'center',alignSelf:'center',marginTop:20,
+            shadowColor: "#222222",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 4
+                                    },
+                                    shadowOpacity: 0.3,
+                                    shadowRadius: 7,
+                                    }}>
             <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
         </TouchableOpacity>    
        
     </View>
-    </ImageBackground>
   );
 }
 

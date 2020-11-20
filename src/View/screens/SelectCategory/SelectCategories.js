@@ -99,22 +99,22 @@ const handleRemoveItem = (tempArray,index) =>{
       <View style={styles.page}>
                       <StatusBar animated barStyle="dark-content" />
 
-                <View style = {styles.container}>
                 
+           
 
-                
-                    <SafeAreaView>
-                        <View style = {{marginTop:20,marginBottom:10}}>
+            
+                   
+                        <View style = {{marginTop:20, width:'90%',alignSelf:'center'}}>
                             <Text style = {{fontSize:30, fontWeight:'bold'}}>Your interests</Text>
                             <Text style = {{fontSize:18, fontWeight:'200'}}>Choose 3 or more categories</Text>
                         </View>
 
-                    </SafeAreaView>
+                   
 
-                    <ScrollView>
 
+                <View style = {{width:'90%',alignSelf:'center'}}>
                         <FlatList
-                          columnWrapperStyle = {{flex:1, justifyContent:'space-between'}}
+                          columnWrapperStyle = {{justifyContent:'space-between'}}
                           data={formatData()}
                           keyExtractor={(item, index) => item.key}
                           renderItem={({item,index}) => (
@@ -153,8 +153,10 @@ const handleRemoveItem = (tempArray,index) =>{
                           )}
                           numColumns = {3}
                         />
-                      
+                  </View>
 
+               
+                    
                       <TouchableOpacity 
                       onPress={() => {
                         var count = 0;
@@ -198,15 +200,15 @@ const handleRemoveItem = (tempArray,index) =>{
                               alert("Please select at least 3 categories")
                             }                 
                         }}
-                      style = {{width:'100%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center'}}>
-                        <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
-                      </TouchableOpacity>
+                        style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#00a3ff',justifyContent:'center',alignSelf:'center',
+           
+                                    }}>
+            <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
+        </TouchableOpacity>    
 
-                    </ScrollView>
 
-
-                </View>
-
+                      
+          
       </View>
     );
   
@@ -215,13 +217,10 @@ const handleRemoveItem = (tempArray,index) =>{
 const styles = StyleSheet.create({
   page: {
     flex: 1,
+    justifyContent:'space-evenly',
     backgroundColor:'white'
   },
-  container: {
-    flex:1,
-      width: '90%',
-      alignSelf:'center'
-  },
+  
   card: {
     width:(width/3)*0.85,
     height:(width/3)*0.85, 
