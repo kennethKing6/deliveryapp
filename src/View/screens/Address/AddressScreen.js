@@ -29,12 +29,13 @@ const AddressScreen = (props) => {
       },[])
         async function getUserLocation(){
           const position = await GetLocation.getCurrentPosition({
-                          enableHighAccuracy: true,
-                          timeout: 0,
-                      });
+                                                            enableHighAccuracy: true,
+                                                            timeout: 15000,
+                                                        });
             return position;
          
         }
+
 
   
  
@@ -47,7 +48,6 @@ const AddressScreen = (props) => {
     //  console.log("location",location);
 
   return (
-    <ImageBackground style={{flex:1}} source={require("../../../assets/images/deliveryLocation.jpg")}>
     <View style={{ flex: 1, justifyContent: "space-around", alignItems: "center",backgroundColor:'white'}}>
       <View>
       <Image
@@ -63,8 +63,8 @@ const AddressScreen = (props) => {
                     placeholderTextColor = {'lightgrey'}
                     
                     inputContainerStyle = {{borderWidth:0, borderColor:'red'}}
-                    listStyle = {{borderWidth:0, backgroundColor:'red',height:'50%'}}
-                   
+                    listStyle = {{borderWidth:0}}
+                    
                     data={addresses}
                     defaultValue={location}
                     onChangeText={text => {
@@ -92,11 +92,12 @@ const AddressScreen = (props) => {
                     
               
                     }}
+
                     
                     
                     hideResults={false}
-                  
                     renderItem={({ item, i }) => (
+                    
                     
                     <View style = {{backgroundColor:'#F7F7F7', borderRadius:10,marginBottom:5}}>
                     
@@ -105,7 +106,7 @@ const AddressScreen = (props) => {
                       key={i} 
                       onPress={() =>{setLocation(item)}}>
 
-                        <Text style={{color:"black",fontSize:18,fontWeight:'500'}} numberOfLines={2}>{item}</Text>
+                        <Text style={{color:"#8e8e93",fontSize:18,fontWeight:'700'}} numberOfLines={2}>{item}</Text>
                       </TouchableOpacity>
 
                       </View>
@@ -158,7 +159,6 @@ const AddressScreen = (props) => {
         </TouchableOpacity>
         
     </View>
-    </ImageBackground>
 
   );
 }
