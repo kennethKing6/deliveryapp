@@ -54,7 +54,7 @@ const UsernameScreen = (props) => {
     <View style={{ flex: 1, justifyContent: "space-around", alignItems: "center",backgroundColor:'white' }}>
       <View style = {{width:'90%'}}>
 
-      <Text style = {{fontSize:40, color:'black',fontWeight:'900'}}>Create your {"\n"} account</Text>
+      <Text style = {{fontSize:40, color:'black',fontWeight:'900'}}>Finishing up with{"\n"}your account</Text>
       <CustomTextInput
       style = {{fontWeight:'900',fontSize:30,borderRadius:100}}
       placeholder='@ username'
