@@ -4,6 +4,7 @@ import { Input } from '@ui-kitten/components';
 import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import CustomTextInput from '../../components/CustomTextInput';
 const {width,height} = Dimensions.get("window");
 
 const UsernameScreen = (props) => {
@@ -49,17 +50,18 @@ const UsernameScreen = (props) => {
         })
       }
   return (
-    <ImageBackground style={{flex:1}}source={require("../../../assets/images/deliveryLocation.jpg")}>
 
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View style={{height:"85%"}}>
+    <View style={{ flex: 1, justifyContent: "space-around", alignItems: "center",backgroundColor:'white' }}>
+      <View style = {{width:'90%'}}>
 
-      <Text style = {{fontSize:30, color:'white',fontWeight:'900', marginTop:100}}>Please enter a username</Text>
-      <Input
-      placeholder='username'
+      <Text style = {{fontSize:40, color:'black',fontWeight:'900'}}>Create your {"\n"} account</Text>
+      <CustomTextInput
+      style = {{fontWeight:'900',fontSize:30,borderRadius:100}}
+      placeholder='@ username'
+      placeholderTextColor = {'lightgrey'}
       value={username}
       onChangeText={nextValue => setUsername(nextValue)}
-      style={{width: (90/100) * width,height:50}}
+      
     />
     </View> 
      
@@ -101,11 +103,18 @@ const UsernameScreen = (props) => {
              
                 }
                 }}
-            style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
+            style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#00a3ff',justifyContent:'center',alignSelf:'center',marginTop:20,
+            shadowColor: "#222222",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 4
+                                    },
+                                    shadowOpacity: 0.3,
+                                    shadowRadius: 7,
+                                    }}>
             <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
         </TouchableOpacity>        
     </View>
-    </ImageBackground>
   );
 }
 

@@ -6,9 +6,8 @@ function CustomTextInput(props) {
 
         <View style={styles.searchRectangle}>
             
-
                     <TextInput
-                    style = {styles.input} 
+                    style = {[styles.input,props.style]} 
                     placeholder = {props.placeholder}
                     placeholderTextColor = {props.placeholderTextColor}
                     clearButtonMode = {props.clearButtonMode}

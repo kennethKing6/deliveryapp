@@ -116,7 +116,15 @@ export default function Introduction(props) {
                     // })
                     props.navigation.navigate('AddressScreen')
                         }}
-                      style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
+                      style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#00a3ff',justifyContent:'center',alignSelf:'center',marginTop:20,
+                      shadowColor: "#222222",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 4
+                                    },
+                                    shadowOpacity: 0.3,
+                                    shadowRadius: 7,
+                                    }}>
                         <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
                       </TouchableOpacity>
                     </SafeAreaView>

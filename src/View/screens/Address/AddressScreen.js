@@ -1,5 +1,5 @@
 import React,{useState,useRef,useEffect} from 'react';
-import { Text, View,TouchableOpacity,Dimensions,ImageBackground } from 'react-native';
+import { Text, View,TouchableOpacity,Dimensions,ImageBackground,StyleSheet,Image } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/Feather';
 import firebase from "@react-native-firebase/app";
@@ -9,6 +9,7 @@ import Autocomplete from 'react-native-autocomplete-input';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import GetLocation from 'react-native-get-location';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { TextInput } from 'react-native-paper';
 const {width,height} = Dimensions.get("window");
 // use a valid API key
 const AddressScreen = (props) => {
@@ -28,9 +29,9 @@ const AddressScreen = (props) => {
       },[])
         async function getUserLocation(){
           const position = await GetLocation.getCurrentPosition({
-                                                            enableHighAccuracy: true,
-                                                            timeout: 15000,
-                                                        });
+                          enableHighAccuracy: true,
+                          timeout: 0,
+                      });
             return position;
          
         }
@@ -47,57 +48,69 @@ const AddressScreen = (props) => {
 
   return (
     <ImageBackground style={{flex:1}} source={require("../../../assets/images/deliveryLocation.jpg")}>
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View style={{height:"85%"}}>
-
-      <Text style = {{fontSize:30, color:'white',fontWeight:'900', marginTop:100}}>Please enter your adress</Text>
+    <View style={{ flex: 1, justifyContent: "space-around", alignItems: "center",backgroundColor:'white'}}>
+      <View>
+      <Image
+        style = {{width:150,height:150,alignSelf:'center'}}
+        source = {require('../../../assets/images/pin.png')}
+      />
+      <Text style = {{fontSize:30, color:'black',fontWeight:'900'}}>Where are you located?</Text>
       <View style={{width:width * (80/90),height:30}}>
-                    <Autocomplete
-                    containerStyle={{flex: 1}}
-            data={addresses}
-            defaultValue={location}
-            onChangeText={text => {
-                if(location.length > 3){
-                  setTimeout(()=>{
-                Geocoder.from(location)
-              .then(json => {
-                    var newAddrresses = []
-                      if(addresses.length > 0){
-                        addresses.forEach(item=>{
-                        newAddrresses.push(item)
-                      })
-                      }
-                      json.results.forEach(address=>{
-                        if(addresses.includes(address.formatted_address) === false){
-                          newAddrresses.push(address.formatted_address)
-                        }
-                      })
-                setAddresses(newAddrresses)
-              })
-                  .catch(error => console.warn(error));
-                        },2000)
-                }
-              setLocation(text);
-            
       
-            }}
-            containerStyle={{
-              zIndex: 1,
-              minHeight:height * (80/90),
-              minWidth:width * (80/90),
+                    <Autocomplete
+                    style = {{height:50, backgroundColor:'#F7F7F7',borderRadius:10,fontWeight:'900',fontSize:20 ,padding:10,marginBottom:5,marginTop:5}}
+                    placeholder = 'Location'
+                    placeholderTextColor = {'lightgrey'}
+                    
+                    inputContainerStyle = {{borderWidth:0, borderColor:'red'}}
+                    listStyle = {{borderWidth:0, backgroundColor:'red',height:'50%'}}
+                   
+                    data={addresses}
+                    defaultValue={location}
+                    onChangeText={text => {
+                        if(location.length > 3){
+                          setTimeout(()=>{
+                        Geocoder.from(location)
+                      .then(json => {
+                            var newAddrresses = []
+                              if(addresses.length > 0){
+                                addresses.forEach(item=>{
+                                newAddrresses.push(item)
+                              })
+                              }
+                              json.results.forEach(address=>{
+                                if(addresses.includes(address.formatted_address) === false){
+                                  newAddrresses.push(address.formatted_address)
+                                }
+                              })
+                        setAddresses(newAddrresses)
+                      })
+                          .catch(error => console.warn(error));
+                                },2000)
+                        }
+                      setLocation(text);
+                    
+              
+                    }}
+                    
+                    
+                    hideResults={false}
+                  
+                    renderItem={({ item, i }) => (
+                    
+                    <View style = {{backgroundColor:'#F7F7F7', borderRadius:10,marginBottom:5}}>
+                    
+                      <TouchableOpacity 
+                      style={styles.descriptionContainer}
+                      key={i} 
+                      onPress={() =>{setLocation(item)}}>
 
-            }}
-            hideResults={false}
-           
-            renderItem={({ item, i }) => (
-              <TouchableOpacity 
-              style={{margin:10,}}
-              key={i} onPress={() =>{setLocation(item)}}>
+                        <Text style={{color:"black",fontSize:18,fontWeight:'500'}} numberOfLines={2}>{item}</Text>
+                      </TouchableOpacity>
 
-                <Text style={{color:"#D9D9D9"}} numberOfLines={1}>{item}</Text>
-              </TouchableOpacity>
-            )}
-          />
+                      </View>
+                    )}
+                  />
             </View>
   
     </View>
@@ -132,7 +145,15 @@ const AddressScreen = (props) => {
                 }
                 
                 }}
-            style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#2ecc71',justifyContent:'center',alignSelf:'center',marginTop:20}}>
+            style = {{width:'90%',height:60,borderRadius:30, backgroundColor:'#00a3ff',justifyContent:'center',alignSelf:'center',marginTop:20,
+            shadowColor: "#222222",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 4
+                                    },
+                                    shadowOpacity: 0.3,
+                                    shadowRadius: 7,
+                                    }}>
             <Text style = {{alignSelf:'center', fontSize:25, fontWeight:'500' , color:'white'}}>Continue</Text>
         </TouchableOpacity>
         
@@ -142,4 +163,14 @@ const AddressScreen = (props) => {
   );
 }
 
+const styles = StyleSheet.create({
+
+  descriptionContainer: {
+    margin:10,
+  },
+  autocompleteContainer: {
+    
+  },
+
+});
 export default AddressScreen
