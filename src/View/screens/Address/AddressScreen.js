@@ -10,6 +10,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import GetLocation from 'react-native-get-location';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TextInput } from 'react-native-paper';
+import {config} from '../../../private/config';
 const {width,height} = Dimensions.get("window");
 // use a valid API key
 const AddressScreen = (props) => {
@@ -18,7 +19,7 @@ const AddressScreen = (props) => {
       useEffect(()=>{
         if(location.length === 0){
           getUserLocation().then((position)=>{
-            return Geocoder.init("AIzaSyCVObze8pBBjZEVdBDgHysPKcih0P9mmLw",{
+            return Geocoder.init(config.GOOGLE_GEOCODER_API_KEY ,{
                components:"country:ca",
                language:"en",
                location:position
