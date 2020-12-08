@@ -63,4 +63,4 @@ buck-out/
 web-build/
 
 #project
-src/private/
+private/*

@@ -10,7 +10,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import GetLocation from 'react-native-get-location';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TextInput } from 'react-native-paper';
-import {config} from '../../../private/config';
+import {config} from '../../../../private/config';
 const {width,height} = Dimensions.get("window");
 // use a valid API key
 const AddressScreen = (props) => {
