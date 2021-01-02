@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyleSheet, Dimensions, ScrollView, Image, ImageBackground, Platform } from 'react-native';
-import { Block, Text } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { Icon } from '../../components/Icon';
 import { Images, materialTheme } from '../constants';
 import { HeaderHeight } from "../constants/utils";
 import { View } from 'react-native-animatable';

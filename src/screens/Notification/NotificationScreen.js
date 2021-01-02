@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View,TouchableOpacity, ImageBackground,Dimensions,Image } from 'react-native';
+import { Text, View,TouchableOpacity,Dimensions,Image } from 'react-native';
 import { Card } from '@ui-kitten/components';
 import auth from '@react-native-firebase/auth';
 import firebase from "@react-native-firebase/app";

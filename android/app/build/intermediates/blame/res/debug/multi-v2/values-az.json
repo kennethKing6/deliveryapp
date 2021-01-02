@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\Projects\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\0994f80e577dd4de935a494dcd3f1665\\jetified-play-services-basement-17.1.1\\res\\values-az\\values.xml",

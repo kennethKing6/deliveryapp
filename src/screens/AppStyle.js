@@ -6,8 +6,6 @@ const SCREEN_WIDTH = width < height ? width : height;
 export const landing = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-    //alignItems: 'center',
     padding: 50
   },
   title: {

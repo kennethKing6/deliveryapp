@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\working\\Folder\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
+            "outputFile": "C:\\Users\\kenzo 3.0\\Documents\\React Native apps\\Projects\\deliveryExpo\\deliveryapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kenzo 3.0\\.gradle\\caches\\transforms-2\\files-2.1\\1fe0718a4a9d82fc422634a98e14585b\\jetified-mapbox-android-sdk-9.1.0\\res\\values-zh-rTW\\values-zh-rTW.xml",
