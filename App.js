@@ -1,19 +1,11 @@
-import React, {useState,useEffect} from "react";
+import React, { useEffect } from "react";
 
 
-import NavigationContainer from "./NavigationContainer";
-import * as firebase from "@react-native-firebase/app";
+import {AppNavigationContainer} from "./src/navigations";
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 import messaging from '@react-native-firebase/messaging'
 
-import {
-  Text,
-  View,
-  StatusBar,
-  ActivityIndicator,
-} from 'react-native';
-import * as Font from 'expo-font';
 
 // Register background handle
 messaging().setBackgroundMessageHandler(async remoteMessage => {
@@ -68,7 +60,7 @@ export default function App ({navigation}) {
       return (
           
           <ApplicationProvider {...eva} theme={eva.light}>
-            <NavigationContainer />
+            <AppNavigationContainer />
           </ApplicationProvider>
           
       );
