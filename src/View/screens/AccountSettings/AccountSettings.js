@@ -209,7 +209,8 @@ function AccountSettings(props) {
                         .signOut()
                         .then()}}
                     style={{
-                        backgroundColor: "black"
+                        backgroundColor: "black",
+                        width: '90%'
                     }}
                     color='black'
                     text='Sign Out'
