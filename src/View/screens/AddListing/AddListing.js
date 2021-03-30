@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { StyleSheet, View, StatusBar, Text,Image,Dimensions, ImageBackground, TouchableOpacity, SafeAreaView, ScrollView } from "react-native";
-import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import React, { Component,useState } from "react";
+import { StyleSheet, View, StatusBar, Text,Image,Dimensions, ImageBackground, TouchableOpacity,TouchableHighlight,SafeAreaView, ScrollView,Modal } from "react-native";
+import { BlurView, VibrancyView } from "@react-native-community/blur";
 import Feather from "react-native-vector-icons/Feather";
 import MapboxGL from "@react-native-mapbox-gl/maps";
 import {styles} from './styles';
@@ -11,7 +11,7 @@ MapboxGL.setAccessToken(
 );
 
 export default function AddListing({props, navigation, route, navigation: { goBack } }) {
-
+    const [modalVisible, setModalVisible] = useState(false);
     const { item } = route.params;
 
     return (
@@ -86,24 +86,12 @@ export default function AddListing({props, navigation, route, navigation: { goBa
                                 <Text style = {styles.TextOverlay}>{item.name}</Text>
                                 {/* </SharedElement> */}
 
-                            <View style={{marginBottom:10}}>
-                                                           
-                                
-
-                                <Text style = {{fontSize:25, fontWeight:'600',color:'#2ecc71'}}>CA${item.price}</Text>
+                           
                                
-                                <View style={{flexDirection:'row',flex:1,alignContent:'center'}}>
-                                    <Feather name='star' style={{fontSize:20,color:'#F7CA18'}}></Feather>
-                                    <Feather name='star' style={{fontSize:20,color:'#F7CA18'}}></Feather>
-                                    <Feather name='star' style={{fontSize:20,color:'#F7CA18'}}></Feather>
-                                    <Feather name='star' style={{fontSize:20,color:'#F7CA18'}}></Feather>
-                                    <Feather name='star' style={{fontSize:20,color:'lightgrey'}}></Feather>
-                                    <Text style={{fontSize:20,color:'lightgrey',alignSelf:'center'}}>4.5 10 Reviews</Text>
-                                </View>
-
+                            <View style = {{marginBottom:10,marginTop:5}}>
+                            <Text style={{fontSize:16,fontWeight:'300'}}>The iPhone 12 and iPhone 12 mini are Apple's mainstream flagship iPhones for 2020. The phones come in 6.1-inch and 5.4-inch sizes with identical features, including support for faster 5G cellular networks, OLED displays, improved cameras, and Apple's latest A14 chip, all in a completely refreshed design.</Text>
                             </View>
-                               
-                            
+
                             <View style={{marginTop:5,marginBottom:5}}>
                                 <Text style={{fontSize:25,fontWeight:'500',marginBottom:5}}>Item Location</Text>
                                 <View style={{
@@ -138,10 +126,7 @@ export default function AddListing({props, navigation, route, navigation: { goBa
 
                             </View>
 
-                            <View style = {{marginBottom:100,marginTop:5}}>
-                            <Text style={{fontSize:25,fontWeight:'500',marginBottom:5}}>Product description</Text>
-                            <Text style={{fontSize:20,fontWeight:'300'}}>I am selling this because I recently just upraded my system. Message for more info.</Text>
-                            </View>
+                            
 
                             
 
@@ -153,38 +138,17 @@ export default function AddListing({props, navigation, route, navigation: { goBa
 
                     </ScrollView>
 
-                        <View style = {{alignSelf:'center',width:'100%', height: 50,position:'absolute',bottom: Dimensions.get("window").width / 20,}}>
+                        <View style = {{alignSelf:'center',width:'100%', height: 50,position:'absolute',bottom: Dimensions.get("window").width / 15}}>
                         
-                        <View style = {{flex:1,flexDirection:'row',justifyContent:'space-evenly'}}>
-
-                            
-                            <TouchableOpacity
-                            onPress = {()=> navigation.navigate('MessageListScreen')}
-                            style = {{
-                                backgroundColor:'black',
-                                 borderRadius: 30, 
-                                 width:50,
-                                 justifyContent:'center',
-                                 shadowColor: "#000",
-                                    shadowOffset: {
-                                        width: 0,
-                                        height: 2,
-                                    },
-                                    shadowOpacity: 0.3,
-                                    shadowRadius: 4,}}>
-
-                            <View>
-                                <Feather name = 'mail' style={{color:'white',alignSelf:'center',fontSize:30}}></Feather>
-                            </View>
-                            </TouchableOpacity>
+                        <View style = {{flex:1,flexDirection:'row', alignSelf:'center'}}>
                             
 
                             <TouchableOpacity
-                            onPress = {()=> navigation.navigate('MapScreen')}
+                            onPress = {()=> setModalVisible(true)}
                             style = {{
-                                backgroundColor:'#2ecc71',
-                                 borderRadius: 30, 
-                                 width:150, 
+                                backgroundColor:'#303030',
+                                 borderRadius: 10, 
+                                 width:'90%', 
                                  justifyContent:'center',
                                  shadowColor: "#000",
                                     shadowOffset: {
@@ -197,16 +161,10 @@ export default function AddListing({props, navigation, route, navigation: { goBa
 
                             <View>
 
-                            <Text style={{color:'white',fontWeight:'300',alignSelf:'center',fontSize:20}}> Buy now</Text>
+                            <Text style={{color:'white',fontWeight:'400',alignSelf:'center',fontSize:20}}> Add to bag . ${item.price} </Text>
                             </View>
                             </TouchableOpacity>
 
-                            <View style = {{width:'auto', justifyContent:'center', backgroundColor:'white', padding:10, borderRadius:10}}>
-                            <Text style={{color:'black',fontWeight:'900',alignSelf:'flex-start',fontSize:20}}> Price</Text>
-                            <Text style={{color:'black',fontWeight:'300',alignSelf:'flex-start',fontSize:20}}> ${item.price}</Text>
-                            
-                            </View>
-                            
                         </View>
 
                         </View>
@@ -214,6 +172,94 @@ export default function AddListing({props, navigation, route, navigation: { goBa
                         
                         
 
+                    <View style={styles.centeredView}>
+                        <Modal
+                            backdropOpacity={0.1}
+                            animationType= "fade"
+                            transparent={true}
+                            visible={modalVisible}
+                            onRequestClose={() => {
+                            Alert.alert("Modal has been closed.");
+                            }}
+                        >
+                            
+                            <BlurView
+                            style={styles.absolute}
+                            blurType="light"
+                            blurAmount={5}
+                            reducedTransparencyFallbackColor="white"
+                            />
+
+                            <View style={styles.centeredView2}>
+                            
+                            
+                            <View style={styles.modalView}>
+                            
+
+                                    <View style = {{width:'100%',marginBottom:10, flexDirection:'row', alignItems:'center',justifyContent:'space-between'}}>
+
+                                        <TouchableHighlight
+                                            style={{ ...styles.openButton, backgroundColor: "#00000033" }}
+                                            onPress={() => {
+                                                setModalVisible(!modalVisible);
+                                            }}
+                                        >
+                                            
+                                            <Feather name = 'x' style={styles.textStyle}></Feather>
+                                        </TouchableHighlight>
+
+                                        <Text style = {{fontSize:20,fontWeight:'800'}}>Your shopping cart</Text>
+                                    </View>
+
+                                   
+                                    <View style = {{alignSelf:'center',width:'100%',flexDirection:'row', justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
+                                        <Image
+                                        resizeMode = "cover"
+                                        source = {item.src}
+                                        style = {{width:100,height:100,borderRadius:10}}
+                                        />
+                                        <Text style = {{textAlign:'center', fontSize:20,fontWeight:'400'}}>{item.name}</Text>
+                                    <Text style = {{textAlign:'center',fontSize:20,fontWeight:'400'}}>${item.price}</Text>
+                                    </View>
+                                    
+                                    <View style = {{height:50, width:'100%'}}> 
+
+                                    <View style = {{flex:1,flexDirection:'row', alignSelf:'center'}}>
+                                        
+
+                                        <TouchableOpacity
+                                        style = {{
+                                            backgroundColor:'#303030',
+                                            borderRadius: 10, 
+                                            width:'100%', 
+                                            justifyContent:'center',
+                                            shadowColor: "#000",
+                                                shadowOffset: {
+                                                    width: 0,
+                                                    height: 2,
+                                                },
+                                                shadowOpacity: 0.3,
+                                                shadowRadius: 4,
+                                            }}>
+
+                                        <View>
+
+                                        <Text style={{color:'white',fontWeight:'400',alignSelf:'center',fontSize:20}}> Checkout </Text>
+                                        </View>
+                                        </TouchableOpacity>
+
+                                    </View>
+
+                                    </View>
+                                    </View>
+                                
+                                </View>
+                                        
+                            
+                        </Modal>
+
+                        </View>
+                        
 
                 
 
