@@ -15,7 +15,7 @@ import firebase from "@react-native-firebase/app";
 import database from '@react-native-firebase/database';
 import storage from '@react-native-firebase/storage';
 import ImagePicker from 'react-native-image-picker';
-import {ImageUploader} from '../../model/ImageUploader';
+import {ImageUploader} from '../../Model/ImageUploader';
 
 
 function AccountSettings(props) {

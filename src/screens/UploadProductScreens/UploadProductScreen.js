@@ -6,13 +6,9 @@ import storage from '@react-native-firebase/storage';
 import ImagePicker from 'react-native-image-picker';
 import analytics from '@react-native-firebase/analytics';
 import database from '@react-native-firebase/database';
-import {Product } from '../../model/Product'
+import {Product } from '../../Model/Product';
 import {request,check, PERMISSIONS, RESULTS} from 'react-native-permissions';
 import CategoryConstants from '../../model/Constants/ProductConstant';
-
-
-
-
 
  
  // Your web app's Firebase configuration
