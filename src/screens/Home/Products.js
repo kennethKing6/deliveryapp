@@ -12,11 +12,7 @@ const ProductData=[
     "key" : "2",
     "price": "1,299",
     "seller" : "techsolutions",
-<<<<<<< HEAD:src/View/screens/Home/Products.js
     "sellerimg": require('../../../../src/assets/images/twitch.png'),
-=======
-    "sellerimg": require('../../assets/images/techlogo.gif'),
->>>>>>> 07c409c0c38d904d13ba4a7109bc605ea0afc071:src/screens/Home/Products.js
     "time": "An hour ago",
     "name" : "iPhone 12",
     "src" : require('../../assets/images/products/iphone12.jpg'),
@@ -27,11 +23,7 @@ const ProductData=[
       "key" : "3",
       "price": "499",
       "seller" : "techsolutions",
-<<<<<<< HEAD:src/View/screens/Home/Products.js
       "sellerimg": require('../../../../src/assets/images/twitch.png'),
-=======
-      "sellerimg": require('../../assets/images/techlogo.gif'),
->>>>>>> 07c409c0c38d904d13ba4a7109bc605ea0afc071:src/screens/Home/Products.js
       "time": "An hour ago",
       "name" : "Senheiser",
       "src" : require('../../assets/images/products/headphones.jpg'),
@@ -42,11 +34,7 @@ const ProductData=[
         "key" : "4",
         "price": "599",
         "seller" : "techsolutions",
-<<<<<<< HEAD:src/View/screens/Home/Products.js
         "sellerimg": require('../../../../src/assets/images/twitch.png'),
-=======
-        "sellerimg": require('../../assets/images/techlogo.gif'),
->>>>>>> 07c409c0c38d904d13ba4a7109bc605ea0afc071:src/screens/Home/Products.js
         "time": "An hour ago",
         "name" : "Audio Technica",
         "src" : require('../../assets/images/products/headphone2.jpg'),
@@ -57,11 +45,7 @@ const ProductData=[
           "key" : "5",
           "price": "99",
           "seller" : "techsolutions",
-<<<<<<< HEAD:src/View/screens/Home/Products.js
           "sellerimg": require('../../../../src/assets/images/twitch.png'),
-=======
-          "sellerimg": require('../../assets/images/techlogo.gif'),
->>>>>>> 07c409c0c38d904d13ba4a7109bc605ea0afc071:src/screens/Home/Products.js
           "time": "An hour ago",
           "name" : "Razer Mouse",
           "src" : require('../../assets/images/products/mouse.jpg'),

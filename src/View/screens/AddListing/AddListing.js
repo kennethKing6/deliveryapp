@@ -93,7 +93,6 @@ export default function AddListing({props, navigation, route, navigation: { goBa
                             </View>
 
                             <View style={{marginTop:5,marginBottom:5}}>
-                                <Text style={{fontSize:25,fontWeight:'500',marginBottom:5}}>Item Location</Text>
                                 <View style={{
                                     marginTop:5,
                                     height:200,
