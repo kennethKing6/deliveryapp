@@ -9,93 +9,93 @@
 9        android:targetSdkVersion="29" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:5:3-75
-11-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:5:20-73
+11-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:5:3-75
+11-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:5:20-73
 12    <uses-permission android:name="android.permission.INTERNET" /> <!-- OPTIONAL PERMISSIONS, REMOVE WHATEVER YOU DO NOT NEED -->
-12-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:4:6-67
-12-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:4:23-65
+12-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:4:6-67
+12-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:4:23-65
 13    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
-13-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:7:3-72
-13-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:7:20-70
+13-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:7:3-72
+13-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:7:20-70
 14    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
-14-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:8:3-77
-14-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:8:20-75
+14-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:8:3-77
+14-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:8:20-75
 15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-15-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:9:3-72
-15-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:9:20-70
+15-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:9:3-72
+15-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:9:20-70
 16    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-16-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:10:3-71
-16-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:10:20-69
+16-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:10:3-71
+16-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:10:20-69
 17    <uses-permission android:name="android.permission.VIBRATE" />
-17-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:11:3-63
-17-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:11:20-61
+17-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:11:3-63
+17-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:11:20-61
 18    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- These require runtime permissions on M -->
-18-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:12:3-77
-18-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:12:20-75
+18-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:12:3-77
+18-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:12:20-75
 19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-19-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:16:3-78
-19-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:16:20-76
+19-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:16:3-78
+19-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:16:20-76
 20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-20-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:17:3-76
-20-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:17:20-74
+20-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:17:3-76
+20-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:17:20-74
 21    <uses-permission android:name="android.permission.CAMERA" />
-21-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:18:3-62
-21-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:18:20-60
+21-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:18:3-62
+21-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:18:20-60
 22    <uses-permission android:name="android.permission.READ_CONTACTS" />
-22-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:19:3-69
-22-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:19:20-67
+22-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:19:3-69
+22-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:19:20-67
 23    <uses-permission android:name="android.permission.READ_CALENDAR" />
-23-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:20:3-69
-23-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:20:20-67
+23-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:20:3-69
+23-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:20:20-67
 24    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-24-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:21:3-70
-24-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:21:20-68
+24-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:21:3-70
+24-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:21:20-68
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-25-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:22:3-77
-25-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:22:20-75
+25-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:22:3-77
+25-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:22:20-75
 26    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-26-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:23:3-68
-26-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:23:20-66
+26-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:23:3-68
+26-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:23:20-66
 27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-27-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:24:3-78
-27-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:24:20-76
+27-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:24:3-78
+27-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:24:20-76
 28    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-28-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:25:3-70
-28-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:25:20-68
+28-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:25:3-70
+28-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:25:20-68
 29    <uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS" />
-29-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:26:3-92
-29-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:26:20-90
+29-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:26:3-92
+29-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:26:20-90
 30    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 30-->[com.facebook.flipper:flipper:0.37.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9fd80467112ad8d46623738a88cc056e\jetified-flipper-0.37.0\AndroidManifest.xml:16:5-76
 30-->[com.facebook.flipper:flipper:0.37.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\9fd80467112ad8d46623738a88cc056e\jetified-flipper-0.37.0\AndroidManifest.xml:16:22-73
 31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-31-->[:expo-updates] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-updates\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-79
-31-->[:expo-updates] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-updates\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-76
+31-->[:expo-updates] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-updates\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-79
+31-->[:expo-updates] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-updates\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-76
 32    <uses-permission android:name="android.permission.WAKE_LOCK" />
-32-->[:react-native-firebase_analytics] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\analytics\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-68
-32-->[:react-native-firebase_analytics] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\analytics\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-65
+32-->[:react-native-firebase_analytics] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\analytics\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-68
+32-->[:react-native-firebase_analytics] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\analytics\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-65
 33
 34    <uses-feature
-34-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:11:5-13:36
+34-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:11:5-13:36
 35        android:name="android.hardware.camera"
-35-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:12:9-47
+35-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:12:9-47
 36        android:required="false" />
-36-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:13:9-33
+36-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:13:9-33
 37    <uses-feature
-37-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:14:5-16:36
+37-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:14:5-16:36
 38        android:name="android.hardware.camera.autofocus"
-38-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:15:9-57
+38-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:15:9-57
 39        android:required="false" /> <!-- Required to access Google Play Licensing -->
-39-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:16:9-33
+39-->[:react-native-camera] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-camera\android\build\intermediates\library_manifest\generalDebug\AndroidManifest.xml:16:9-33
 40    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-40-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-73
-40-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-70
+40-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-73
+40-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-70
 41    <uses-permission android:name="android.permission.STORAGE" />
-41-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-66
-41-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-63
+41-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-66
+41-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-63
 42    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-42-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-77
-42-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-74
+42-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-77
+42-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-74
 43
 44    <uses-feature
 44-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\1fe0718a4a9d82fc422634a98e14585b\jetified-mapbox-android-sdk-9.1.0\AndroidManifest.xml:9:5-11:35
@@ -116,195 +116,195 @@
 51-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:26:5-110
 51-->[com.google.android.gms:play-services-measurement:17.6.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\fdce99bb075bd394186459ac2072edaa\jetified-play-services-measurement-17.6.0\AndroidManifest.xml:26:22-107
 52    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
-52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
+52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
+52-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
 53    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
-53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
-53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
+53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
+53-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
 54
 55    <application
-55-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:29:5-50:19
+55-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:29:5-50:19
 56        android:name="com.deliveryapp.MainApplication"
-56-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:30:7-38
+56-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:30:7-38
 57        android:allowBackup="false"
-57-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:34:7-34
+57-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:34:7-34
 58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 58-->[androidx.core:core:1.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0f512e181ca87b528277c07a0d4a1870\core-1.1.0\AndroidManifest.xml:24:18-86
 59        android:debuggable="true"
 60        android:icon="@mipmap/ic_launcher"
-60-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:32:7-41
+60-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:32:7-41
 61        android:label="@string/app_name"
-61-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:31:7-39
+61-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:31:7-39
 62        android:requestLegacyExternalStorage="true"
-62-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:35:7-50
+62-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:35:7-50
 63        android:roundIcon="@mipmap/ic_launcher_round"
-63-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:33:7-52
+63-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:33:7-52
 64        android:testOnly="true"
 65        android:theme="@style/AppTheme"
-65-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:37:7-38
+65-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:37:7-38
 66        android:usesCleartextTraffic="true" >
-66-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:36:8-43
+66-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:36:8-43
 67        <activity
-67-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:38:7-48:18
+67-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:38:7-48:18
 68            android:name="com.deliveryapp.MainActivity"
-68-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:39:9-37
+68-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:39:9-37
 69            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-69-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:41:9-86
+69-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:41:9-86
 70            android:label="@string/app_name"
-70-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:40:9-41
+70-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:40:9-41
 71            android:launchMode="singleTask"
-71-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:42:9-40
+71-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:42:9-40
 72            android:windowSoftInputMode="adjustResize" >
-72-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:43:9-51
+72-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:43:9-51
 73            <intent-filter>
-73-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:44:9-47:25
+73-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:44:9-47:25
 74                <action android:name="android.intent.action.MAIN" />
-74-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:45:13-65
-74-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:45:21-62
+74-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:45:13-65
+74-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:45:21-62
 75
 76                <category android:name="android.intent.category.LAUNCHER" />
-76-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:46:13-73
-76-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:46:23-70
+76-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:46:13-73
+76-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:46:23-70
 77            </intent-filter>
 78        </activity>
 79        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-79-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:49:7-84
-79-->C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:49:17-81
+79-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:49:7-84
+79-->C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\android\app\src\main\AndroidManifest.xml:49:17-81
 80
 81        <meta-data
-81-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:91
+81-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:91
 82            android:name="org.unimodules.core.AppLoader#react-native-headless"
-82-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
+82-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
 83            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
-83-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
+83-->[:unimodules-react-native-adapter] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
 84
 85        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
-85-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-111
-85-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:18-108
+85-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-111
+85-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:18-108
 86        <service
-86-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-23:19
+86-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-23:19
 87            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-87-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-95
+87-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-95
 88            android:exported="false" >
-88-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-37
+88-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-37
 89            <intent-filter>
-89-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-22:29
+89-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-22:29
 90                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-90-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-78
-90-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-75
+90-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-78
+90-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-75
 91            </intent-filter>
 92        </service>
 93
 94        <receiver
-94-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-32:20
+94-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-32:20
 95            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-95-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-96
+95-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-96
 96            android:exported="true"
-96-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-36
+96-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-36
 97            android:permission="com.google.android.c2dm.permission.SEND" >
-97-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-73
+97-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-73
 98            <intent-filter>
-98-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
+98-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
 99                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-99-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
-99-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
+99-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
+99-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
 100            </intent-filter>
 101        </receiver>
 102
 103        <meta-data
-103-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-36:36
+103-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-36:36
 104            android:name="firebase_messaging_auto_init_enabled"
-104-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-64
+104-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-64
 105            android:value="true" />
-105-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-33
+105-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-33
 106        <meta-data
-106-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:9-39:32
+106-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:9-39:32
 107            android:name="com.google.firebase.messaging.default_notification_channel_id"
-107-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-89
+107-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-89
 108            android:value="" />
-108-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-29
+108-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-29
 109        <meta-data
-109-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:9-42:47
+109-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:9-42:47
 110            android:name="com.google.firebase.messaging.default_notification_color"
-110-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-84
+110-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-84
 111            android:resource="@color/white" />
-111-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-44
+111-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-44
 112
 113        <provider
-113-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
+113-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
 114            android:name="com.imagepicker.FileProvider"
-114-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
+114-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
 115            android:authorities="com.deliveryapp.provider"
-115-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
+115-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
 116            android:exported="false"
-116-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
+116-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
 117            android:grantUriPermissions="true" >
-117-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
+117-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
 118            <meta-data
-118-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+118-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
 119                android:name="android.support.FILE_PROVIDER_PATHS"
-119-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+119-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
 120                android:resource="@xml/provider_paths" />
-120-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+120-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
 121        </provider>
 122        <provider
-122-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+122-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
 123            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-123-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+123-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
 124            android:authorities="com.deliveryapp.fileprovider"
-124-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+124-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
 125            android:exported="false"
-125-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+125-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
 126            android:grantUriPermissions="true" >
-126-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+126-->[:react-native-webview] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
 127            <meta-data
-127-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+127-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
 128                android:name="android.support.FILE_PROVIDER_PATHS"
-128-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+128-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
 129                android:resource="@xml/file_provider_paths" />
-129-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+129-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
 130        </provider>
 131        <provider
-131-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:9-44:20
+131-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:9-44:20
 132            android:name="com.RNFetchBlob.Utils.FileProvider"
-132-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-62
+132-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-62
 133            android:authorities="com.deliveryapp.provider"
-133-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-60
+133-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-60
 134            android:exported="false"
-134-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-37
+134-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-37
 135            android:grantUriPermissions="true" >
-135-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-47
+135-->[:rn-fetch-blob] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\rn-fetch-blob\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-47
 136            <meta-data
-136-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+136-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
 137                android:name="android.support.FILE_PROVIDER_PATHS"
-137-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+137-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
 138                android:resource="@xml/provider_paths" />
-138-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+138-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
 139        </provider>
 140        <provider
-140-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-27:20
+140-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-27:20
 141            android:name="expo.modules.filesystem.FileSystemFileProvider"
-141-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
+141-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
 142            android:authorities="com.deliveryapp.FileSystemFileProvider"
-142-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-74
+142-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-74
 143            android:exported="false"
-143-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-37
+143-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-37
 144            android:grantUriPermissions="true" >
-144-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-47
+144-->[:expo-file-system] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-47
 145            <meta-data
-145-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+145-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
 146                android:name="android.support.FILE_PROVIDER_PATHS"
-146-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+146-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
 147                android:resource="@xml/file_system_provider_paths" />
-147-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+147-->[:react-native-image-picker] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
 148        </provider>
 149
 150        <service
-150-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
+150-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
 151            android:name="expo.modules.location.services.LocationTaskService"
-151-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
+151-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
 152            android:exported="false" />
-152-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+152-->[:expo-location] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
 153        <!--
 154             FirebaseMessagingService performs security checks at runtime,
 155             but set to not exported to explicitly avoid allowing another app to call it.
@@ -318,10 +318,10 @@
 160            android:exported="false" >
 160-->[com.google.firebase:firebase-messaging:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\02a919f8c970ac0db3fcda90af49db52\jetified-firebase-messaging-20.3.0\AndroidManifest.xml:31:13-37
 161            <intent-filter android:priority="-500" >
-161-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-22:29
+161-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-22:29
 162                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-162-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-78
-162-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-75
+162-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-78
+162-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-75
 163            </intent-filter>
 164        </service>
 165        <service
@@ -478,10 +478,10 @@
 247            android:permission="com.google.android.c2dm.permission.SEND" >
 247-->[com.google.firebase:firebase-iid:20.3.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\a5d786812483d52e18ed29cfab52d7ac\jetified-firebase-iid-20.3.0\AndroidManifest.xml:40:13-73
 248            <intent-filter>
-248-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
+248-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-31:29
 249                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-249-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
-249-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\working\Folder\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
+249-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-81
+249-->[:react-native-firebase_messaging] C:\Users\kenzo 3.0\Documents\React Native apps\Projects\deliveryExpo\deliveryapp\node_modules\@react-native-firebase\messaging\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-78
 250            </intent-filter>
 251        </receiver>
 252
@@ -550,23 +550,23 @@
 287            android:exported="false" />
 287-->[androidx.room:room-runtime:2.1.0] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\b01a27933d1f24c1d8c70b6d982f21f0\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
 288        <service
-288-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
+288-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
 289            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-289-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
+289-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
 290            android:exported="false" />
-290-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
+290-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
 291        <service
-291-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
+291-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
 292            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-292-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
+292-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
 293            android:exported="false" />
-293-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
+293-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
 294        <service
-294-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
+294-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
 295            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-295-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
+295-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
 296            android:exported="false" />
-296-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\330a2ea3f86fd5b2bc829faff8d37e3a\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
+296-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\kenzo 3.0\.gradle\caches\transforms-2\files-2.1\0b73fb4be0d5861db509b4b634a471f1\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
 297    </application>
 298
 299</manifest>

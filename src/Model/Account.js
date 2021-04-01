@@ -14,18 +14,7 @@ export class Account{
 
         
     }
-    // initUserCredentials(firstname,lastname,username,location){
-    //     var path =  "users/" + this.userOwnerRef + "/user/info" ;
-    //     this.uid = uid;
-    // }
-    // setUserCredentials(userCredentialObj){
-    //     var path =  "users/" + this.userOwnerRef + "/user/info" ;
-
-    // }
-    // getUserId(){
-    //     if(this.uid === null)
-    //         return this.uid;
-    // }
+    
 
     getUserCategories(){
 
